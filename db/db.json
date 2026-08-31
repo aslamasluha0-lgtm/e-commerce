@@ -1,0 +1,3038 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Laptops",
+      "slug": "laptops",
+      "description": "High-performance laptops for developers, creators, and professionals.",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "Smartphones",
+      "slug": "smartphones",
+      "description": "Latest smartphones for productivity and connectivity.",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80",
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "name": "Monitors",
+      "slug": "monitors",
+      "description": "Professional monitors for coding, design, and entertainment.",
+      "image": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&q=80",
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "name": "Keyboards",
+      "slug": "keyboards",
+      "description": "Mechanical and wireless keyboards for every typing style.",
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80",
+      "isActive": true
+    },
+    {
+      "id": 5,
+      "name": "Mice",
+      "slug": "mice",
+      "description": "Precision mice for gaming, design, and everyday use.",
+      "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&q=80",
+      "isActive": true
+    },
+    {
+      "id": 6,
+      "name": "Headphones",
+      "slug": "headphones",
+      "description": "Premium headphones for immersive audio experiences.",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80",
+      "isActive": true
+    },
+    {
+      "id": 7,
+      "name": "Webcams",
+      "slug": "webcams",
+      "description": "HD webcams for video calls, streaming, and content creation.",
+      "image": "https://images.unsplash.com/photo-1541140134513-85a161dc4a00?w=800&q=80",
+      "isActive": true
+    },
+    {
+      "id": 8,
+      "name": "Microphones",
+      "slug": "microphones",
+      "description": "Professional microphones for recording, streaming, and podcasts.",
+      "image": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80",
+      "isActive": true
+    },
+    {
+      "id": 9,
+      "name": "Storage",
+      "slug": "storage",
+      "description": "External SSDs, HDDs, and storage solutions for data management.",
+      "image": "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80",
+      "isActive": true
+    },
+    {
+      "id": 10,
+      "name": "USB Hubs & Docks",
+      "slug": "usb-hubs-docks",
+      "description": "Expand your connectivity with USB hubs and docking stations.",
+      "image": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80",
+      "isActive": true
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "MacBook Pro 14-inch M3 Pro",
+      "slug": "macbook-pro-14-m3-pro",
+      "brand": "Apple",
+      "categoryId": 1,
+      "category": "Laptops",
+      "price": 199900,
+      "discountPrice": 189900,
+      "currency": "INR",
+      "rating": 4.8,
+      "reviewCount": 256,
+      "stock": 15,
+      "sku": "LAP-001",
+      "description": "The MacBook Pro 14-inch with M3 Pro chip delivers exceptional performance for professional workflows. With up to 18 hours of battery life, a stunning Liquid Retina XDR display, and advanced thermal design, it handles demanding tasks like video editing, 3D rendering, and software development with ease.",
+      "shortDescription": "14-inch MacBook Pro with M3 Pro chip, 18GB RAM, 512GB SSD.",
+      "images": [
+        "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80",
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&q=80"
+      ],
+      "specifications": {
+        "processor": "Apple M3 Pro 11-core",
+        "ram": "18GB Unified Memory",
+        "storage": "512GB SSD",
+        "display": "14.2-inch Liquid Retina XDR",
+        "resolution": "3024 x 1964",
+        "refreshRate": "120Hz ProMotion",
+        "graphics": "Apple M3 Pro 14-core GPU",
+        "battery": "Up to 18 hours",
+        "operatingSystem": "macOS Sonoma",
+        "weight": "1.55kg",
+        "ports": "3x Thunderbolt 4, HDMI, SD card slot, MagSafe 3"
+      },
+      "features": [
+        "Liquid Retina XDR display",
+        "M3 Pro chip",
+        "18-hour battery life",
+        "MagSafe charging",
+        "Force Touch trackpad"
+      ],
+      "tags": [
+        "apple",
+        "macbook",
+        "professional",
+        "developer",
+        "creator"
+      ],
+      "featured": true,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "ThinkPad X1 Carbon Gen 11",
+      "slug": "thinkpad-x1-carbon-gen11",
+      "brand": "Lenovo",
+      "categoryId": 1,
+      "category": "Laptops",
+      "price": 142999,
+      "discountPrice": 132999,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 189,
+      "stock": 20,
+      "sku": "LAP-002",
+      "description": "The ThinkPad X1 Carbon Gen 11 is an ultra-lightweight business laptop with enterprise-grade security features. Powered by 13th Gen Intel Core processors, it offers exceptional keyboard comfort, a brilliant 2.8K OLED display option, and all-day battery life for mobile professionals.",
+      "shortDescription": "14-inch ultralight business laptop with Intel Core i7, 16GB RAM.",
+      "images": [
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&q=80",
+        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&q=80",
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&q=80"
+      ],
+      "specifications": {
+        "processor": "Intel Core i7-1365U",
+        "ram": "16GB LPDDR5x",
+        "storage": "512GB PCIe Gen 4 SSD",
+        "display": "14-inch 2.8K OLED",
+        "resolution": "2880 x 1800",
+        "refreshRate": "60Hz",
+        "graphics": "Intel Iris Xe Graphics",
+        "battery": "57Wh, up to 15 hours",
+        "operatingSystem": "Windows 11 Pro",
+        "weight": "1.12kg",
+        "ports": "2x Thunderbolt 4, 2x USB-A, HDMI 2.0b"
+      },
+      "features": [
+        "MIL-STD-810H tested",
+        "IR camera with Windows Hello",
+        "TrackPoint pointing device",
+        "Rapid Charge"
+      ],
+      "tags": [
+        "lenovo",
+        "thinkpad",
+        "business",
+        "ultralight",
+        "enterprise"
+      ],
+      "featured": true,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-02-10T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Dell XPS 15 9530",
+      "slug": "dell-xps-15-9530",
+      "brand": "Dell",
+      "categoryId": 1,
+      "category": "Laptops",
+      "price": 164999,
+      "discountPrice": 154999,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 142,
+      "stock": 12,
+      "sku": "LAP-003",
+      "description": "The Dell XPS 15 9530 combines stunning design with powerful performance. Featuring a 15.6-inch InfinityEdge display, 13th Gen Intel Core processors, and NVIDIA GeForce RTX graphics, it's perfect for developers and creators who need a balance of portability and power.",
+      "shortDescription": "15.6-inch premium laptop with Intel i7, RTX 4050, OLED display.",
+      "images": [
+        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&q=80",
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&q=80"
+      ],
+      "specifications": {
+        "processor": "Intel Core i7-13700H",
+        "ram": "16GB DDR5",
+        "storage": "512GB NVMe SSD",
+        "display": "15.6-inch 3.5K OLED",
+        "resolution": "3456 x 2160",
+        "refreshRate": "60Hz",
+        "graphics": "NVIDIA GeForce RTX 4050 6GB",
+        "battery": "86Wh, up to 13 hours",
+        "operatingSystem": "Windows 11 Home",
+        "weight": "1.86kg",
+        "ports": "2x Thunderbolt 4, USB-C 3.2, SD card slot"
+      },
+      "features": [
+        "InfinityEdge display",
+        "CNC machined aluminum",
+        "Fingerprint reader",
+        "Waves MaxxAudio Pro"
+      ],
+      "tags": [
+        "dell",
+        "xps",
+        "creator",
+        "premium",
+        "oled"
+      ],
+      "featured": true,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-01-20T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "name": "ASUS ROG Zephyrus G14",
+      "slug": "asus-rog-zephyrus-g14",
+      "brand": "ASUS",
+      "categoryId": 1,
+      "category": "Laptops",
+      "price": 139999,
+      "discountPrice": 129999,
+      "currency": "INR",
+      "rating": 4.7,
+      "reviewCount": 312,
+      "stock": 18,
+      "sku": "LAP-004",
+      "description": "The ASUS ROG Zephyrus G14 packs incredible gaming and creative performance into an ultra-portable 14-inch form factor. With AMD Ryzen 9 and NVIDIA RTX graphics, a 165Hz display, and the iconic AniMe Matrix LED lid, it's built for gamers and creators on the move.",
+      "shortDescription": "14-inch gaming laptop with Ryzen 9, RTX 4060, 165Hz display.",
+      "images": [
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&q=80",
+        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80"
+      ],
+      "specifications": {
+        "processor": "AMD Ryzen 9 7940HS",
+        "ram": "16GB DDR5",
+        "storage": "1TB PCIe Gen 4 SSD",
+        "display": "14-inch QHD+",
+        "resolution": "2560 x 1600",
+        "refreshRate": "165Hz",
+        "graphics": "NVIDIA GeForce RTX 4060 8GB",
+        "battery": "76Wh, up to 10 hours",
+        "operatingSystem": "Windows 11 Home",
+        "weight": "1.72kg",
+        "ports": "USB-C, 2x USB-A, HDMI 2.1, microSD"
+      },
+      "features": [
+        "AniMe Matrix LED",
+        "ROG Intelligent Cooling",
+        "Dolby Atmos",
+        "100% DCI-P3 color"
+      ],
+      "tags": [
+        "asus",
+        "rog",
+        "gaming",
+        "portable",
+        "creator"
+      ],
+      "featured": false,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-03-05T10:00:00Z"
+    },
+    {
+      "id": 5,
+      "name": "HP Spectre x360 14",
+      "slug": "hp-spectre-x360-14",
+      "brand": "HP",
+      "categoryId": 1,
+      "category": "Laptops",
+      "price": 129999,
+      "discountPrice": 119999,
+      "currency": "INR",
+      "rating": 4.4,
+      "reviewCount": 98,
+      "stock": 10,
+      "sku": "LAP-005",
+      "description": "The HP Spectre x360 14 is a versatile 2-in-1 convertible laptop with a stunning OLED touchscreen. It features 13th Gen Intel Core processors, a 360-degree hinge for tablet mode, and premium build quality with gem-cut accents.",
+      "shortDescription": "14-inch 2-in-1 convertible with Intel i7, OLED touchscreen.",
+      "images": [
+        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80"
+      ],
+      "specifications": {
+        "processor": "Intel Core i7-1355U",
+        "ram": "16GB LPDDR5",
+        "storage": "1TB PCIe Gen 4 SSD",
+        "display": "13.5-inch 3K2K OLED Touch",
+        "resolution": "3000 x 2000",
+        "refreshRate": "60Hz",
+        "graphics": "Intel Iris Xe Graphics",
+        "battery": "68Wh, up to 14 hours",
+        "operatingSystem": "Windows 11 Home",
+        "weight": "1.36kg",
+        "ports": "2x Thunderbolt 4, USB-A, microSD"
+      },
+      "features": [
+        "360-degree hinge",
+        "OLED touchscreen",
+        "Windows Hello face auth",
+        "Gem-cut design"
+      ],
+      "tags": [
+        "hp",
+        "spectre",
+        "2-in-1",
+        "convertible",
+        "touch"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-02-28T10:00:00Z"
+    },
+    {
+      "id": 6,
+      "name": "Samsung Galaxy S24 Ultra",
+      "slug": "samsung-galaxy-s24-ultra",
+      "brand": "Samsung",
+      "categoryId": 2,
+      "category": "Smartphones",
+      "price": 134999,
+      "discountPrice": 124999,
+      "currency": "INR",
+      "rating": 4.7,
+      "reviewCount": 487,
+      "stock": 30,
+      "sku": "PHN-001",
+      "description": "The Samsung Galaxy S24 Ultra is the ultimate flagship smartphone with built-in S Pen, a 200MP camera system, and Galaxy AI features. Its titanium frame and flat display make it the most refined Ultra yet, perfect for productivity and creativity on the go.",
+      "shortDescription": "6.8-inch flagship with S Pen, 200MP camera, Snapdragon 8 Gen 3.",
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&q=80",
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&q=80",
+        "https://images.unsplash.com/photo-1598965402089-897ce52e8355?w=800&q=80"
+      ],
+      "specifications": {
+        "processor": "Snapdragon 8 Gen 3 for Galaxy",
+        "ram": "12GB",
+        "storage": "256GB",
+        "display": "6.8-inch Dynamic AMOLED 2X",
+        "camera": "200MP + 50MP + 12MP + 10MP",
+        "battery": "5000mAh",
+        "charging": "45W Wired, 15W Wireless",
+        "operatingSystem": "Android 14, One UI 6.1"
+      },
+      "features": [
+        "Built-in S Pen",
+        "Galaxy AI",
+        "200MP main camera",
+        "Titanium frame",
+        "Corning Gorilla Armor"
+      ],
+      "tags": [
+        "samsung",
+        "galaxy",
+        "flagship",
+        "s-pen",
+        "ai"
+      ],
+      "featured": true,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-01-25T10:00:00Z"
+    },
+    {
+      "id": 7,
+      "name": "iPhone 15 Pro Max",
+      "slug": "iphone-15-pro-max",
+      "brand": "Apple",
+      "categoryId": 2,
+      "category": "Smartphones",
+      "price": 159900,
+      "discountPrice": 152900,
+      "currency": "INR",
+      "rating": 4.8,
+      "reviewCount": 623,
+      "stock": 25,
+      "sku": "PHN-002",
+      "description": "The iPhone 15 Pro Max features a titanium design, the A17 Pro chip, and a powerful camera system with 5x optical zoom. It's the most advanced iPhone ever, ideal for developers testing iOS apps and professionals who demand the best.",
+      "shortDescription": "6.7-inch iPhone with A17 Pro, titanium design, 5x optical zoom.",
+      "images": [
+        "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&q=80",
+        "https://images.unsplash.com/photo-1598965402089-897ce52e8355?w=800&q=80"
+      ],
+      "specifications": {
+        "processor": "Apple A17 Pro",
+        "ram": "8GB",
+        "storage": "256GB",
+        "display": "6.7-inch Super Retina XDR",
+        "camera": "48MP + 12MP + 12MP",
+        "battery": "Up to 33 hours video playback",
+        "charging": "27W Wired, 15W MagSafe",
+        "operatingSystem": "iOS 17"
+      },
+      "features": [
+        "Titanium design",
+        "Action Button",
+        "USB-C",
+        "5x optical zoom",
+        "ProRes video"
+      ],
+      "tags": [
+        "apple",
+        "iphone",
+        "flagship",
+        "pro",
+        "camera"
+      ],
+      "featured": true,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-01-10T10:00:00Z"
+    },
+    {
+      "id": 8,
+      "name": "OnePlus 12",
+      "slug": "oneplus-12",
+      "brand": "OnePlus",
+      "categoryId": 2,
+      "category": "Smartphones",
+      "price": 64999,
+      "discountPrice": 59999,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 234,
+      "stock": 40,
+      "sku": "PHN-003",
+      "description": "The OnePlus 12 offers flagship performance at a competitive price. Featuring the Snapdragon 8 Gen 3, a Hasselblad-tuned camera system, and 100W SUPERVOOC charging, it delivers a premium experience without the premium price tag.",
+      "shortDescription": "6.82-inch flagship killer with Snapdragon 8 Gen 3, 100W charging.",
+      "images": [
+        "https://images.unsplash.com/photo-1598965402089-897ce52e8355?w=800&q=80",
+        "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&q=80",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80"
+      ],
+      "specifications": {
+        "processor": "Snapdragon 8 Gen 3",
+        "ram": "12GB",
+        "storage": "256GB",
+        "display": "6.82-inch LTPO AMOLED",
+        "camera": "50MP + 48MP + 64MP",
+        "battery": "5400mAh",
+        "charging": "100W SUPERVOOC, 50W Wireless",
+        "operatingSystem": "Android 14, OxygenOS 14"
+      },
+      "features": [
+        "Hasselblad camera",
+        "100W SUPERVOOC",
+        "IP65 rating",
+        "Alert Slider"
+      ],
+      "tags": [
+        "oneplus",
+        "flagship-killer",
+        "fast-charging",
+        "value"
+      ],
+      "featured": false,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-02-01T10:00:00Z"
+    },
+    {
+      "id": 9,
+      "name": "Google Pixel 8 Pro",
+      "slug": "google-pixel-8-pro",
+      "brand": "Google",
+      "categoryId": 2,
+      "category": "Smartphones",
+      "price": 89999,
+      "discountPrice": 84999,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 178,
+      "stock": 22,
+      "sku": "PHN-004",
+      "description": "The Google Pixel 8 Pro showcases the best of Android with the Tensor G3 chip, an advanced AI-powered camera system, and 7 years of OS updates. Its Magic Eraser, Best Take, and Night Sight features make it a photographer's dream.",
+      "shortDescription": "6.7-inch Pixel with Tensor G3, AI camera, 7 years of updates.",
+      "images": [
+        "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&q=80",
+        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80"
+      ],
+      "specifications": {
+        "processor": "Google Tensor G3",
+        "ram": "12GB",
+        "storage": "128GB",
+        "display": "6.7-inch LTPO OLED",
+        "camera": "50MP + 48MP + 48MP",
+        "battery": "5050mAh",
+        "charging": "30W Wired, 23W Wireless",
+        "operatingSystem": "Android 14"
+      },
+      "features": [
+        "Magic Eraser",
+        "Best Take",
+        "7 years of updates",
+        "Temperature sensor",
+        "Night Sight"
+      ],
+      "tags": [
+        "google",
+        "pixel",
+        "ai",
+        "camera",
+        "stock-android"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-02-15T10:00:00Z"
+    },
+    {
+      "id": 10,
+      "name": "LG UltraGear 27GP950-B",
+      "slug": "lg-ultragear-27gp950",
+      "brand": "LG",
+      "categoryId": 3,
+      "category": "Monitors",
+      "price": 64999,
+      "discountPrice": 59999,
+      "currency": "INR",
+      "rating": 4.7,
+      "reviewCount": 167,
+      "stock": 14,
+      "sku": "MON-001",
+      "description": "The LG UltraGear 27GP950-B is a 27-inch 4K Nano IPS gaming monitor with a 160Hz refresh rate and 1ms response time. It covers 98% of DCI-P3 color space and supports HDMI 2.1, making it ideal for both gaming and color-accurate creative work.",
+      "shortDescription": "27-inch 4K 160Hz Nano IPS gaming monitor with HDMI 2.1.",
+      "images": [
+        "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&q=80",
+        "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800&q=80",
+        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800&q=80"
+      ],
+      "specifications": {
+        "size": "27-inch",
+        "resolution": "3840 x 2160 (4K UHD)",
+        "panelType": "Nano IPS",
+        "refreshRate": "160Hz",
+        "responseTime": "1ms GtG",
+        "brightness": "400 nits (HDR 600)",
+        "ports": "2x HDMI 2.1, 1x DisplayPort 1.4, USB Hub",
+        "adaptiveSync": "NVIDIA G-Sync Compatible, AMD FreeSync Premium Pro"
+      },
+      "features": [
+        "DCI-P3 98%",
+        "HDR 600",
+        "VESA DisplayHDR 600",
+        "Sphere Lighting 2.0"
+      ],
+      "tags": [
+        "lg",
+        "gaming",
+        "4k",
+        "nano-ips",
+        "160hz"
+      ],
+      "featured": true,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-01-18T10:00:00Z"
+    },
+    {
+      "id": 11,
+      "name": "Samsung Odyssey G7 32-inch",
+      "slug": "samsung-odyssey-g7-32",
+      "brand": "Samsung",
+      "categoryId": 3,
+      "category": "Monitors",
+      "price": 49999,
+      "discountPrice": 44999,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 203,
+      "stock": 18,
+      "sku": "MON-002",
+      "description": "The Samsung Odyssey G7 features a 32-inch 1440p curved VA panel with a blazing 240Hz refresh rate and 1ms response time. Its 1000R curvature provides an immersive gaming experience, while the QLED technology delivers vivid colors.",
+      "shortDescription": "32-inch 1440p 240Hz curved QLED gaming monitor.",
+      "images": [
+        "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800&q=80",
+        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800&q=80"
+      ],
+      "specifications": {
+        "size": "32-inch",
+        "resolution": "2560 x 1440 (QHD)",
+        "panelType": "VA QLED",
+        "refreshRate": "240Hz",
+        "responseTime": "1ms GtG",
+        "brightness": "350 nits",
+        "ports": "2x HDMI 2.1, 1x DisplayPort 1.4, USB",
+        "adaptiveSync": "NVIDIA G-Sync, AMD FreeSync Premium Pro"
+      },
+      "features": [
+        "1000R curvature",
+        "QLED color",
+        "Core Lighting",
+        "Smart TV apps"
+      ],
+      "tags": [
+        "samsung",
+        "odyssey",
+        "curved",
+        "240hz",
+        "qled"
+      ],
+      "featured": false,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-02-12T10:00:00Z"
+    },
+    {
+      "id": 12,
+      "name": "Dell UltraSharp U2723QE",
+      "slug": "dell-ultrasharp-u2723qe",
+      "brand": "Dell",
+      "categoryId": 3,
+      "category": "Monitors",
+      "price": 52999,
+      "discountPrice": 49999,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 134,
+      "stock": 22,
+      "sku": "MON-003",
+      "description": "The Dell UltraSharp U2723QE is a 27-inch 4K USB-C Hub monitor designed for professionals. It features IPS Black technology for deeper blacks, 100% sRGB and 98% DCI-P3 coverage, and a built-in KVM switch for seamless multi-device workflows.",
+      "shortDescription": "27-inch 4K USB-C Hub monitor with IPS Black, KVM switch.",
+      "images": [
+        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800&q=80",
+        "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&q=80",
+        "https://images.unsplash.com/photo-1583445095369-9c651e7e5d34?w=800&q=80"
+      ],
+      "specifications": {
+        "size": "27-inch",
+        "resolution": "3840 x 2160 (4K UHD)",
+        "panelType": "IPS Black",
+        "refreshRate": "60Hz",
+        "responseTime": "5ms GtG",
+        "brightness": "400 nits",
+        "ports": "USB-C 90W PD, HDMI, DP, RJ45, USB Hub",
+        "adaptiveSync": "AMD FreeSync"
+      },
+      "features": [
+        "IPS Black technology",
+        "Built-in KVM",
+        "90W USB-C PD",
+        "100% sRGB"
+      ],
+      "tags": [
+        "dell",
+        "ultrasharp",
+        "professional",
+        "4k",
+        "usb-c"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-01T10:00:00Z"
+    },
+    {
+      "id": 13,
+      "name": "ASUS ProArt PA278QV",
+      "slug": "asus-proart-pa278qv",
+      "brand": "ASUS",
+      "categoryId": 3,
+      "category": "Monitors",
+      "price": 32999,
+      "discountPrice": 29999,
+      "currency": "INR",
+      "rating": 4.4,
+      "reviewCount": 89,
+      "stock": 25,
+      "sku": "MON-004",
+      "description": "The ASUS ProArt PA278QV is a 27-inch WQHD monitor designed for creative professionals on a budget. It offers accurate colors with 100% sRGB and Rec. 709 coverage, factory-calibrated accuracy, and a ergonomic stand for comfortable long sessions.",
+      "shortDescription": "27-inch WQHD ProArt monitor with factory-calibrated colors.",
+      "images": [
+        "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&q=80",
+        "https://images.unsplash.com/photo-1583445095369-9c651e7e5d34?w=800&q=80"
+      ],
+      "specifications": {
+        "size": "27-inch",
+        "resolution": "2560 x 1440 (QHD)",
+        "panelType": "IPS",
+        "refreshRate": "75Hz",
+        "responseTime": "5ms GtG",
+        "brightness": "350 nits",
+        "ports": "HDMI, DisplayPort, DVI, USB Hub",
+        "adaptiveSync": "AMD FreeSync"
+      },
+      "features": [
+        "100% sRGB",
+        "Factory-calibrated",
+        "ProArt Palette",
+        "Ergonomic stand"
+      ],
+      "tags": [
+        "asus",
+        "proart",
+        "creative",
+        "color-accurate",
+        "budget"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-02-20T10:00:00Z"
+    },
+    {
+      "id": 14,
+      "name": "LG 34WN80C-B UltraWide",
+      "slug": "lg-34wn80c-ultrawide",
+      "brand": "LG",
+      "categoryId": 3,
+      "category": "Monitors",
+      "price": 44999,
+      "discountPrice": 41999,
+      "currency": "INR",
+      "rating": 4.3,
+      "reviewCount": 112,
+      "stock": 16,
+      "sku": "MON-005",
+      "description": "The LG 34WN80C-B is a 34-inch UltraWide WQHD monitor perfect for multitasking and coding. With a 21:9 aspect ratio, USB-C connectivity with 60W power delivery, and On-Screen Control software, it boosts productivity for developers and professionals.",
+      "shortDescription": "34-inch UltraWide WQHD monitor with USB-C 60W PD.",
+      "images": [
+        "https://images.unsplash.com/photo-1583445095369-9c651e7e5d34?w=800&q=80",
+        "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&q=80",
+        "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800&q=80"
+      ],
+      "specifications": {
+        "size": "34-inch",
+        "resolution": "3440 x 1440 (UWQHD)",
+        "panelType": "IPS",
+        "refreshRate": "60Hz",
+        "responseTime": "5ms GtG",
+        "brightness": "300 nits",
+        "ports": "USB-C 60W PD, HDMI x2, DisplayPort",
+        "adaptiveSync": "AMD FreeSync"
+      },
+      "features": [
+        "21:9 UltraWide",
+        "USB-C 60W PD",
+        "On-Screen Control",
+        "Split Screen 2.0"
+      ],
+      "tags": [
+        "lg",
+        "ultrawide",
+        "productivity",
+        "coding",
+        "usb-c"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-08T10:00:00Z"
+    },
+    {
+      "id": 15,
+      "name": "Keychron Q1 Pro",
+      "slug": "keychron-q1-pro",
+      "brand": "Keychron",
+      "categoryId": 4,
+      "category": "Keyboards",
+      "price": 17999,
+      "discountPrice": 16499,
+      "currency": "INR",
+      "rating": 4.7,
+      "reviewCount": 289,
+      "stock": 30,
+      "sku": "KEY-001",
+      "description": "The Keychron Q1 Pro is a wireless custom mechanical keyboard with a full aluminum body, hot-swappable switches, and QMK/VIA support. It offers Bluetooth and wired connectivity, south-facing RGB, and a premium typing experience for developers and enthusiasts.",
+      "shortDescription": "75% wireless custom mechanical keyboard with aluminum body.",
+      "images": [
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80",
+        "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=800&q=80"
+      ],
+      "specifications": {
+        "switchType": "Gateron Jupiter Banana (Hot-swappable)",
+        "layout": "75%",
+        "connection": "Bluetooth 5.1, USB-C, 2.4GHz",
+        "backlight": "South-facing RGB, 22 effects",
+        "battery": "4000mAh, up to 300 hours",
+        "compatibility": "Windows, macOS, Linux"
+      },
+      "features": [
+        "QMK/VIA support",
+        "Full aluminum body",
+        "Hot-swappable",
+        "Double-shot PBT keycaps"
+      ],
+      "tags": [
+        "keychron",
+        "mechanical",
+        "wireless",
+        "custom",
+        "qmk"
+      ],
+      "featured": true,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-01-22T10:00:00Z"
+    },
+    {
+      "id": 16,
+      "name": "Logitech MX Keys S",
+      "slug": "logitech-mx-keys-s",
+      "brand": "Logitech",
+      "categoryId": 4,
+      "category": "Keyboards",
+      "price": 10995,
+      "discountPrice": 9995,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 345,
+      "stock": 45,
+      "sku": "KEY-002",
+      "description": "The Logitech MX Keys S is an advanced wireless keyboard designed for professionals. With perfect stroke keys, smart illumination, Easy-Switch between devices, and multi-computer control via Logi Flow, it's the ultimate productivity keyboard.",
+      "shortDescription": "Advanced wireless keyboard with smart backlighting and multi-device.",
+      "images": [
+        "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=800&q=80",
+        "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&q=80",
+        "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80"
+      ],
+      "specifications": {
+        "switchType": "Membrane (Scissor-switch)",
+        "layout": "Full-size",
+        "connection": "Bluetooth, Logi Bolt USB receiver",
+        "backlight": "Smart proximity illumination",
+        "battery": "Up to 10 days with backlight, 5 months without",
+        "compatibility": "Windows, macOS, Linux, iOS, Android"
+      },
+      "features": [
+        "Perfect Stroke keys",
+        "Smart illumination",
+        "Logi Flow",
+        "USB-C charging"
+      ],
+      "tags": [
+        "logitech",
+        "mx-keys",
+        "wireless",
+        "productivity",
+        "multi-device"
+      ],
+      "featured": true,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-02-05T10:00:00Z"
+    },
+    {
+      "id": 17,
+      "name": "Corsair K100 RGB",
+      "slug": "corsair-k100-rgb",
+      "brand": "Corsair",
+      "categoryId": 4,
+      "category": "Keyboards",
+      "price": 16999,
+      "discountPrice": 14999,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 178,
+      "stock": 20,
+      "sku": "KEY-003",
+      "description": "The Corsair K100 RGB is a premium mechanical gaming keyboard with OPX optical switches, a programmable iCUE control wheel, and per-key RGB lighting. Its 4000Hz polling rate and dedicated macro keys make it the top choice for gamers and power users.",
+      "shortDescription": "Premium mechanical keyboard with iCUE control wheel, 4000Hz polling.",
+      "images": [
+        "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&q=80",
+        "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80"
+      ],
+      "specifications": {
+        "switchType": "Corsair OPX Optical-Mechanical",
+        "layout": "Full-size with macro keys",
+        "connection": "USB-C Wired",
+        "backlight": "Per-key RGB, 44-zone LightEdge",
+        "battery": "N/A (Wired)",
+        "compatibility": "Windows, macOS"
+      },
+      "features": [
+        "iCUE control wheel",
+        "4000Hz polling",
+        "Aircraft-grade aluminum",
+        "Dedicated macro keys"
+      ],
+      "tags": [
+        "corsair",
+        "gaming",
+        "mechanical",
+        "rgb",
+        "optical"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-01-28T10:00:00Z"
+    },
+    {
+      "id": 18,
+      "name": "Royal Kludge RK84",
+      "slug": "royal-kludge-rk84",
+      "brand": "Royal Kludge",
+      "categoryId": 4,
+      "category": "Keyboards",
+      "price": 5499,
+      "discountPrice": 4999,
+      "currency": "INR",
+      "rating": 4.3,
+      "reviewCount": 412,
+      "stock": 60,
+      "sku": "KEY-004",
+      "description": "The Royal Kludge RK84 is an affordable 75% wireless mechanical keyboard that punches above its price. With triple-mode connectivity, hot-swappable sockets, and impressive RGB, it's the best budget entry point into custom mechanical keyboards.",
+      "shortDescription": "Budget 75% wireless mechanical keyboard, hot-swappable.",
+      "images": [
+        "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80",
+        "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&q=80",
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80"
+      ],
+      "specifications": {
+        "switchType": "RK Brown (Hot-swappable)",
+        "layout": "75%",
+        "connection": "Bluetooth 5.1, USB-C, 2.4GHz",
+        "backlight": "RGB, 18 modes",
+        "battery": "3400mAh, up to 200 hours",
+        "compatibility": "Windows, macOS, Linux, Android"
+      },
+      "features": [
+        "Hot-swappable",
+        "Triple-mode wireless",
+        "PBT keycaps",
+        "Detachable USB-C cable"
+      ],
+      "tags": [
+        "royal-kludge",
+        "budget",
+        "wireless",
+        "hot-swappable",
+        "75-percent"
+      ],
+      "featured": false,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-03-10T10:00:00Z"
+    },
+    {
+      "id": 19,
+      "name": "Leopold FC660M PD",
+      "slug": "leopold-fc660m-pd",
+      "brand": "Leopold",
+      "categoryId": 4,
+      "category": "Keyboards",
+      "price": 12999,
+      "discountPrice": 11999,
+      "currency": "INR",
+      "rating": 4.8,
+      "reviewCount": 98,
+      "stock": 15,
+      "sku": "KEY-005",
+      "description": "The Leopold FC660M PD is a compact 66-key mechanical keyboard revered by typing enthusiasts. With premium PBT double-shot keycaps, a solid steel plate, and Cherry MX switches, it delivers an unmatched typing feel in a space-saving layout.",
+      "shortDescription": "66-key compact mechanical keyboard with Cherry MX switches.",
+      "images": [
+        "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&q=80",
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80"
+      ],
+      "specifications": {
+        "switchType": "Cherry MX Brown (or Red/Blue)",
+        "layout": "66-key Compact",
+        "connection": "USB-C Wired",
+        "backlight": "None",
+        "battery": "N/A (Wired)",
+        "compatibility": "Windows, macOS"
+      },
+      "features": [
+        "PBT double-shot keycaps",
+        "Steel plate",
+        "Dip switches",
+        "Sound-dampening foam"
+      ],
+      "tags": [
+        "leopold",
+        "compact",
+        "cherry-mx",
+        "typing",
+        "premium"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-02-18T10:00:00Z"
+    },
+    {
+      "id": 20,
+      "name": "Logitech MX Master 3S",
+      "slug": "logitech-mx-master-3s",
+      "brand": "Logitech",
+      "categoryId": 5,
+      "category": "Mice",
+      "price": 9995,
+      "discountPrice": 8995,
+      "currency": "INR",
+      "rating": 4.7,
+      "reviewCount": 567,
+      "stock": 50,
+      "sku": "MOU-001",
+      "description": "The Logitech MX Master 3S is the flagship ergonomic mouse for professionals. With an 8000 DPI sensor, quiet clicks, MagSpeed scroll wheel, and Logi Flow cross-computer control, it's the gold standard for productivity mice used by developers worldwide.",
+      "shortDescription": "Ergonomic wireless mouse with 8000 DPI, MagSpeed scroll, USB-C.",
+      "images": [
+        "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=800&q=80",
+        "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&q=80",
+        "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800&q=80"
+      ],
+      "specifications": {
+        "sensor": "Logitech 8000 DPI",
+        "dpi": "8000",
+        "buttons": "7 (including gesture button)",
+        "connection": "Bluetooth, Logi Bolt USB receiver",
+        "battery": "Up to 70 days, USB-C charging",
+        "weight": "141g"
+      },
+      "features": [
+        "MagSpeed scroll wheel",
+        "Logi Flow",
+        "Quiet clicks",
+        "USB-C quick charge",
+        "Works on any surface"
+      ],
+      "tags": [
+        "logitech",
+        "mx-master",
+        "ergonomic",
+        "productivity",
+        "wireless"
+      ],
+      "featured": true,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-01-12T10:00:00Z"
+    },
+    {
+      "id": 21,
+      "name": "Razer DeathAdder V3",
+      "slug": "razer-deathadder-v3",
+      "brand": "Razer",
+      "categoryId": 5,
+      "category": "Mice",
+      "price": 7999,
+      "discountPrice": 6999,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 312,
+      "stock": 35,
+      "sku": "MOU-002",
+      "description": "The Razer DeathAdder V3 is an ultra-lightweight ergonomic gaming mouse weighing just 59g. Featuring the Focus Pro 30K optical sensor and Gen-3 optical switches, it delivers precision and speed for competitive gaming and fast-paced work.",
+      "shortDescription": "Ultra-lightweight 59g ergonomic mouse with 30K DPI sensor.",
+      "images": [
+        "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&q=80",
+        "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800&q=80"
+      ],
+      "specifications": {
+        "sensor": "Razer Focus Pro 30K",
+        "dpi": "30000",
+        "buttons": "5",
+        "connection": "USB-C Wired",
+        "battery": "N/A (Wired)",
+        "weight": "59g"
+      },
+      "features": [
+        "Ultra-lightweight design",
+        "Gen-3 optical switches",
+        "90-hour battery (wireless version)",
+        "HyperPolling compatible"
+      ],
+      "tags": [
+        "razer",
+        "deathadder",
+        "ergonomic",
+        "lightweight",
+        "gaming"
+      ],
+      "featured": false,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-02-08T10:00:00Z"
+    },
+    {
+      "id": 22,
+      "name": "Logitech G Pro X Superlight 2",
+      "slug": "logitech-g-pro-x-superlight-2",
+      "brand": "Logitech",
+      "categoryId": 5,
+      "category": "Mice",
+      "price": 14995,
+      "discountPrice": 13495,
+      "currency": "INR",
+      "rating": 4.8,
+      "reviewCount": 234,
+      "stock": 28,
+      "sku": "MOU-003",
+      "description": "The Logitech G Pro X Superlight 2 is the lightest esports mouse from Logitech at just 60g. With the HERO 2 sensor, LIGHTFORCE hybrid switches, and 95-hour battery, it's the weapon of choice for professional gamers and fast-click demanding tasks.",
+      "shortDescription": "60g wireless esports mouse with HERO 2 sensor, 95-hour battery.",
+      "images": [
+        "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800&q=80",
+        "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=800&q=80",
+        "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&q=80"
+      ],
+      "specifications": {
+        "sensor": "HERO 2",
+        "dpi": "32000",
+        "buttons": "5",
+        "connection": "LIGHTSPEED, Bluetooth",
+        "battery": "Up to 95 hours",
+        "weight": "60g"
+      },
+      "features": [
+        "Zero-additive PTFE feet",
+        "LIGHTFORCE switches",
+        "LIGHTSPEED wireless",
+        "POWERPLAY compatible"
+      ],
+      "tags": [
+        "logitech",
+        "esports",
+        "superlight",
+        "wireless",
+        "ultra-light"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-02T10:00:00Z"
+    },
+    {
+      "id": 23,
+      "name": "Razer Viper V3 HyperSpeed",
+      "slug": "razer-viper-v3-hyperspeed",
+      "brand": "Razer",
+      "categoryId": 5,
+      "category": "Mice",
+      "price": 10999,
+      "discountPrice": 9999,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 156,
+      "stock": 32,
+      "sku": "MOU-004",
+      "description": "The Razer Viper V3 HyperSpeed is a lightweight wireless gaming mouse with a symmetrical design. Featuring the Focus Pro 30K sensor, Gen-3 optical switches, and up to 230 hours of battery life, it offers exceptional value for competitive gamers.",
+      "shortDescription": "Lightweight wireless mouse with 30K sensor, 230-hour battery.",
+      "images": [
+        "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=800&q=80",
+        "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&q=80"
+      ],
+      "specifications": {
+        "sensor": "Razer Focus Pro 30K",
+        "dpi": "30000",
+        "buttons": "6",
+        "connection": "HyperSpeed, Bluetooth",
+        "battery": "Up to 230 hours",
+        "weight": "54g"
+      },
+      "features": [
+        "54g ultra-lightweight",
+        "230-hour battery",
+        "Gen-3 optical switches",
+        "Symmetrical design"
+      ],
+      "tags": [
+        "razer",
+        "viper",
+        "wireless",
+        "lightweight",
+        "symmetrical"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-12T10:00:00Z"
+    },
+    {
+      "id": 24,
+      "name": "Sony WH-1000XM5",
+      "slug": "sony-wh-1000xm5",
+      "brand": "Sony",
+      "categoryId": 6,
+      "category": "Headphones",
+      "price": 29990,
+      "discountPrice": 26990,
+      "currency": "INR",
+      "rating": 4.8,
+      "reviewCount": 892,
+      "stock": 40,
+      "sku": "HEA-001",
+      "description": "The Sony WH-1000XM5 are industry-leading noise-cancelling headphones with Auto NC Optimizer, 30-hour battery life, and LDAC support. Their lightweight design and premium comfort make them ideal for focused coding sessions, calls, and travel.",
+      "shortDescription": "Premium ANC headphones with 30-hour battery, LDAC, multi-point.",
+      "images": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80",
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80",
+        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80"
+      ],
+      "specifications": {
+        "driver": "30mm",
+        "connection": "Bluetooth 5.2, 3.5mm, USB-C",
+        "noiseCancellation": "Industry-leading ANC with Auto NC Optimizer",
+        "battery": "Up to 30 hours (NC ON)",
+        "microphone": "8 microphones (beam forming)",
+        "weight": "250g"
+      },
+      "features": [
+        "LDAC Hi-Res Audio",
+        "Speak-to-Chat",
+        "Multi-point connection",
+        "30-hour battery",
+        "Adaptive Sound Control"
+      ],
+      "tags": [
+        "sony",
+        "anc",
+        "noise-cancelling",
+        "wireless",
+        "premium"
+      ],
+      "featured": true,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-01-08T10:00:00Z"
+    },
+    {
+      "id": 25,
+      "name": "Apple AirPods Pro 2",
+      "slug": "apple-airpods-pro-2",
+      "brand": "Apple",
+      "categoryId": 6,
+      "category": "Headphones",
+      "price": 24900,
+      "discountPrice": 22900,
+      "currency": "INR",
+      "rating": 4.7,
+      "reviewCount": 1245,
+      "stock": 55,
+      "sku": "HEA-002",
+      "description": "The Apple AirPods Pro 2 with USB-C feature the H2 chip for computational audio, up to 2x more noise cancellation than the previous generation, and a personalized Spatial Audio experience. Perfect for seamless Apple ecosystem integration.",
+      "shortDescription": "ANC earbuds with H2 chip, USB-C, Adaptive Transparency.",
+      "images": [
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80",
+        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80"
+      ],
+      "specifications": {
+        "driver": "Apple-designed custom driver",
+        "connection": "Bluetooth 5.3",
+        "noiseCancellation": "Active Noise Cancellation + Adaptive Transparency",
+        "battery": "Up to 6 hours (30 hours with case)",
+        "microphone": "Dual beamforming microphones",
+        "weight": "5.3g per earbud"
+      },
+      "features": [
+        "H2 chip",
+        "Personalized Spatial Audio",
+        "Touch control",
+        "MagSafe charging case",
+        "IP54 rated"
+      ],
+      "tags": [
+        "apple",
+        "airpods",
+        "earbuds",
+        "anc",
+        "wireless"
+      ],
+      "featured": true,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-01-05T10:00:00Z"
+    },
+    {
+      "id": 26,
+      "name": "Bose QuietComfort Ultra Headphones",
+      "slug": "bose-qc-ultra-headphones",
+      "brand": "Bose",
+      "categoryId": 6,
+      "category": "Headphones",
+      "price": 34999,
+      "discountPrice": 31999,
+      "currency": "INR",
+      "rating": 4.7,
+      "reviewCount": 345,
+      "stock": 22,
+      "sku": "HEA-003",
+      "description": "The Bose QuietComfort Ultra Headphones deliver the best noise cancellation from Bose with Immersive Audio support. Featuring CustomTune sound calibration, a 24-hour battery life, and luxurious comfort, they redefine premium audio.",
+      "shortDescription": "Premium ANC headphones with Immersive Audio, CustomTune.",
+      "images": [
+        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80",
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&q=80",
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80"
+      ],
+      "specifications": {
+        "driver": "Bose proprietary",
+        "connection": "Bluetooth 5.3, 3.5mm, USB-C",
+        "noiseCancellation": "Bose QuietComfort ANC + Immersive Audio",
+        "battery": "Up to 24 hours",
+        "microphone": "4 microphones",
+        "weight": "250g"
+      },
+      "features": [
+        "Immersive Audio",
+        "CustomTune",
+        "Aware mode with ActiveSense",
+        "Foldable design"
+      ],
+      "tags": [
+        "bose",
+        "anc",
+        "immersive-audio",
+        "premium",
+        "comfort"
+      ],
+      "featured": false,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-02-22T10:00:00Z"
+    },
+    {
+      "id": 27,
+      "name": "HyperX Cloud III Wireless",
+      "slug": "hyperx-cloud-iii-wireless",
+      "brand": "HyperX",
+      "categoryId": 6,
+      "category": "Headphones",
+      "price": 16999,
+      "discountPrice": 14999,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 267,
+      "stock": 30,
+      "sku": "HEA-004",
+      "description": "The HyperX Cloud III Wireless gaming headset delivers immersive DTS Headphone:X audio with 53mm drivers, up to 120 hours of wireless battery life, and signature HyperX comfort. It's built for marathon gaming and streaming sessions.",
+      "shortDescription": "Wireless gaming headset with DTS, 53mm drivers, 120-hour battery.",
+      "images": [
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&q=80",
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80"
+      ],
+      "specifications": {
+        "driver": "53mm Dynamic",
+        "connection": "2.4GHz Wireless, 3.5mm",
+        "noiseCancellation": "Passive",
+        "battery": "Up to 120 hours",
+        "microphone": "Detachable boom mic with noise-cancellation",
+        "weight": "330g"
+      },
+      "features": [
+        "DTS Headphone:X",
+        "120-hour battery",
+        "Memory foam ear cushions",
+        "Detachable mic"
+      ],
+      "tags": [
+        "hyperx",
+        "gaming",
+        "wireless",
+        "comfort",
+        "streaming"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-06T10:00:00Z"
+    },
+    {
+      "id": 28,
+      "name": "Sennheiser Momentum 4 Wireless",
+      "slug": "sennheiser-momentum-4-wireless",
+      "brand": "Sennheiser",
+      "categoryId": 6,
+      "category": "Headphones",
+      "price": 27990,
+      "discountPrice": 24990,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 189,
+      "stock": 18,
+      "sku": "HEA-005",
+      "description": "The Sennheiser Momentum 4 Wireless headphones offer audiophile-grade sound quality with Adaptive Noise Cancellation and a remarkable 60-hour battery life. Their minimalist design and premium build make them perfect for discerning listeners.",
+      "shortDescription": "Audiophile ANC headphones with 60-hour battery, adaptive ANC.",
+      "images": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80",
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80",
+        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80"
+      ],
+      "specifications": {
+        "driver": "42mm Dynamic",
+        "connection": "Bluetooth 5.2, 3.5mm, USB-C",
+        "noiseCancellation": "Adaptive Noise Cancellation",
+        "battery": "Up to 60 hours",
+        "microphone": "4 microphones with beamforming",
+        "weight": "293g"
+      },
+      "features": [
+        "60-hour battery",
+        "Audiophile-grade sound",
+        "Smart Pause",
+        "Customizable EQ"
+      ],
+      "tags": [
+        "sennheiser",
+        "audiophile",
+        "anc",
+        "wireless",
+        "premium"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-02-14T10:00:00Z"
+    },
+    {
+      "id": 29,
+      "name": "Logitech Brio 4K Ultra HD",
+      "slug": "logitech-brio-4k",
+      "brand": "Logitech",
+      "categoryId": 7,
+      "category": "Webcams",
+      "price": 17995,
+      "discountPrice": 15995,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 234,
+      "stock": 35,
+      "sku": "WEB-001",
+      "description": "The Logitech Brio 4K Ultra HD webcam delivers cinematic video quality with 4K recording, HDR, and a noise-cancelling dual microphone. It's the premium choice for video calls, streaming, and content creation.",
+      "shortDescription": "4K Ultra HD webcam with HDR, noise-cancelling mic, Windows Hello.",
+      "images": [
+        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80",
+        "https://images.unsplash.com/photo-1541140134513-85a161dc4a00?w=800&q=80"
+      ],
+      "specifications": {
+        "resolution": "4K Ultra HD (4096 x 2160)",
+        "fps": "30fps (4K), 60fps (1080p)",
+        "fieldOfView": "90\u00b0 / 78\u00b0 / 65\u00b0 adjustable",
+        "microphone": "Dual omni-directional with noise cancellation",
+        "connection": "USB-C"
+      },
+      "features": [
+        "4K HDR",
+        "Windows Hello facial recognition",
+        "Adjustable FOV",
+        "Background replacement"
+      ],
+      "tags": [
+        "logitech",
+        "brio",
+        "4k",
+        "webcam",
+        "hdr"
+      ],
+      "featured": true,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-01-16T10:00:00Z"
+    },
+    {
+      "id": 30,
+      "name": "Elgato Facecam Pro",
+      "slug": "elgato-facecam-pro",
+      "brand": "Elgato",
+      "categoryId": 7,
+      "category": "Webcams",
+      "price": 24999,
+      "discountPrice": 22999,
+      "currency": "INR",
+      "rating": 4.7,
+      "reviewCount": 156,
+      "stock": 15,
+      "sku": "WEB-002",
+      "description": "The Elgato Facecam Pro is the world's first 4K60 webcam. With a Sony STARVIS sensor, uncompressed 4K video at 60fps, and advanced color controls via Elgato Camera Hub, it's built for streamers and content creators who demand the best.",
+      "shortDescription": "4K60 webcam with Sony STARVIS sensor, uncompressed video.",
+      "images": [
+        "https://images.unsplash.com/photo-1541140134513-85a161dc4a00?w=800&q=80",
+        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&q=80",
+        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80"
+      ],
+      "specifications": {
+        "resolution": "4K UHD (3840 x 2160)",
+        "fps": "60fps (4K), 60fps (1080p/720p)",
+        "fieldOfView": "82\u00b0",
+        "microphone": "Built-in dual noise-reducing",
+        "connection": "USB-C"
+      },
+      "features": [
+        "Sony STARVIS sensor",
+        "Uncompressed 4K60",
+        "Camera Hub software",
+        "AI-powered background removal"
+      ],
+      "tags": [
+        "elgato",
+        "facecam",
+        "4k60",
+        "streaming",
+        "creator"
+      ],
+      "featured": false,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-02-25T10:00:00Z"
+    },
+    {
+      "id": 31,
+      "name": "Razer Kiyo Pro Ultra",
+      "slug": "razer-kiyo-pro-ultra",
+      "brand": "Razer",
+      "categoryId": 7,
+      "category": "Webcams",
+      "price": 19999,
+      "discountPrice": 17999,
+      "currency": "INR",
+      "rating": 4.4,
+      "reviewCount": 98,
+      "stock": 22,
+      "sku": "WEB-003",
+      "description": "The Razer Kiyo Pro Ultra features a large Sony STARVIS 2 sensor for exceptional low-light performance. With 4K 30fps or 1080p 60fps, HDR support, and an adaptive light sensor, it delivers studio-quality video in any lighting condition.",
+      "shortDescription": "4K webcam with Sony STARVIS 2, adaptive light sensor, HDR.",
+      "images": [
+        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&q=80",
+        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80"
+      ],
+      "specifications": {
+        "resolution": "4K UHD (3840 x 2160)",
+        "fps": "30fps (4K), 60fps (1080p)",
+        "fieldOfView": "81.9\u00b0",
+        "microphone": "Built-in omnidirectional mic",
+        "connection": "USB-A"
+      },
+      "features": [
+        "Sony STARVIS 2 sensor",
+        "Adaptive light sensor",
+        "HDR",
+        "Razer Synapse software"
+      ],
+      "tags": [
+        "razer",
+        "kiyo",
+        "4k",
+        "streaming",
+        "low-light"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-14T10:00:00Z"
+    },
+    {
+      "id": 32,
+      "name": "Anker PowerConf C200",
+      "slug": "anker-powerconf-c200",
+      "brand": "Anker",
+      "categoryId": 7,
+      "category": "Webcams",
+      "price": 4999,
+      "discountPrice": 4499,
+      "currency": "INR",
+      "rating": 4.3,
+      "reviewCount": 187,
+      "stock": 45,
+      "sku": "WEB-004",
+      "description": "The Anker PowerConf C200 is an affordable 2K webcam with AI-powered noise cancellation, auto-framing, and a privacy shutter. It offers excellent value for remote workers and students who need reliable video quality for daily calls.",
+      "shortDescription": "Budget 2K webcam with AI noise cancellation, privacy shutter.",
+      "images": [
+        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80",
+        "https://images.unsplash.com/photo-1541140134513-85a161dc4a00?w=800&q=80",
+        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&q=80"
+      ],
+      "specifications": {
+        "resolution": "2K QHD (2560 x 1440)",
+        "fps": "30fps (2K), 30fps (1080p)",
+        "fieldOfView": "95\u00b0",
+        "microphone": "Dual microphones with AI noise cancellation",
+        "connection": "USB-C"
+      },
+      "features": [
+        "AI noise cancellation",
+        "Auto-framing",
+        "Privacy shutter",
+        "Software included"
+      ],
+      "tags": [
+        "anker",
+        "budget",
+        "2k",
+        "webcam",
+        "remote-work"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-18T10:00:00Z"
+    },
+    {
+      "id": 33,
+      "name": "Shure MV7+",
+      "slug": "shure-mv7-plus",
+      "brand": "Shure",
+      "categoryId": 8,
+      "category": "Microphones",
+      "price": 29999,
+      "discountPrice": 27999,
+      "currency": "INR",
+      "rating": 4.8,
+      "reviewCount": 198,
+      "stock": 20,
+      "sku": "MIC-001",
+      "description": "The Shure MV7+ is a hybrid XLR/USB podcast microphone with a professional dynamic capsule. Featuring built-in DSP with auto-level mode, touch-mute, headphone output, and broadcast-quality sound, it's the ultimate all-in-one content creation microphone.",
+      "shortDescription": "Hybrid XLR/USB dynamic microphone with built-in DSP for podcasting.",
+      "images": [
+        "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80",
+        "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80"
+      ],
+      "specifications": {
+        "type": "Dynamic",
+        "pickupPattern": "Cardioid",
+        "connection": "USB-C, XLR",
+        "sampleRate": "48kHz / 24-bit",
+        "frequencyResponse": "50Hz - 16kHz"
+      },
+      "features": [
+        "Auto-level mode",
+        "Digital signal processing",
+        "Touch-mute button",
+        "Headphone monitoring",
+        "ShurePlus MOTIV app"
+      ],
+      "tags": [
+        "shure",
+        "mv7",
+        "podcasting",
+        "dynamic",
+        "hybrid"
+      ],
+      "featured": true,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-01-30T10:00:00Z"
+    },
+    {
+      "id": 34,
+      "name": "Blue Yeti X",
+      "slug": "blue-yeti-x",
+      "brand": "Blue",
+      "categoryId": 8,
+      "category": "Microphones",
+      "price": 18999,
+      "discountPrice": 16999,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 456,
+      "stock": 35,
+      "sku": "MIC-002",
+      "description": "The Blue Yeti X is a professional USB condenser microphone with 4 pickup patterns, a built-in DSP, and a high-res LED meter. It's the go-to microphone for podcasters, streamers, and content creators seeking broadcast-quality sound.",
+      "shortDescription": "USB condenser mic with 4 pickup patterns, built-in DSP.",
+      "images": [
+        "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80",
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
+        "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80"
+      ],
+      "specifications": {
+        "type": "Condenser",
+        "pickupPattern": "Cardioid, Bidirectional, Omnidirectional, Stereo",
+        "connection": "USB",
+        "sampleRate": "48kHz / 24-bit",
+        "frequencyResponse": "20Hz - 20kHz"
+      },
+      "features": [
+        "4 pickup patterns",
+        "Blue VO!CE software",
+        "LED metering",
+        "Gain control",
+        "Headphone output"
+      ],
+      "tags": [
+        "blue",
+        "yeti",
+        "podcasting",
+        "streaming",
+        "usb"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-02-10T10:00:00Z"
+    },
+    {
+      "id": 35,
+      "name": "Rode PodMic USB",
+      "slug": "rode-podmic-usb",
+      "brand": "Rode",
+      "categoryId": 8,
+      "category": "Microphones",
+      "price": 12999,
+      "discountPrice": 11999,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 167,
+      "stock": 28,
+      "sku": "MIC-003",
+      "description": "The Rode PodMic USB is a versatile dynamic microphone with both USB and XLR outputs. Designed for podcasting and streaming, it features an internal pop filter, integrated swing mount adapter, and broadcast-quality audio at an accessible price.",
+      "shortDescription": "Dynamic podcast mic with USB/XLR, internal pop filter.",
+      "images": [
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
+        "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80"
+      ],
+      "specifications": {
+        "type": "Dynamic",
+        "pickupPattern": "Cardioid",
+        "connection": "USB-C, XLR",
+        "sampleRate": "48kHz / 24-bit",
+        "frequencyResponse": "20Hz - 20kHz"
+      },
+      "features": [
+        "Internal pop filter",
+        "Swing mount adapter",
+        "Dual output (USB/XLR)",
+        "Zero-latency monitoring"
+      ],
+      "tags": [
+        "rode",
+        "podmic",
+        "podcasting",
+        "streaming",
+        "hybrid"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-04T10:00:00Z"
+    },
+    {
+      "id": 36,
+      "name": "Samsung T7 Shield 2TB",
+      "slug": "samsung-t7-shield-2tb",
+      "brand": "Samsung",
+      "categoryId": 9,
+      "category": "Storage",
+      "price": 15999,
+      "discountPrice": 13999,
+      "currency": "INR",
+      "rating": 4.7,
+      "reviewCount": 534,
+      "stock": 50,
+      "sku": "STO-001",
+      "description": "The Samsung T7 Shield 2TB is a rugged portable SSD with IP65 water and dust resistance, drop protection up to 3 meters, and read speeds up to 1050MB/s. It's built for professionals who need reliable, fast storage on the go.",
+      "shortDescription": "2TB rugged portable SSD, IP65 rated, 1050MB/s read speed.",
+      "images": [
+        "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80",
+        "https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=800&q=80",
+        "https://images.unsplash.com/photo-1494809610410-160faaed4de0?w=800&q=80"
+      ],
+      "specifications": {
+        "capacity": "2TB",
+        "interface": "USB 3.2 Gen 2",
+        "readSpeed": "Up to 1050 MB/s",
+        "writeSpeed": "Up to 1000 MB/s",
+        "formFactor": "Portable External SSD",
+        "compatibility": "Windows, macOS, Android, PlayStation, Xbox"
+      },
+      "features": [
+        "IP65 rated",
+        "3-meter drop protection",
+        "Hardware encryption",
+        "Samsung Magician software"
+      ],
+      "tags": [
+        "samsung",
+        "ssd",
+        "portable",
+        "rugged",
+        "2tb"
+      ],
+      "featured": true,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-01-14T10:00:00Z"
+    },
+    {
+      "id": 37,
+      "name": "WD Black SN850X 1TB NVMe",
+      "slug": "wd-black-sn850x-1tb",
+      "brand": "Western Digital",
+      "categoryId": 9,
+      "category": "Storage",
+      "price": 9499,
+      "discountPrice": 8499,
+      "currency": "INR",
+      "rating": 4.8,
+      "reviewCount": 389,
+      "stock": 40,
+      "sku": "STO-002",
+      "description": "The WD Black SN850X is a high-performance NVMe SSD designed for gamers and content creators. With sequential read speeds up to 7300MB/s, PCIe Gen 4 interface, and optional heatsink, it delivers blazing-fast load times and file transfers.",
+      "shortDescription": "1TB PCIe Gen 4 NVMe SSD, 7300MB/s read, gaming optimized.",
+      "images": [
+        "https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=800&q=80",
+        "https://images.unsplash.com/photo-1494809610410-160faaed4de0?w=800&q=80"
+      ],
+      "specifications": {
+        "capacity": "1TB",
+        "interface": "PCIe Gen 4 x4 NVMe 1.4",
+        "readSpeed": "Up to 7300 MB/s",
+        "writeSpeed": "Up to 6300 MB/s",
+        "formFactor": "M.2 2280",
+        "compatibility": "Desktop, Laptop, PS5"
+      },
+      "features": [
+        "Game Mode 2.0",
+        "WD_BLACK Dashboard",
+        "Optional heatsink",
+        "Endurance: 600 TBW"
+      ],
+      "tags": [
+        "wd",
+        "nvme",
+        "gen4",
+        "gaming",
+        "internal"
+      ],
+      "featured": false,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-02-03T10:00:00Z"
+    },
+    {
+      "id": 38,
+      "name": "Crucial X9 Pro 4TB Portable",
+      "slug": "crucial-x9-pro-4tb",
+      "brand": "Crucial",
+      "categoryId": 9,
+      "category": "Storage",
+      "price": 27999,
+      "discountPrice": 24999,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 145,
+      "stock": 18,
+      "sku": "STO-003",
+      "description": "The Crucial X9 Pro 4TB portable SSD offers massive storage in a compact, rugged design. With read speeds up to 1050MB/s, IP55 water and dust resistance, and drop protection up to 2 meters, it's perfect for creators handling large video files.",
+      "shortDescription": "4TB portable SSD, IP55 rated, 1050MB/s, compact design.",
+      "images": [
+        "https://images.unsplash.com/photo-1494809610410-160faaed4de0?w=800&q=80",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+        "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80"
+      ],
+      "specifications": {
+        "capacity": "4TB",
+        "interface": "USB 3.2 Gen 2",
+        "readSpeed": "Up to 1050 MB/s",
+        "writeSpeed": "Up to 1000 MB/s",
+        "formFactor": "Portable External SSD",
+        "compatibility": "Windows, macOS, iPad Pro, Android, Gaming Consoles"
+      },
+      "features": [
+        "IP55 rated",
+        "2-meter drop protection",
+        "Compact palm-sized design",
+        "Hardware encryption"
+      ],
+      "tags": [
+        "crucial",
+        "ssd",
+        "portable",
+        "4tb",
+        "creator"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-08T10:00:00Z"
+    },
+    {
+      "id": 39,
+      "name": "Seagate One Touch 5TB HDD",
+      "slug": "seagate-one-touch-5tb",
+      "brand": "Seagate",
+      "categoryId": 9,
+      "category": "Storage",
+      "price": 10999,
+      "discountPrice": 9499,
+      "currency": "INR",
+      "rating": 4.3,
+      "reviewCount": 278,
+      "stock": 35,
+      "sku": "STO-004",
+      "description": "The Seagate One Touch 5TB is a sleek portable HDD offering massive storage capacity at an affordable price. With USB 3.0 connectivity, password protection, and backup software, it's the ideal solution for bulk data storage and archival.",
+      "shortDescription": "5TB portable USB 3.0 HDD with backup software, password protection.",
+      "images": [
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+        "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80"
+      ],
+      "specifications": {
+        "capacity": "5TB",
+        "interface": "USB 3.0",
+        "readSpeed": "Up to 120 MB/s",
+        "writeSpeed": "Up to 120 MB/s",
+        "formFactor": "Portable External HDD",
+        "compatibility": "Windows, Mac (reformatting required)"
+      },
+      "features": [
+        "USB powered",
+        "Backup software",
+        "Password protection",
+        "Slim design"
+      ],
+      "tags": [
+        "seagate",
+        "hdd",
+        "portable",
+        "5tb",
+        "budget"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-16T10:00:00Z"
+    },
+    {
+      "id": 40,
+      "name": "Kingston DataTraveler Max 256GB",
+      "slug": "kingston-datatraveler-max-256gb",
+      "brand": "Kingston",
+      "categoryId": 9,
+      "category": "Storage",
+      "price": 2999,
+      "discountPrice": 2499,
+      "currency": "INR",
+      "rating": 4.4,
+      "reviewCount": 356,
+      "stock": 80,
+      "sku": "STO-005",
+      "description": "The Kingston DataTraveler Max 256GB is a high-performance USB 3.2 Gen 2 flash drive with read speeds up to 1000MB/s. Its compact design with a keyring loop makes it perfect for carrying large files between workstations.",
+      "shortDescription": "256GB USB 3.2 Gen 2 flash drive, 1000MB/s read speed.",
+      "images": [
+        "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80",
+        "https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=800&q=80",
+        "https://images.unsplash.com/photo-1494809610410-160faaed4de0?w=800&q=80"
+      ],
+      "specifications": {
+        "capacity": "256GB",
+        "interface": "USB 3.2 Gen 2",
+        "readSpeed": "Up to 1000 MB/s",
+        "writeSpeed": "Up to 900 MB/s",
+        "formFactor": "USB Flash Drive",
+        "compatibility": "Windows, macOS, Linux, Chrome OS"
+      },
+      "features": [
+        "Compact design",
+        "Keyring loop",
+        "Plug and play",
+        "1000MB/s read"
+      ],
+      "tags": [
+        "kingston",
+        "flash-drive",
+        "usb",
+        "portable",
+        "fast"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-20T10:00:00Z"
+    },
+    {
+      "id": 41,
+      "name": "CalDigit TS4 Thunderbolt 4 Dock",
+      "slug": "caldigit-ts4-thunderbolt-dock",
+      "brand": "CalDigit",
+      "categoryId": 10,
+      "category": "USB Hubs & Docks",
+      "price": 32999,
+      "discountPrice": 29999,
+      "currency": "INR",
+      "rating": 4.8,
+      "reviewCount": 234,
+      "stock": 15,
+      "sku": "DOC-001",
+      "description": "The CalDigit TS4 is the ultimate Thunderbolt 4 dock with 18 ports including 3x Thunderbolt 4, 5x USB-A, 2x USB-C, SD card, microSD, 2.5Gb Ethernet, and 98W laptop charging. It transforms any laptop into a powerful desktop workstation.",
+      "shortDescription": "Thunderbolt 4 dock with 18 ports, 98W charging, 2.5Gb Ethernet.",
+      "images": [
+        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80",
+        "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80"
+      ],
+      "specifications": {
+        "ports": "3x Thunderbolt 4, 5x USB-A 3.2, 2x USB-C 3.2, SD 4.0, microSD 4.0, 2.5GbE, Audio in/out",
+        "connection": "Thunderbolt 4 host cable (0.8m)",
+        "powerDelivery": "98W laptop charging",
+        "displaySupport": "Up to 3x displays (dual 6K or triple 4K)",
+        "compatibility": "Mac, Windows, ChromeOS laptops with Thunderbolt 4/USB-C"
+      },
+      "features": [
+        "18 ports",
+        "98W laptop charging",
+        "2.5 Gigabit Ethernet",
+        "SD 4.0 card reader",
+        " front-facing USB-C"
+      ],
+      "tags": [
+        "caldigit",
+        "thunderbolt",
+        "dock",
+        "mac",
+        "productivity"
+      ],
+      "featured": true,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-01-20T10:00:00Z"
+    },
+    {
+      "id": 42,
+      "name": "Anker 555 USB-C Hub (8-in-1)",
+      "slug": "anker-555-usb-c-hub",
+      "brand": "Anker",
+      "categoryId": 10,
+      "category": "USB Hubs & Docks",
+      "price": 4999,
+      "discountPrice": 4499,
+      "currency": "INR",
+      "rating": 4.4,
+      "reviewCount": 456,
+      "stock": 60,
+      "sku": "DOC-002",
+      "description": "The Anker 555 USB-C Hub is an affordable 8-in-1 docking solution with HDMI 4K@60Hz, 100W power delivery pass-through, Ethernet, SD/microSD slots, and USB-A ports. It's the perfect travel companion for laptops with limited ports.",
+      "shortDescription": "8-in-1 USB-C hub with 4K HDMI, 100W PD, Ethernet.",
+      "images": [
+        "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80",
+        "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=800&q=80",
+        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80"
+      ],
+      "specifications": {
+        "ports": "HDMI 2.1, USB-C PD, 2x USB-A 3.0, Ethernet (Gigabit), SD, microSD",
+        "connection": "USB-C (attached cable)",
+        "powerDelivery": "100W pass-through charging",
+        "displaySupport": "Single 4K@60Hz display",
+        "compatibility": "MacBook, Windows USB-C laptops, iPad Pro"
+      },
+      "features": [
+        "4K@60Hz HDMI",
+        "100W PD pass-through",
+        "Gigabit Ethernet",
+        "Compact aluminum design"
+      ],
+      "tags": [
+        "anker",
+        "usb-c",
+        "hub",
+        "travel",
+        "affordable"
+      ],
+      "featured": false,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-02-15T10:00:00Z"
+    },
+    {
+      "id": 43,
+      "name": "OWC Thunderbolt 4 Dock",
+      "slug": "owc-thunderbolt-4-dock",
+      "brand": "OWC",
+      "categoryId": 10,
+      "category": "USB Hubs & Docks",
+      "price": 24999,
+      "discountPrice": 22999,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 123,
+      "stock": 18,
+      "sku": "DOC-003",
+      "description": "The OWC Thunderbolt 4 Dock provides 11 powerful ports including Thunderbolt 4, USB-A, USB-C, Gigabit Ethernet, SD card, and dual display support up to 4K@60Hz. With 96W charging, it's a clean, single-cable desktop solution.",
+      "shortDescription": "Thunderbolt 4 dock with 11 ports, 96W charging, dual 4K.",
+      "images": [
+        "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=800&q=80",
+        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80"
+      ],
+      "specifications": {
+        "ports": "3x Thunderbolt 4, 3x USB-A 3.2, 1x USB-C 3.2, Gigabit Ethernet, SD, microSD, Audio",
+        "connection": "Thunderbolt 4 host cable",
+        "powerDelivery": "96W laptop charging",
+        "displaySupport": "Dual 4K@60Hz displays",
+        "compatibility": "Mac, Windows laptops with Thunderbolt 4"
+      },
+      "features": [
+        "96W charging",
+        "Dual 4K display",
+        "VESA mount compatible",
+        "Compact design"
+      ],
+      "tags": [
+        "owc",
+        "thunderbolt",
+        "dock",
+        "mac",
+        "dual-display"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-05T10:00:00Z"
+    },
+    {
+      "id": 44,
+      "name": "UGREEN 12-in-1 USB-C Hub",
+      "slug": "ugreen-12-in-1-usb-c-hub",
+      "brand": "UGREEN",
+      "categoryId": 10,
+      "category": "USB Hubs & Docks",
+      "price": 6999,
+      "discountPrice": 5999,
+      "currency": "INR",
+      "rating": 4.3,
+      "reviewCount": 267,
+      "stock": 40,
+      "sku": "DOC-004",
+      "description": "The UGREEN 12-in-1 USB-C Hub offers an impressive array of ports including dual HDMI, VGA, USB-A 3.0, Ethernet, SD/microSD, audio, and 100W PD. It supports triple display output for maximum productivity.",
+      "shortDescription": "12-in-1 USB-C hub with dual HDMI, VGA, Ethernet, 100W PD.",
+      "images": [
+        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80",
+        "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80",
+        "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=800&q=80"
+      ],
+      "specifications": {
+        "ports": "2x HDMI, VGA, 3x USB-A 3.0, USB-C PD, Gigabit Ethernet, SD, microSD, Audio",
+        "connection": "USB-C (attached cable)",
+        "powerDelivery": "100W pass-through charging",
+        "displaySupport": "Triple display (Dual HDMI + VGA)",
+        "compatibility": "MacBook, Windows USB-C laptops"
+      },
+      "features": [
+        "Triple display",
+        "100W PD",
+        "VGA included",
+        "Compact design"
+      ],
+      "tags": [
+        "ugreen",
+        "usb-c",
+        "hub",
+        "multi-display",
+        "affordable"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-12T10:00:00Z"
+    },
+    {
+      "id": 45,
+      "name": "Satechi Thunderbolt 4 Pro Dock",
+      "slug": "satechi-thunderbolt-4-pro-dock",
+      "brand": "Satechi",
+      "categoryId": 10,
+      "category": "USB Hubs & Docks",
+      "price": 21999,
+      "discountPrice": 19999,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 89,
+      "stock": 22,
+      "sku": "DOC-005",
+      "description": "The Satechi Thunderbolt 4 Pro Dock combines premium aluminum design with powerful connectivity. Offering Thunderbolt 4, USB-A, Ethernet, SD, and up to 96W charging, it's designed for MacBook users who value aesthetics and performance.",
+      "shortDescription": "Thunderbolt 4 dock with premium aluminum design, 96W charging.",
+      "images": [
+        "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80",
+        "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=800&q=80"
+      ],
+      "specifications": {
+        "ports": "3x Thunderbolt 4, 2x USB-A 3.2, Gigabit Ethernet, SD, Audio",
+        "connection": "Thunderbolt 4 host cable",
+        "powerDelivery": "96W laptop charging",
+        "displaySupport": "Up to dual 4K@60Hz displays",
+        "compatibility": "MacBook, Windows laptops with Thunderbolt 4"
+      },
+      "features": [
+        "Premium aluminum build",
+        "96W charging",
+        "Dual 4K support",
+        "Compact form factor"
+      ],
+      "tags": [
+        "satechi",
+        "thunderbolt",
+        "dock",
+        "premium",
+        "mac"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-18T10:00:00Z"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Arjun Mehta",
+      "email": "arjun@example.com",
+      "password": "password123",
+      "role": "customer",
+      "avatar": "https://i.pravatar.cc/150?u=arjun",
+      "phone": "+919876543210",
+      "createdAt": "2026-01-05T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Priya Sharma",
+      "email": "priya@example.com",
+      "password": "password123",
+      "role": "customer",
+      "avatar": "https://i.pravatar.cc/150?u=priya",
+      "phone": "+919876543211",
+      "createdAt": "2026-01-08T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Rohit Kumar",
+      "email": "rohit@example.com",
+      "password": "password123",
+      "role": "customer",
+      "avatar": "https://i.pravatar.cc/150?u=rohit",
+      "phone": "+919876543212",
+      "createdAt": "2026-01-12T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Sneha Patel",
+      "email": "sneha@example.com",
+      "password": "password123",
+      "role": "customer",
+      "avatar": "https://i.pravatar.cc/150?u=sneha",
+      "phone": "+919876543213",
+      "createdAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": 5,
+      "name": "Vikram Singh",
+      "email": "vikram@example.com",
+      "password": "password123",
+      "role": "customer",
+      "avatar": "https://i.pravatar.cc/150?u=vikram",
+      "phone": "+919876543214",
+      "createdAt": "2026-02-01T10:00:00Z"
+    },
+    {
+      "id": 6,
+      "name": "Ananya Reddy",
+      "email": "ananya@example.com",
+      "password": "password123",
+      "role": "customer",
+      "avatar": "https://i.pravatar.cc/150?u=ananya",
+      "phone": "+919876543215",
+      "createdAt": "2026-02-10T10:00:00Z"
+    },
+    {
+      "id": 7,
+      "name": "Karan Joshi",
+      "email": "karan@example.com",
+      "password": "password123",
+      "role": "customer",
+      "avatar": "https://i.pravatar.cc/150?u=karan",
+      "phone": "+919876543216",
+      "createdAt": "2026-02-20T10:00:00Z"
+    },
+    {
+      "id": 8,
+      "name": "Neha Gupta",
+      "email": "neha@example.com",
+      "password": "password123",
+      "role": "customer",
+      "avatar": "https://i.pravatar.cc/150?u=neha",
+      "phone": "+919876543217",
+      "createdAt": "2026-03-01T10:00:00Z"
+    },
+    {
+      "id": 100,
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "avatar": "https://i.pravatar.cc/150?u=admin",
+      "phone": "+919000000001",
+      "createdAt": "2025-12-01T10:00:00Z"
+    },
+    {
+      "id": 101,
+      "name": "Store Manager",
+      "email": "manager@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "avatar": "https://i.pravatar.cc/150?u=manager",
+      "phone": "+919000000002",
+      "createdAt": "2025-12-15T10:00:00Z"
+    },
+    {
+      "name": "aslam",
+      "email": "aslam@gmail.com",
+      "password": "12345678",
+      "role": "customer",
+      "createdAt": "2026-08-31T17:32:54.777Z",
+      "id": 102
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "orderNumber": "ORD-2026-0001",
+      "userId": 1,
+      "items": [
+        {
+          "productId": 1,
+          "quantity": 1,
+          "price": 189900
+        },
+        {
+          "productId": 15,
+          "quantity": 1,
+          "price": 16499
+        }
+      ],
+      "subtotal": 206399,
+      "discount": 5000,
+      "shipping": 0,
+      "tax": 36152,
+      "total": 237551,
+      "paymentMethod": "razorpay",
+      "paymentStatus": "paid",
+      "orderStatus": "delivered",
+      "shippingAddress": {
+        "fullName": "Arjun Mehta",
+        "addressLine1": "42 MG Road",
+        "addressLine2": "Near Juhu Beach",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "postalCode": "400049",
+        "country": "India"
+      },
+      "createdAt": "2026-06-15T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "orderNumber": "ORD-2026-0002",
+      "userId": 2,
+      "items": [
+        {
+          "productId": 6,
+          "quantity": 1,
+          "price": 124999
+        }
+      ],
+      "subtotal": 124999,
+      "discount": 0,
+      "shipping": 0,
+      "tax": 22500,
+      "total": 147499,
+      "paymentMethod": "razorpay",
+      "paymentStatus": "paid",
+      "orderStatus": "delivered",
+      "shippingAddress": {
+        "fullName": "Priya Sharma",
+        "addressLine1": "15 Park Street",
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "postalCode": "700016",
+        "country": "India"
+      },
+      "createdAt": "2026-07-02T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "orderNumber": "ORD-2026-0003",
+      "userId": 3,
+      "items": [
+        {
+          "productId": 11,
+          "quantity": 1,
+          "price": 44999
+        },
+        {
+          "productId": 20,
+          "quantity": 1,
+          "price": 8995
+        },
+        {
+          "productId": 16,
+          "quantity": 1,
+          "price": 9995
+        }
+      ],
+      "subtotal": 63989,
+      "discount": 3000,
+      "shipping": 0,
+      "tax": 11518,
+      "total": 72507,
+      "paymentMethod": "cod",
+      "paymentStatus": "paid",
+      "orderStatus": "shipped",
+      "shippingAddress": {
+        "fullName": "Rohit Kumar",
+        "addressLine1": "78 Koramangala 5th Block",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "postalCode": "560095",
+        "country": "India"
+      },
+      "createdAt": "2026-07-18T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "orderNumber": "ORD-2026-0004",
+      "userId": 4,
+      "items": [
+        {
+          "productId": 24,
+          "quantity": 1,
+          "price": 26990
+        },
+        {
+          "productId": 33,
+          "quantity": 1,
+          "price": 27999
+        }
+      ],
+      "subtotal": 54989,
+      "discount": 2000,
+      "shipping": 0,
+      "tax": 9898,
+      "total": 62887,
+      "paymentMethod": "razorpay",
+      "paymentStatus": "paid",
+      "orderStatus": "out_for_delivery",
+      "shippingAddress": {
+        "fullName": "Sneha Patel",
+        "addressLine1": "23 Banjara Hills Road No. 12",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "postalCode": "500034",
+        "country": "India"
+      },
+      "createdAt": "2026-08-01T10:00:00Z"
+    },
+    {
+      "id": 5,
+      "orderNumber": "ORD-2026-0005",
+      "userId": 5,
+      "items": [
+        {
+          "productId": 3,
+          "quantity": 1,
+          "price": 154999
+        },
+        {
+          "productId": 36,
+          "quantity": 2,
+          "price": 13999
+        }
+      ],
+      "subtotal": 182997,
+      "discount": 10000,
+      "shipping": 0,
+      "tax": 32939,
+      "total": 205936,
+      "paymentMethod": "razorpay",
+      "paymentStatus": "paid",
+      "orderStatus": "shipped",
+      "shippingAddress": {
+        "fullName": "Vikram Singh",
+        "addressLine1": "9 Civil Lines",
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "postalCode": "302006",
+        "country": "India"
+      },
+      "createdAt": "2026-08-05T10:00:00Z"
+    },
+    {
+      "id": 6,
+      "orderNumber": "ORD-2026-0006",
+      "userId": 6,
+      "items": [
+        {
+          "productId": 15,
+          "quantity": 1,
+          "price": 16499
+        },
+        {
+          "productId": 29,
+          "quantity": 1,
+          "price": 15995
+        },
+        {
+          "productId": 41,
+          "quantity": 1,
+          "price": 29999
+        }
+      ],
+      "subtotal": 62493,
+      "discount": 0,
+      "shipping": 0,
+      "tax": 11249,
+      "total": 73742,
+      "paymentMethod": "razorpay",
+      "paymentStatus": "paid",
+      "orderStatus": "delivered",
+      "shippingAddress": {
+        "fullName": "Ananya Reddy",
+        "addressLine1": "56 Gachibowli",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "postalCode": "500032",
+        "country": "India"
+      },
+      "createdAt": "2026-07-25T10:00:00Z"
+    },
+    {
+      "id": 7,
+      "orderNumber": "ORD-2026-0007",
+      "userId": 7,
+      "items": [
+        {
+          "productId": 2,
+          "quantity": 1,
+          "price": 132999
+        }
+      ],
+      "subtotal": 132999,
+      "discount": 5000,
+      "shipping": 0,
+      "tax": 22939,
+      "total": 150938,
+      "paymentMethod": "cod",
+      "paymentStatus": "paid",
+      "orderStatus": "packed",
+      "shippingAddress": {
+        "fullName": "Karan Joshi",
+        "addressLine1": "12 Aundh-Baner Road",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "postalCode": "411045",
+        "country": "India"
+      },
+      "createdAt": "2026-08-10T10:00:00Z"
+    },
+    {
+      "id": 8,
+      "orderNumber": "ORD-2026-0008",
+      "userId": 8,
+      "items": [
+        {
+          "productId": 37,
+          "quantity": 1,
+          "price": 8499
+        },
+        {
+          "productId": 42,
+          "quantity": 1,
+          "price": 4499
+        }
+      ],
+      "subtotal": 12998,
+      "discount": 0,
+      "shipping": 49,
+      "tax": 2340,
+      "total": 15387,
+      "paymentMethod": "razorpay",
+      "paymentStatus": "paid",
+      "orderStatus": "confirmed",
+      "shippingAddress": {
+        "fullName": "Neha Gupta",
+        "addressLine1": "34 Salt Lake Sector V",
+        "city": "Kolkata",
+        "state": "West Bengal",
+        "postalCode": "700091",
+        "country": "India"
+      },
+      "createdAt": "2026-08-15T10:00:00Z"
+    },
+    {
+      "id": 9,
+      "orderNumber": "ORD-2026-0009",
+      "userId": 1,
+      "items": [
+        {
+          "productId": 30,
+          "quantity": 1,
+          "price": 22999
+        }
+      ],
+      "subtotal": 22999,
+      "discount": 0,
+      "shipping": 0,
+      "tax": 4140,
+      "total": 27139,
+      "paymentMethod": "razorpay",
+      "paymentStatus": "refunded",
+      "orderStatus": "cancelled",
+      "shippingAddress": {
+        "fullName": "Arjun Mehta",
+        "addressLine1": "42 MG Road",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "postalCode": "400049",
+        "country": "India"
+      },
+      "createdAt": "2026-08-08T10:00:00Z"
+    },
+    {
+      "id": 10,
+      "orderNumber": "ORD-2026-0010",
+      "userId": 3,
+      "items": [
+        {
+          "productId": 4,
+          "quantity": 1,
+          "price": 129999
+        },
+        {
+          "productId": 43,
+          "quantity": 1,
+          "price": 22999
+        }
+      ],
+      "subtotal": 152998,
+      "discount": 8000,
+      "shipping": 0,
+      "tax": 27539,
+      "total": 172537,
+      "paymentMethod": "razorpay",
+      "paymentStatus": "paid",
+      "orderStatus": "pending",
+      "shippingAddress": {
+        "fullName": "Rohit Kumar",
+        "addressLine1": "78 Koramangala 5th Block",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "postalCode": "560095",
+        "country": "India"
+      },
+      "createdAt": "2026-08-20T10:00:00Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "productId": 1,
+      "userId": 1,
+      "rating": 5,
+      "title": "Best laptop for development",
+      "comment": "The M3 Pro handles Xcode, Docker, and multiple VS Code windows without breaking a sweat. Battery life is incredible for full-day coding sessions. The display is gorgeous for long hours of work.",
+      "createdAt": "2026-07-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "productId": 1,
+      "userId": 3,
+      "rating": 4,
+      "title": "Great but pricey",
+      "comment": "Incredible build quality and performance. The only reason for 4 stars is the price \u2014 it's a significant investment. But for professional development work, it's worth every penny.",
+      "createdAt": "2026-07-10T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "productId": 3,
+      "userId": 5,
+      "rating": 5,
+      "title": "Perfect for creators",
+      "comment": "The OLED display is stunning for photo and video editing. The RTX 4050 handles Premiere Pro and DaVinci Resolve smoothly. Build quality is top-notch.",
+      "createdAt": "2026-07-15T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "productId": 6,
+      "userId": 2,
+      "rating": 5,
+      "title": "Galaxy AI is a game changer",
+      "comment": "The translation and summarization features are incredibly useful. Camera quality is outstanding, especially in low light. The S Pen is still unmatched for note-taking.",
+      "createdAt": "2026-07-20T10:00:00Z"
+    },
+    {
+      "id": 5,
+      "productId": 7,
+      "userId": 4,
+      "rating": 5,
+      "title": "Premium Apple experience",
+      "comment": "The titanium build feels amazing in hand. USB-C is finally here! The 5x zoom is fantastic for product photography. iOS ecosystem integration is seamless.",
+      "createdAt": "2026-07-05T10:00:00Z"
+    },
+    {
+      "id": 6,
+      "productId": 10,
+      "userId": 6,
+      "rating": 5,
+      "title": "Incredible for coding and gaming",
+      "comment": "4K at 160Hz with Nano IPS \u2014 what more could you want? Colors are accurate for design work, and the refresh rate is buttery smooth for gaming after work hours.",
+      "createdAt": "2026-07-18T10:00:00Z"
+    },
+    {
+      "id": 7,
+      "productId": 15,
+      "userId": 1,
+      "rating": 5,
+      "title": "Best mechanical keyboard I've owned",
+      "comment": "The build quality is insane for the price. QMK support means I can customize every key. The Gateron Jupiter switches feel fantastic out of the box. Highly recommend for developers.",
+      "createdAt": "2026-06-28T10:00:00Z"
+    },
+    {
+      "id": 8,
+      "productId": 20,
+      "userId": 2,
+      "rating": 5,
+      "title": "Essential for productivity",
+      "comment": "The MagSpeed scroll wheel alone is worth the price. Logi Flow lets me switch between my Mac and Windows workstations seamlessly. Ergonomic shape is comfortable for 8+ hours of use.",
+      "createdAt": "2026-07-08T10:00:00Z"
+    },
+    {
+      "id": 9,
+      "productId": 24,
+      "userId": 3,
+      "rating": 5,
+      "title": "Perfect noise cancellation",
+      "comment": "I use these daily for focus coding in an open office. The ANC blocks out everything. Sound quality is excellent for music and calls. Multi-point connection with phone and laptop works flawlessly.",
+      "createdAt": "2026-07-12T10:00:00Z"
+    },
+    {
+      "id": 10,
+      "productId": 33,
+      "userId": 4,
+      "rating": 5,
+      "title": "Podcast quality at home",
+      "comment": "The auto-level mode is a lifesaver \u2014 no more worrying about mic technique. Sound quality rivals XLR setups at twice the price. The hybrid USB/XLR output gives upgrade flexibility.",
+      "createdAt": "2026-07-22T10:00:00Z"
+    },
+    {
+      "id": 11,
+      "productId": 36,
+      "userId": 5,
+      "rating": 5,
+      "title": "Tank-like build quality",
+      "comment": "Dropped it from desk height onto concrete and not a scratch. Read speeds are consistently over 1000MB/s. Perfect for backing up projects on the go.",
+      "createdAt": "2026-07-25T10:00:00Z"
+    },
+    {
+      "id": 12,
+      "productId": 41,
+      "userId": 6,
+      "rating": 5,
+      "title": "Single cable desktop setup",
+      "comment": "One cable to my MacBook Pro and everything just works \u2014 dual monitors, ethernet, all peripherals. The 98W charging keeps my laptop topped up. Worth every rupee for the convenience.",
+      "createdAt": "2026-07-30T10:00:00Z"
+    },
+    {
+      "id": 13,
+      "productId": 4,
+      "userId": 7,
+      "rating": 4,
+      "title": "Powerful gaming laptop",
+      "comment": "Handles every AAA game at high settings. The G14 is impressively light for a gaming laptop. Fan noise is noticeable under load but manageable. Battery life in non-gaming mode is decent.",
+      "createdAt": "2026-08-01T10:00:00Z"
+    },
+    {
+      "id": 14,
+      "productId": 2,
+      "userId": 8,
+      "rating": 4,
+      "title": "Solid business laptop",
+      "comment": "Keyboard is the best I've ever typed on. TrackPoint is a nice touch for power users. Build quality is exceptional \u2014 feels like it could survive anything. Webcam could be better.",
+      "createdAt": "2026-08-02T10:00:00Z"
+    },
+    {
+      "id": 15,
+      "productId": 11,
+      "userId": 1,
+      "rating": 4,
+      "title": "Immersive curved display",
+      "comment": "240Hz at 1440p is the sweet spot for gaming. The curve really pulls you in. Colors are vibrant thanks to QLED. Minor backlight bleed in dark scenes but nothing deal-breaking.",
+      "createdAt": "2026-08-03T10:00:00Z"
+    },
+    {
+      "id": 16,
+      "productId": 16,
+      "userId": 3,
+      "rating": 5,
+      "title": "Ultimate office keyboard",
+      "comment": "Smart illumination that turns on when my hands approach is pure magic. Easy-Switch between my three devices is seamless. Quiet, precise, and beautifully designed.",
+      "createdAt": "2026-08-04T10:00:00Z"
+    },
+    {
+      "id": 17,
+      "productId": 25,
+      "userId": 2,
+      "rating": 4,
+      "title": "Great but fit varies",
+      "comment": "ANC is excellent for commuting. Sound quality has noticeably improved over AirPods Pro 1. Spatial Audio with head tracking is impressive. Took a star off because the fit isn't perfect for my ears.",
+      "createdAt": "2026-08-05T10:00:00Z"
+    },
+    {
+      "id": 18,
+      "productId": 29,
+      "userId": 5,
+      "rating": 4,
+      "title": "Crystal clear video calls",
+      "comment": "4K quality makes me look professional on every call. The adjustable FOV is handy. Windows Hello integration is seamless. Only wish it had a wider FOV option.",
+      "createdAt": "2026-08-06T10:00:00Z"
+    },
+    {
+      "id": 19,
+      "productId": 37,
+      "userId": 4,
+      "rating": 5,
+      "title": "Fastest SSD for gaming",
+      "comment": "Game load times are virtually eliminated. The 7300MB/s read speed is the real deal. Installed it in my PS5 and it performs flawlessly. WD Dashboard software is useful for monitoring health.",
+      "createdAt": "2026-08-07T10:00:00Z"
+    },
+    {
+      "id": 20,
+      "productId": 42,
+      "userId": 6,
+      "rating": 4,
+      "title": "Great value hub",
+      "comment": "Does everything I need at a fraction of premium dock prices. 4K@60Hz output is smooth. Gets a bit warm under heavy load but doesn't affect performance. Compact and travel-friendly.",
+      "createdAt": "2026-08-08T10:00:00Z"
+    },
+    {
+      "id": 21,
+      "productId": 8,
+      "userId": 7,
+      "rating": 4,
+      "title": "Great value flagship",
+      "comment": "100W charging is incredibly fast \u2014 0 to 100% in under 30 minutes. OxygenOS is clean and snappy. Camera is good but not S24 Ultra level. At this price, it's hard to beat.",
+      "createdAt": "2026-08-09T10:00:00Z"
+    },
+    {
+      "id": 22,
+      "productId": 17,
+      "userId": 8,
+      "rating": 5,
+      "title": "RGB masterpiece",
+      "comment": "The iCUE control wheel is incredibly useful for quick adjustments. Per-key RGB with LightEdge looks stunning. OPX switches are responsive and satisfying. A bit heavy but worth it.",
+      "createdAt": "2026-08-10T10:00:00Z"
+    },
+    {
+      "id": 23,
+      "productId": 22,
+      "userId": 1,
+      "rating": 5,
+      "title": "Worth the upgrade",
+      "comment": "Coming from the original Superlight, the improvements are noticeable. LIGHTFORCE switches are clicky yet quiet. 95-hour battery life is no joke. Best gaming mouse on the market.",
+      "createdAt": "2026-08-11T10:00:00Z"
+    },
+    {
+      "id": 24,
+      "productId": 38,
+      "userId": 2,
+      "rating": 4,
+      "title": "Massive portable storage",
+      "comment": "4TB in something this small is remarkable. Transfer speeds are consistent. The IP55 rating gives peace of mind. Wish it came with a protective case included.",
+      "createdAt": "2026-08-12T10:00:00Z"
+    },
+    {
+      "id": 25,
+      "productId": 12,
+      "userId": 3,
+      "rating": 5,
+      "title": "Developer's dream monitor",
+      "comment": "The USB-C 90W PD means one cable to my laptop. KVM switch handles my work and personal machines seamlessly. IPS Black technology makes dark themes look much better than regular IPS.",
+      "createdAt": "2026-08-13T10:00:00Z"
+    },
+    {
+      "id": 26,
+      "productId": 34,
+      "userId": 4,
+      "rating": 4,
+      "title": "Versatile podcast mic",
+      "comment": "Having 4 pickup patterns is incredibly useful for different recording scenarios. Stereo mode is great for music. Blue VO!CE adds nice polish to voice. Build quality is solid metal.",
+      "createdAt": "2026-08-14T10:00:00Z"
+    },
+    {
+      "id": 27,
+      "productId": 5,
+      "userId": 5,
+      "rating": 4,
+      "title": "Beautiful 2-in-1",
+      "comment": "The OLED touchscreen is stunning and the 360-degree hinge is smooth. Perfect for presentations and note-taking. Performance is great for everyday tasks. Speakers could be louder.",
+      "createdAt": "2026-08-15T10:00:00Z"
+    },
+    {
+      "id": 28,
+      "productId": 9,
+      "userId": 6,
+      "rating": 4,
+      "title": "Camera king",
+      "comment": "Night Sight is unbelievable. The clean Android experience is refreshing. 7 years of updates gives incredible longevity. Performance is snappy for daily use and development.",
+      "createdAt": "2026-08-16T10:00:00Z"
+    },
+    {
+      "id": 29,
+      "productId": 26,
+      "userId": 7,
+      "rating": 5,
+      "title": "Best ANC I've ever heard",
+      "comment": "Immersive Audio is spatial audio done right. Noise cancellation is a noticeable step above the QC45. Comfortable for hours. The carrying case is premium. Absolutely worth the price.",
+      "createdAt": "2026-08-17T10:00:00Z"
+    },
+    {
+      "id": 30,
+      "productId": 19,
+      "userId": 8,
+      "rating": 5,
+      "title": "Typing perfection",
+      "comment": "The PBT keycaps and steel plate create a satisfying thock sound. Cherry MX Browns are perfectly balanced for typing and light gaming. Compact layout saves desk space without losing functionality.",
+      "createdAt": "2026-08-18T10:00:00Z"
+    },
+    {
+      "id": 31,
+      "productId": 39,
+      "userId": 1,
+      "rating": 3,
+      "title": "Good for the price",
+      "comment": "5TB gives plenty of space for backups. Transfer speeds are decent for an HDD. It's not fast like an SSD, but for archival and backups it does the job. A bit bulky to carry around.",
+      "createdAt": "2026-08-19T10:00:00Z"
+    },
+    {
+      "id": 32,
+      "productId": 14,
+      "userId": 2,
+      "rating": 4,
+      "title": "Productivity powerhouse",
+      "comment": "The 21:9 ratio is amazing for split-screen coding. USB-C with 60W PD means one cable setup. Only downside is 60Hz \u2014 would love a higher refresh rate option.",
+      "createdAt": "2026-08-20T10:00:00Z"
+    }
+  ],
+  "coupons": [
+    {
+      "id": 1,
+      "code": "WELCOME10",
+      "type": "percentage",
+      "value": 10,
+      "minimumOrderAmount": 2000,
+      "maximumDiscount": 2000,
+      "expiresAt": "2026-12-31T23:59:59Z",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "code": "FLAT500",
+      "type": "fixed",
+      "value": 500,
+      "minimumOrderAmount": 3000,
+      "maximumDiscount": 500,
+      "expiresAt": "2026-12-31T23:59:59Z",
+      "isActive": true
+    },
+    {
+      "id": 3,
+      "code": "FREESHIP",
+      "type": "free_shipping",
+      "value": 0,
+      "minimumOrderAmount": 500,
+      "maximumDiscount": 0,
+      "expiresAt": "2026-12-31T23:59:59Z",
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "code": "GAMER15",
+      "type": "percentage",
+      "value": 15,
+      "minimumOrderAmount": 5000,
+      "maximumDiscount": 5000,
+      "expiresAt": "2026-10-31T23:59:59Z",
+      "isActive": true
+    },
+    {
+      "id": 5,
+      "code": "DEV20",
+      "type": "percentage",
+      "value": 20,
+      "minimumOrderAmount": 10000,
+      "maximumDiscount": 8000,
+      "expiresAt": "2026-09-30T23:59:59Z",
+      "isActive": true
+    },
+    {
+      "id": 6,
+      "code": "NEWUSER",
+      "type": "fixed",
+      "value": 1000,
+      "minimumOrderAmount": 5000,
+      "maximumDiscount": 1000,
+      "expiresAt": "2026-12-31T23:59:59Z",
+      "isActive": true
+    },
+    {
+      "id": 7,
+      "code": "SUMMER25",
+      "type": "percentage",
+      "value": 25,
+      "minimumOrderAmount": 15000,
+      "maximumDiscount": 10000,
+      "expiresAt": "2026-09-15T23:59:59Z",
+      "isActive": true
+    },
+    {
+      "id": 8,
+      "code": "MONITOR100",
+      "type": "fixed",
+      "value": 1000,
+      "minimumOrderAmount": 20000,
+      "maximumDiscount": 1000,
+      "expiresAt": "2026-12-31T23:59:59Z",
+      "isActive": true
+    }
+  ]
+}
