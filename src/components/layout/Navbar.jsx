@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ShoppingCart, Heart, User, Search, Menu, X } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 import { useSelector } from 'react-redux'
+import ThemeToggle from '@/components/common/ThemeToggle'
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -13,7 +14,7 @@ const Navbar = () => {
   const wishlistCount = useSelector((state) => state.wishlist.items.length)
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-40">
+    <nav className="bg-white shadow-sm sticky top-0 z-40 dark:bg-gray-900 dark:border-b dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="text-2xl font-bold text-blue-600">
@@ -21,12 +22,13 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/products" className="text-gray-600 hover:text-gray-900">Products</Link>
-            <Link to="/categories" className="text-gray-600 hover:text-gray-900">Categories</Link>
+            <Link to="/products" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Products</Link>
+            <Link to="/categories" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Categories</Link>
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/wishlist" className="relative text-gray-600 hover:text-gray-900">
+            <ThemeToggle />
+            <Link to="/wishlist" className="relative text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
               <Heart className="h-6 w-6" />
               {wishlistCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
@@ -34,7 +36,7 @@ const Navbar = () => {
                 </span>
               )}
             </Link>
-            <Link to="/cart" className="relative text-gray-600 hover:text-gray-900">
+            <Link to="/cart" className="relative text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
               <ShoppingCart className="h-6 w-6" />
               {cartCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
@@ -44,22 +46,22 @@ const Navbar = () => {
             </Link>
             {isAuthenticated ? (
               <div className="flex items-center gap-4">
-                <Link to="/profile" className="text-gray-600 hover:text-gray-900">
+                <Link to="/profile" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                   <User className="h-6 w-6" />
                 </Link>
-                <button onClick={logout} className="text-gray-600 hover:text-gray-900 text-sm">
+                <button onClick={logout} className="text-gray-600 hover:text-gray-900 text-sm dark:text-gray-300 dark:hover:text-white">
                   Logout
                 </button>
               </div>
             ) : (
-              <Link to="/login" className="text-gray-600 hover:text-gray-900">
+              <Link to="/login" className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
                 Login
               </Link>
             )}
           </div>
 
           <button
-            className="md:hidden text-gray-600"
+            className="md:hidden text-gray-600 dark:text-gray-300"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -68,19 +70,23 @@ const Navbar = () => {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden border-t">
+        <div className="md:hidden border-t dark:border-gray-800">
           <div className="px-4 py-4 space-y-3">
-            <Link to="/products" className="block text-gray-600 hover:text-gray-900" onClick={() => setMobileMenuOpen(false)}>Products</Link>
-            <Link to="/categories" className="block text-gray-600 hover:text-gray-900" onClick={() => setMobileMenuOpen(false)}>Categories</Link>
-            <Link to="/cart" className="block text-gray-600 hover:text-gray-900" onClick={() => setMobileMenuOpen(false)}>Cart</Link>
-            <Link to="/wishlist" className="block text-gray-600 hover:text-gray-900" onClick={() => setMobileMenuOpen(false)}>Wishlist</Link>
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium text-gray-500 dark:text-gray-400">Theme</span>
+              <ThemeToggle />
+            </div>
+            <Link to="/products" className="block text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" onClick={() => setMobileMenuOpen(false)}>Products</Link>
+            <Link to="/categories" className="block text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" onClick={() => setMobileMenuOpen(false)}>Categories</Link>
+            <Link to="/cart" className="block text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" onClick={() => setMobileMenuOpen(false)}>Cart</Link>
+            <Link to="/wishlist" className="block text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" onClick={() => setMobileMenuOpen(false)}>Wishlist</Link>
             {isAuthenticated ? (
               <>
-                <Link to="/profile" className="block text-gray-600 hover:text-gray-900" onClick={() => setMobileMenuOpen(false)}>Profile</Link>
-                <button onClick={() => { logout(); setMobileMenuOpen(false) }} className="block text-gray-600 hover:text-gray-900">Logout</button>
+                <Link to="/profile" className="block text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" onClick={() => setMobileMenuOpen(false)}>Profile</Link>
+                <button onClick={() => { logout(); setMobileMenuOpen(false) }} className="block text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Logout</button>
               </>
             ) : (
-              <Link to="/login" className="block text-gray-600 hover:text-gray-900" onClick={() => setMobileMenuOpen(false)}>Login</Link>
+              <Link to="/login" className="block text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" onClick={() => setMobileMenuOpen(false)}>Login</Link>
             )}
           </div>
         </div>

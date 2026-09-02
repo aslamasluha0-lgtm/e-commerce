@@ -9,14 +9,6 @@
       "isActive": true
     },
     {
-      "id": 2,
-      "name": "Smartphones",
-      "slug": "smartphones",
-      "description": "Latest smartphones for productivity and connectivity.",
-      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80",
-      "isActive": true
-    },
-    {
       "id": 3,
       "name": "Monitors",
       "slug": "monitors",
@@ -79,6 +71,14 @@
       "description": "Expand your connectivity with USB hubs and docking stations.",
       "image": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80",
       "isActive": true
+    },
+    {
+      "id": 11,
+      "name": "Laptop Stands",
+      "slug": "laptop-stands",
+      "description": "Ergonomic and adjustable laptop stands for developers, creators, professionals, and work-from-home setups.",
+      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80",
+      "isActive": true
     }
   ],
   "products": [
@@ -99,8 +99,9 @@
       "description": "The MacBook Pro 14-inch with M3 Pro chip delivers exceptional performance for professional workflows. With up to 18 hours of battery life, a stunning Liquid Retina XDR display, and advanced thermal design, it handles demanding tasks like video editing, 3D rendering, and software development with ease.",
       "shortDescription": "14-inch MacBook Pro with M3 Pro chip, 18GB RAM, 512GB SSD.",
       "images": [
-        "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80",
-        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&q=80"
+        "https://www.imagineonline.store/cdn/shop/files/MacBook_Pro_14-inch_M4_chip_Space_Black_PDP_Image_Position_1__en-IN_fbfef1b9-211c-4aed-8e05-ab0d8cf998bb.jpg?v=1760101814",
+        "https://inspireonline.in/cdn/shop/files/MacBook_Pro_16-inch_M4_Pro_or_Max_chip_Space_Black_PDP_Image_Position_2__en-IN_7ed08712-3f80-4824-9332-492cb9da44f3.jpg?v=1730312666&width=1445",
+        "https://www.designinfo.in/wp-content/uploads/2025/05/Apple-14-MacBook-Pro-M4-Space-Black-3-1.webp"
       ],
       "specifications": {
         "processor": "Apple M3 Pro 11-core",
@@ -151,9 +152,9 @@
       "description": "The ThinkPad X1 Carbon Gen 11 is an ultra-lightweight business laptop with enterprise-grade security features. Powered by 13th Gen Intel Core processors, it offers exceptional keyboard comfort, a brilliant 2.8K OLED display option, and all-day battery life for mobile professionals.",
       "shortDescription": "14-inch ultralight business laptop with Intel Core i7, 16GB RAM.",
       "images": [
-        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&q=80",
-        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&q=80",
-        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&q=80"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQczcTv92ljtISad-Y-uAPDIyX76koE1wW6tvq-zMpvphCSQ4jRBT1QehM&s=10",
+        "https://m.media-amazon.com/images/I/616lsDxAaCL.jpg",
+        "https://5.imimg.com/data5/SELLER/Default/2024/3/403284749/GO/CO/ZB/8268091/thinkpad-x1-carbon-gen-11-21hms00000-500x500.png"
       ],
       "specifications": {
         "processor": "Intel Core i7-1365U",
@@ -203,8 +204,9 @@
       "description": "The Dell XPS 15 9530 combines stunning design with powerful performance. Featuring a 15.6-inch InfinityEdge display, 13th Gen Intel Core processors, and NVIDIA GeForce RTX graphics, it's perfect for developers and creators who need a balance of portability and power.",
       "shortDescription": "15.6-inch premium laptop with Intel i7, RTX 4050, OLED display.",
       "images": [
-        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&q=80",
-        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&q=80"
+        "https://pctech.co.in/image/cache/catalog/Laptops/DELL/dell-xps-15-9530-laptop-05-800x800w.jpg",
+        "https://www.expertsystems.co.in/wp-content/uploads/2023/12/ICON-31-500x500.jpg",
+        "https://m.media-amazon.com/images/I/61vlgM-GutL._AC_UF350,350_QL80_.jpg"
       ],
       "specifications": {
         "processor": "Intel Core i7-13700H",
@@ -254,9 +256,9 @@
       "description": "The ASUS ROG Zephyrus G14 packs incredible gaming and creative performance into an ultra-portable 14-inch form factor. With AMD Ryzen 9 and NVIDIA RTX graphics, a 165Hz display, and the iconic AniMe Matrix LED lid, it's built for gamers and creators on the move.",
       "shortDescription": "14-inch gaming laptop with Ryzen 9, RTX 4060, 165Hz display.",
       "images": [
-        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&q=80",
-        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80",
-        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80"
+        "https://in.store.asus.com/media/catalog/product/r/f/rf-ga403um_eclps_gry_sngl_lght_kbd_bd2_9__1.jpg",
+        "https://in.store.asus.com/media/catalog/product/r/f/rf-ga402rk_expls_gry_anm_mtrx_1zone_rgb_kbd_3_.jpg",
+        "https://cdn.mos.cms.futurecdn.net/v2/t:0,l:420,cw:1080,ch:1080,q:80,w:1080/fc2JwcfsxpvkvNsuWKwkUn.jpg"
       ],
       "specifications": {
         "processor": "AMD Ryzen 9 7940HS",
@@ -306,8 +308,9 @@
       "description": "The HP Spectre x360 14 is a versatile 2-in-1 convertible laptop with a stunning OLED touchscreen. It features 13th Gen Intel Core processors, a 360-degree hinge for tablet mode, and premium build quality with gem-cut accents.",
       "shortDescription": "14-inch 2-in-1 convertible with Intel i7, OLED touchscreen.",
       "images": [
-        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80",
-        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80"
+        "https://varietyinfotech.com/wp-content/uploads/AE0C2PA-8_T1728536005.jpg",
+        "https://images.moneycontrol.com/static-mcnews/2021/08/HP-Spectre-x360-1.jpg?impolicy=website&width=1600&height=900https://images.moneycontrol.com/static-mcnews/2021/08/HP-Spectre-x360-1.jpg?impolicy=website&width=1600&height=900",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1HpPrcooCq653qSL7LJYxHY4It_9idMx-kVaX3U-V7S0wLGOeFWdOOx8&s=10"
       ],
       "specifications": {
         "processor": "Intel Core i7-1355U",
@@ -341,202 +344,6 @@
       "createdAt": "2026-02-28T10:00:00Z"
     },
     {
-      "id": 6,
-      "name": "Samsung Galaxy S24 Ultra",
-      "slug": "samsung-galaxy-s24-ultra",
-      "brand": "Samsung",
-      "categoryId": 2,
-      "category": "Smartphones",
-      "price": 134999,
-      "discountPrice": 124999,
-      "currency": "INR",
-      "rating": 4.7,
-      "reviewCount": 487,
-      "stock": 30,
-      "sku": "PHN-001",
-      "description": "The Samsung Galaxy S24 Ultra is the ultimate flagship smartphone with built-in S Pen, a 200MP camera system, and Galaxy AI features. Its titanium frame and flat display make it the most refined Ultra yet, perfect for productivity and creativity on the go.",
-      "shortDescription": "6.8-inch flagship with S Pen, 200MP camera, Snapdragon 8 Gen 3.",
-      "images": [
-        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800&q=80",
-        "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&q=80",
-        "https://images.unsplash.com/photo-1598965402089-897ce52e8355?w=800&q=80"
-      ],
-      "specifications": {
-        "processor": "Snapdragon 8 Gen 3 for Galaxy",
-        "ram": "12GB",
-        "storage": "256GB",
-        "display": "6.8-inch Dynamic AMOLED 2X",
-        "camera": "200MP + 50MP + 12MP + 10MP",
-        "battery": "5000mAh",
-        "charging": "45W Wired, 15W Wireless",
-        "operatingSystem": "Android 14, One UI 6.1"
-      },
-      "features": [
-        "Built-in S Pen",
-        "Galaxy AI",
-        "200MP main camera",
-        "Titanium frame",
-        "Corning Gorilla Armor"
-      ],
-      "tags": [
-        "samsung",
-        "galaxy",
-        "flagship",
-        "s-pen",
-        "ai"
-      ],
-      "featured": true,
-      "trending": true,
-      "isActive": true,
-      "createdAt": "2026-01-25T10:00:00Z"
-    },
-    {
-      "id": 7,
-      "name": "iPhone 15 Pro Max",
-      "slug": "iphone-15-pro-max",
-      "brand": "Apple",
-      "categoryId": 2,
-      "category": "Smartphones",
-      "price": 159900,
-      "discountPrice": 152900,
-      "currency": "INR",
-      "rating": 4.8,
-      "reviewCount": 623,
-      "stock": 25,
-      "sku": "PHN-002",
-      "description": "The iPhone 15 Pro Max features a titanium design, the A17 Pro chip, and a powerful camera system with 5x optical zoom. It's the most advanced iPhone ever, ideal for developers testing iOS apps and professionals who demand the best.",
-      "shortDescription": "6.7-inch iPhone with A17 Pro, titanium design, 5x optical zoom.",
-      "images": [
-        "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&q=80",
-        "https://images.unsplash.com/photo-1598965402089-897ce52e8355?w=800&q=80"
-      ],
-      "specifications": {
-        "processor": "Apple A17 Pro",
-        "ram": "8GB",
-        "storage": "256GB",
-        "display": "6.7-inch Super Retina XDR",
-        "camera": "48MP + 12MP + 12MP",
-        "battery": "Up to 33 hours video playback",
-        "charging": "27W Wired, 15W MagSafe",
-        "operatingSystem": "iOS 17"
-      },
-      "features": [
-        "Titanium design",
-        "Action Button",
-        "USB-C",
-        "5x optical zoom",
-        "ProRes video"
-      ],
-      "tags": [
-        "apple",
-        "iphone",
-        "flagship",
-        "pro",
-        "camera"
-      ],
-      "featured": true,
-      "trending": true,
-      "isActive": true,
-      "createdAt": "2026-01-10T10:00:00Z"
-    },
-    {
-      "id": 8,
-      "name": "OnePlus 12",
-      "slug": "oneplus-12",
-      "brand": "OnePlus",
-      "categoryId": 2,
-      "category": "Smartphones",
-      "price": 64999,
-      "discountPrice": 59999,
-      "currency": "INR",
-      "rating": 4.5,
-      "reviewCount": 234,
-      "stock": 40,
-      "sku": "PHN-003",
-      "description": "The OnePlus 12 offers flagship performance at a competitive price. Featuring the Snapdragon 8 Gen 3, a Hasselblad-tuned camera system, and 100W SUPERVOOC charging, it delivers a premium experience without the premium price tag.",
-      "shortDescription": "6.82-inch flagship killer with Snapdragon 8 Gen 3, 100W charging.",
-      "images": [
-        "https://images.unsplash.com/photo-1598965402089-897ce52e8355?w=800&q=80",
-        "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&q=80",
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80"
-      ],
-      "specifications": {
-        "processor": "Snapdragon 8 Gen 3",
-        "ram": "12GB",
-        "storage": "256GB",
-        "display": "6.82-inch LTPO AMOLED",
-        "camera": "50MP + 48MP + 64MP",
-        "battery": "5400mAh",
-        "charging": "100W SUPERVOOC, 50W Wireless",
-        "operatingSystem": "Android 14, OxygenOS 14"
-      },
-      "features": [
-        "Hasselblad camera",
-        "100W SUPERVOOC",
-        "IP65 rating",
-        "Alert Slider"
-      ],
-      "tags": [
-        "oneplus",
-        "flagship-killer",
-        "fast-charging",
-        "value"
-      ],
-      "featured": false,
-      "trending": true,
-      "isActive": true,
-      "createdAt": "2026-02-01T10:00:00Z"
-    },
-    {
-      "id": 9,
-      "name": "Google Pixel 8 Pro",
-      "slug": "google-pixel-8-pro",
-      "brand": "Google",
-      "categoryId": 2,
-      "category": "Smartphones",
-      "price": 89999,
-      "discountPrice": 84999,
-      "currency": "INR",
-      "rating": 4.6,
-      "reviewCount": 178,
-      "stock": 22,
-      "sku": "PHN-004",
-      "description": "The Google Pixel 8 Pro showcases the best of Android with the Tensor G3 chip, an advanced AI-powered camera system, and 7 years of OS updates. Its Magic Eraser, Best Take, and Night Sight features make it a photographer's dream.",
-      "shortDescription": "6.7-inch Pixel with Tensor G3, AI camera, 7 years of updates.",
-      "images": [
-        "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&q=80",
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&q=80"
-      ],
-      "specifications": {
-        "processor": "Google Tensor G3",
-        "ram": "12GB",
-        "storage": "128GB",
-        "display": "6.7-inch LTPO OLED",
-        "camera": "50MP + 48MP + 48MP",
-        "battery": "5050mAh",
-        "charging": "30W Wired, 23W Wireless",
-        "operatingSystem": "Android 14"
-      },
-      "features": [
-        "Magic Eraser",
-        "Best Take",
-        "7 years of updates",
-        "Temperature sensor",
-        "Night Sight"
-      ],
-      "tags": [
-        "google",
-        "pixel",
-        "ai",
-        "camera",
-        "stock-android"
-      ],
-      "featured": false,
-      "trending": false,
-      "isActive": true,
-      "createdAt": "2026-02-15T10:00:00Z"
-    },
-    {
       "id": 10,
       "name": "LG UltraGear 27GP950-B",
       "slug": "lg-ultragear-27gp950",
@@ -553,9 +360,9 @@
       "description": "The LG UltraGear 27GP950-B is a 27-inch 4K Nano IPS gaming monitor with a 160Hz refresh rate and 1ms response time. It covers 98% of DCI-P3 color space and supports HDMI 2.1, making it ideal for both gaming and color-accurate creative work.",
       "shortDescription": "27-inch 4K 160Hz Nano IPS gaming monitor with HDMI 2.1.",
       "images": [
-        "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&q=80",
-        "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800&q=80",
-        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800&q=80"
+        "https://www.lg.com/content/dam/channel/wcms/hk_en/images/monitor/27gp950-b_ahk_echk_hk_en_c/gallery/large03.jpg",
+        "https://www.boostboxx.com/en/media/catalog/product/cache/9/image_product_feed/1000x1000/9df78eab33525d08d6e5fb8d27136e95/2/7/27zoll-68cm_lg-27gr93u-b_4k_3000px.jpg",
+        "https://m.media-amazon.com/images/I/616YTEGoPyL.jpg"
       ],
       "specifications": {
         "size": "27-inch",
@@ -602,8 +409,9 @@
       "description": "The Samsung Odyssey G7 features a 32-inch 1440p curved VA panel with a blazing 240Hz refresh rate and 1ms response time. Its 1000R curvature provides an immersive gaming experience, while the QLED technology delivers vivid colors.",
       "shortDescription": "32-inch 1440p 240Hz curved QLED gaming monitor.",
       "images": [
-        "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800&q=80",
-        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800&q=80"
+        "https://5.imimg.com/data5/SELLER/Default/2024/1/380058934/LP/VM/EU/206362967/samsung-odyssey-neo-g7-ls32bg750nwxxl-32-inch-curved-gaming-monitor-1-250x250.jpg",
+        "https://images.samsung.com/is/image/samsung/p6pim/us/ls32bg752nnxgo/gallery/us-gaming-ls32bg752nnxgo----inch-odyssey-neo-g--black-552005606?$product-details-jpg$",
+        "https://images.samsung.com/is/image/samsung/ca-feature-core-lighting-design-255353068?$FB_TYPE_A_MO_JPG$"
       ],
       "specifications": {
         "size": "32-inch",
@@ -650,9 +458,9 @@
       "description": "The Dell UltraSharp U2723QE is a 27-inch 4K USB-C Hub monitor designed for professionals. It features IPS Black technology for deeper blacks, 100% sRGB and 98% DCI-P3 coverage, and a built-in KVM switch for seamless multi-device workflows.",
       "shortDescription": "27-inch 4K USB-C Hub monitor with IPS Black, KVM switch.",
       "images": [
-        "https://images.unsplash.com/photo-1562976540-1502c2145186?w=800&q=80",
-        "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&q=80",
-        "https://images.unsplash.com/photo-1583445095369-9c651e7e5d34?w=800&q=80"
+        "https://lastbestprice.com/wp-content/uploads/2024/09/Dell-UltraSharp-27-4K-USB-C-Hub-Monitor-U2723QE.png",
+        "https://m.media-amazon.com/images/I/71MPyLWBRsL.jpg",
+        "https://www.bhphotovideo.com/cdn-cgi/image/fit=scale-down,width=500,quality=95/https://www.bhphotovideo.com/images/images500x500/dell_27_ultrasharp_u2723qe_4k_1745409216_1860558.jpg"
       ],
       "specifications": {
         "size": "27-inch",
@@ -699,8 +507,9 @@
       "description": "The ASUS ProArt PA278QV is a 27-inch WQHD monitor designed for creative professionals on a budget. It offers accurate colors with 100% sRGB and Rec. 709 coverage, factory-calibrated accuracy, and a ergonomic stand for comfortable long sessions.",
       "shortDescription": "27-inch WQHD ProArt monitor with factory-calibrated colors.",
       "images": [
-        "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&q=80",
-        "https://images.unsplash.com/photo-1583445095369-9c651e7e5d34?w=800&q=80"
+        "https://www.pcstudio.in/wp-content/uploads/2025/01/Asus-ProArt-Display-PA278QV-SRGB-Professional-Monitor-4-1.webp",
+        "https://dellstatic.luroconnect.com/media/catalog/product/cache/74ae05ef3745aec30d7f5a287debd7f5/m/o/monitor-dell-plus-s2725dc-gy-gallery-5.png",
+        "https://dellstatic.luroconnect.com/media/catalog/product/cache/74ae05ef3745aec30d7f5a287debd7f5/m/o/monitor-dell-plus-s2725dc-gy-gallery-6.png"
       ],
       "specifications": {
         "size": "27-inch",
@@ -747,9 +556,9 @@
       "description": "The LG 34WN80C-B is a 34-inch UltraWide WQHD monitor perfect for multitasking and coding. With a 21:9 aspect ratio, USB-C connectivity with 60W power delivery, and On-Screen Control software, it boosts productivity for developers and professionals.",
       "shortDescription": "34-inch UltraWide WQHD monitor with USB-C 60W PD.",
       "images": [
-        "https://images.unsplash.com/photo-1583445095369-9c651e7e5d34?w=800&q=80",
-        "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&q=80",
-        "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800&q=80"
+        "https://m.media-amazon.com/images/I/81WBbFOEHwL.jpg",
+        "https://www.lg.com/content/dam/channel/wcms/hk_en/images/monitor/34wn80c-b_ahk_echk_hk_en_c/gallery/large09.jpg?w=800",
+        "https://www1.yohohongkong.com/images/upload/Proddb/1602832799129634064.jpg"
       ],
       "specifications": {
         "size": "34-inch",
@@ -796,8 +605,9 @@
       "description": "The Keychron Q1 Pro is a wireless custom mechanical keyboard with a full aluminum body, hot-swappable switches, and QMK/VIA support. It offers Bluetooth and wired connectivity, south-facing RGB, and a premium typing experience for developers and enthusiasts.",
       "shortDescription": "75% wireless custom mechanical keyboard with aluminum body.",
       "images": [
-        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80",
-        "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=800&q=80"
+        "https://m.media-amazon.com/images/I/61CGMmIiBjL.jpg",
+        "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800&q=80",
+        "https://m.media-amazon.com/images/I/71I7RB7I8XL._AC_UF1000,1000_QL80_.jpg"
       ],
       "specifications": {
         "switchType": "Gateron Jupiter Banana (Hot-swappable)",
@@ -842,9 +652,9 @@
       "description": "The Logitech MX Keys S is an advanced wireless keyboard designed for professionals. With perfect stroke keys, smart illumination, Easy-Switch between devices, and multi-computer control via Logi Flow, it's the ultimate productivity keyboard.",
       "shortDescription": "Advanced wireless keyboard with smart backlighting and multi-device.",
       "images": [
-        "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=800&q=80",
-        "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&q=80",
-        "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80"
+        "https://m.media-amazon.com/images/I/712syj7-otL.jpg",
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80",
+        "https://www.unboxify.in/cdn/shop/files/B0C6K19YBH_8.jpg?v=1760723440"
       ],
       "specifications": {
         "switchType": "Membrane (Scissor-switch)",
@@ -889,8 +699,9 @@
       "description": "The Corsair K100 RGB is a premium mechanical gaming keyboard with OPX optical switches, a programmable iCUE control wheel, and per-key RGB lighting. Its 4000Hz polling rate and dedicated macro keys make it the top choice for gamers and power users.",
       "shortDescription": "Premium mechanical keyboard with iCUE control wheel, 4000Hz polling.",
       "images": [
-        "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&q=80",
-        "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80"
+        "https://m.media-amazon.com/images/I/71QCqjg5j8L.jpg",
+        "https://i0.wp.com/www.nilkanthinfotech.co.in/wp-content/uploads/2025/04/81QdkINNGvL._SL1500_.jpg?fit=1500%2C1500&ssl=1",
+        "https://vlebazaar.in/image/cache/catalog//B08Y78FFR9/Corsair-K100-RGB-Optical-Mechanical-USB-Gaming-Keyboard-with-OPX-RGB-Optical-Mec-7-500x500.jpg.webp"
       ],
       "specifications": {
         "switchType": "Corsair OPX Optical-Mechanical",
@@ -935,9 +746,9 @@
       "description": "The Royal Kludge RK84 is an affordable 75% wireless mechanical keyboard that punches above its price. With triple-mode connectivity, hot-swappable sockets, and impressive RGB, it's the best budget entry point into custom mechanical keyboards.",
       "shortDescription": "Budget 75% wireless mechanical keyboard, hot-swappable.",
       "images": [
-        "https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80",
-        "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&q=80",
-        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80"
+        "https://m.media-amazon.com/images/I/61vAUrxGmZL.jpg",
+        "https://rkgamingstore.com/cdn/shop/products/75_TripleModeBT5.02.4GUSB-CHotSwappableMechanicalKeyboard_16.jpg?v=1748587887&width=1946",
+        "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800&q=80"
       ],
       "specifications": {
         "switchType": "RK Brown (Hot-swappable)",
@@ -982,8 +793,9 @@
       "description": "The Leopold FC660M PD is a compact 66-key mechanical keyboard revered by typing enthusiasts. With premium PBT double-shot keycaps, a solid steel plate, and Cherry MX switches, it delivers an unmatched typing feel in a space-saving layout.",
       "shortDescription": "66-key compact mechanical keyboard with Cherry MX switches.",
       "images": [
-        "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&q=80",
-        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80"
+        "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800&q=80",
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80",
+        "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&q=80"
       ],
       "specifications": {
         "switchType": "Cherry MX Brown (or Red/Blue)",
@@ -1028,9 +840,9 @@
       "description": "The Logitech MX Master 3S is the flagship ergonomic mouse for professionals. With an 8000 DPI sensor, quiet clicks, MagSpeed scroll wheel, and Logi Flow cross-computer control, it's the gold standard for productivity mice used by developers worldwide.",
       "shortDescription": "Ergonomic wireless mouse with 8000 DPI, MagSpeed scroll, USB-C.",
       "images": [
-        "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=800&q=80",
         "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&q=80",
-        "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800&q=80"
+        "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=800&q=80",
+        "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&q=80"
       ],
       "specifications": {
         "sensor": "Logitech 8000 DPI",
@@ -1076,7 +888,8 @@
       "description": "The Razer DeathAdder V3 is an ultra-lightweight ergonomic gaming mouse weighing just 59g. Featuring the Focus Pro 30K optical sensor and Gen-3 optical switches, it delivers precision and speed for competitive gaming and fast-paced work.",
       "shortDescription": "Ultra-lightweight 59g ergonomic mouse with 30K DPI sensor.",
       "images": [
-        "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&q=80",
+        "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&q=80",
+        "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=800&q=80",
         "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800&q=80"
       ],
       "specifications": {
@@ -1122,9 +935,9 @@
       "description": "The Logitech G Pro X Superlight 2 is the lightest esports mouse from Logitech at just 60g. With the HERO 2 sensor, LIGHTFORCE hybrid switches, and 95-hour battery, it's the weapon of choice for professional gamers and fast-click demanding tasks.",
       "shortDescription": "60g wireless esports mouse with HERO 2 sensor, 95-hour battery.",
       "images": [
-        "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800&q=80",
-        "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=800&q=80",
-        "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&q=80"
+        "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800&q=80",
+        "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&q=80",
+        "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&q=80"
       ],
       "specifications": {
         "sensor": "HERO 2",
@@ -1169,8 +982,9 @@
       "description": "The Razer Viper V3 HyperSpeed is a lightweight wireless gaming mouse with a symmetrical design. Featuring the Focus Pro 30K sensor, Gen-3 optical switches, and up to 230 hours of battery life, it offers exceptional value for competitive gamers.",
       "shortDescription": "Lightweight wireless mouse with 30K sensor, 230-hour battery.",
       "images": [
-        "https://images.unsplash.com/photo-1526738549149-8e07eca6c147?w=800&q=80",
-        "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&q=80"
+        "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&q=80",
+        "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800&q=80",
+        "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=800&q=80"
       ],
       "specifications": {
         "sensor": "Razer Focus Pro 30K",
@@ -1217,7 +1031,7 @@
       "images": [
         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80",
         "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80",
-        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80"
+        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&q=80"
       ],
       "specifications": {
         "driver": "30mm",
@@ -1263,8 +1077,9 @@
       "description": "The Apple AirPods Pro 2 with USB-C feature the H2 chip for computational audio, up to 2x more noise cancellation than the previous generation, and a personalized Spatial Audio experience. Perfect for seamless Apple ecosystem integration.",
       "shortDescription": "ANC earbuds with H2 chip, USB-C, Adaptive Transparency.",
       "images": [
-        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80",
-        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80"
+        "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=800&q=80",
+        "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=800&q=80",
+        "https://images.unsplash.com/photo-1558756520-22cfe5d382ca?w=800&q=80"
       ],
       "specifications": {
         "driver": "Apple-designed custom driver",
@@ -1310,9 +1125,9 @@
       "description": "The Bose QuietComfort Ultra Headphones deliver the best noise cancellation from Bose with Immersive Audio support. Featuring CustomTune sound calibration, a 24-hour battery life, and luxurious comfort, they redefine premium audio.",
       "shortDescription": "Premium ANC headphones with Immersive Audio, CustomTune.",
       "images": [
-        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80",
-        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&q=80",
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80"
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80",
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80",
+        "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=800&q=80"
       ],
       "specifications": {
         "driver": "Bose proprietary",
@@ -1357,7 +1172,8 @@
       "description": "The HyperX Cloud III Wireless gaming headset delivers immersive DTS Headphone:X audio with 53mm drivers, up to 120 hours of wireless battery life, and signature HyperX comfort. It's built for marathon gaming and streaming sessions.",
       "shortDescription": "Wireless gaming headset with DTS, 53mm drivers, 120-hour battery.",
       "images": [
-        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&q=80",
+        "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=800&q=80",
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80",
         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80"
       ],
       "specifications": {
@@ -1403,9 +1219,9 @@
       "description": "The Sennheiser Momentum 4 Wireless headphones offer audiophile-grade sound quality with Adaptive Noise Cancellation and a remarkable 60-hour battery life. Their minimalist design and premium build make them perfect for discerning listeners.",
       "shortDescription": "Audiophile ANC headphones with 60-hour battery, adaptive ANC.",
       "images": [
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800&q=80",
         "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80",
-        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80",
-        "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80"
+        "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a?w=800&q=80"
       ],
       "specifications": {
         "driver": "42mm Dynamic",
@@ -1450,13 +1266,14 @@
       "description": "The Logitech Brio 4K Ultra HD webcam delivers cinematic video quality with 4K recording, HDR, and a noise-cancelling dual microphone. It's the premium choice for video calls, streaming, and content creation.",
       "shortDescription": "4K Ultra HD webcam with HDR, noise-cancelling mic, Windows Hello.",
       "images": [
-        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80",
-        "https://images.unsplash.com/photo-1541140134513-85a161dc4a00?w=800&q=80"
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
+        "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80",
+        "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=800&q=80"
       ],
       "specifications": {
         "resolution": "4K Ultra HD (4096 x 2160)",
         "fps": "30fps (4K), 60fps (1080p)",
-        "fieldOfView": "90\u00b0 / 78\u00b0 / 65\u00b0 adjustable",
+        "fieldOfView": "90° / 78° / 65° adjustable",
         "microphone": "Dual omni-directional with noise cancellation",
         "connection": "USB-C"
       },
@@ -1495,14 +1312,14 @@
       "description": "The Elgato Facecam Pro is the world's first 4K60 webcam. With a Sony STARVIS sensor, uncompressed 4K video at 60fps, and advanced color controls via Elgato Camera Hub, it's built for streamers and content creators who demand the best.",
       "shortDescription": "4K60 webcam with Sony STARVIS sensor, uncompressed video.",
       "images": [
-        "https://images.unsplash.com/photo-1541140134513-85a161dc4a00?w=800&q=80",
-        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&q=80",
-        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80"
+        "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80",
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
+        "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=800&q=80"
       ],
       "specifications": {
         "resolution": "4K UHD (3840 x 2160)",
         "fps": "60fps (4K), 60fps (1080p/720p)",
-        "fieldOfView": "82\u00b0",
+        "fieldOfView": "82°",
         "microphone": "Built-in dual noise-reducing",
         "connection": "USB-C"
       },
@@ -1541,13 +1358,14 @@
       "description": "The Razer Kiyo Pro Ultra features a large Sony STARVIS 2 sensor for exceptional low-light performance. With 4K 30fps or 1080p 60fps, HDR support, and an adaptive light sensor, it delivers studio-quality video in any lighting condition.",
       "shortDescription": "4K webcam with Sony STARVIS 2, adaptive light sensor, HDR.",
       "images": [
-        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&q=80",
-        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80"
+        "https://images.unsplash.com/photo-1588702547923-7093a6c3ba33?w=800&q=80",
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
+        "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80"
       ],
       "specifications": {
         "resolution": "4K UHD (3840 x 2160)",
         "fps": "30fps (4K), 60fps (1080p)",
-        "fieldOfView": "81.9\u00b0",
+        "fieldOfView": "81.9°",
         "microphone": "Built-in omnidirectional mic",
         "connection": "USB-A"
       },
@@ -1586,14 +1404,14 @@
       "description": "The Anker PowerConf C200 is an affordable 2K webcam with AI-powered noise cancellation, auto-framing, and a privacy shutter. It offers excellent value for remote workers and students who need reliable video quality for daily calls.",
       "shortDescription": "Budget 2K webcam with AI noise cancellation, privacy shutter.",
       "images": [
-        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80",
-        "https://images.unsplash.com/photo-1541140134513-85a161dc4a00?w=800&q=80",
-        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&q=80"
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
+        "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80",
+        "https://images.unsplash.com/photo-1552168324-d612d77725e3?w=800&q=80"
       ],
       "specifications": {
         "resolution": "2K QHD (2560 x 1440)",
         "fps": "30fps (2K), 30fps (1080p)",
-        "fieldOfView": "95\u00b0",
+        "fieldOfView": "95°",
         "microphone": "Dual microphones with AI noise cancellation",
         "connection": "USB-C"
       },
@@ -1633,6 +1451,7 @@
       "shortDescription": "Hybrid XLR/USB dynamic microphone with built-in DSP for podcasting.",
       "images": [
         "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80",
+        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80",
         "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80"
       ],
       "specifications": {
@@ -1678,9 +1497,9 @@
       "description": "The Blue Yeti X is a professional USB condenser microphone with 4 pickup patterns, a built-in DSP, and a high-res LED meter. It's the go-to microphone for podcasters, streamers, and content creators seeking broadcast-quality sound.",
       "shortDescription": "USB condenser mic with 4 pickup patterns, built-in DSP.",
       "images": [
-        "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80",
-        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
-        "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80"
+        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80",
+        "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80",
+        "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80"
       ],
       "specifications": {
         "type": "Condenser",
@@ -1725,8 +1544,9 @@
       "description": "The Rode PodMic USB is a versatile dynamic microphone with both USB and XLR outputs. Designed for podcasting and streaming, it features an internal pop filter, integrated swing mount adapter, and broadcast-quality audio at an accessible price.",
       "shortDescription": "Dynamic podcast mic with USB/XLR, internal pop filter.",
       "images": [
-        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&q=80",
-        "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80"
+        "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&q=80",
+        "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800&q=80",
+        "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=800&q=80"
       ],
       "specifications": {
         "type": "Dynamic",
@@ -1771,8 +1591,8 @@
       "shortDescription": "2TB rugged portable SSD, IP65 rated, 1050MB/s read speed.",
       "images": [
         "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80",
-        "https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=800&q=80",
-        "https://images.unsplash.com/photo-1494809610410-160faaed4de0?w=800&q=80"
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80"
       ],
       "specifications": {
         "capacity": "2TB",
@@ -1817,8 +1637,9 @@
       "description": "The WD Black SN850X is a high-performance NVMe SSD designed for gamers and content creators. With sequential read speeds up to 7300MB/s, PCIe Gen 4 interface, and optional heatsink, it delivers blazing-fast load times and file transfers.",
       "shortDescription": "1TB PCIe Gen 4 NVMe SSD, 7300MB/s read, gaming optimized.",
       "images": [
-        "https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=800&q=80",
-        "https://images.unsplash.com/photo-1494809610410-160faaed4de0?w=800&q=80"
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80",
+        "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80"
       ],
       "specifications": {
         "capacity": "1TB",
@@ -1863,9 +1684,9 @@
       "description": "The Crucial X9 Pro 4TB portable SSD offers massive storage in a compact, rugged design. With read speeds up to 1050MB/s, IP55 water and dust resistance, and drop protection up to 2 meters, it's perfect for creators handling large video files.",
       "shortDescription": "4TB portable SSD, IP55 rated, 1050MB/s, compact design.",
       "images": [
-        "https://images.unsplash.com/photo-1494809610410-160faaed4de0?w=800&q=80",
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
-        "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80"
+        "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80",
+        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
       ],
       "specifications": {
         "capacity": "4TB",
@@ -1910,8 +1731,9 @@
       "description": "The Seagate One Touch 5TB is a sleek portable HDD offering massive storage capacity at an affordable price. With USB 3.0 connectivity, password protection, and backup software, it's the ideal solution for bulk data storage and archival.",
       "shortDescription": "5TB portable USB 3.0 HDD with backup software, password protection.",
       "images": [
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
-        "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80"
+        "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80",
+        "https://images.unsplash.com/photo-1494809610410-160faaed4de0?w=800&q=80",
+        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80"
       ],
       "specifications": {
         "capacity": "5TB",
@@ -1956,9 +1778,9 @@
       "description": "The Kingston DataTraveler Max 256GB is a high-performance USB 3.2 Gen 2 flash drive with read speeds up to 1000MB/s. Its compact design with a keyring loop makes it perfect for carrying large files between workstations.",
       "shortDescription": "256GB USB 3.2 Gen 2 flash drive, 1000MB/s read speed.",
       "images": [
-        "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80",
+        "https://images.unsplash.com/photo-1494809610410-160faaed4de0?w=800&q=80",
         "https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=800&q=80",
-        "https://images.unsplash.com/photo-1494809610410-160faaed4de0?w=800&q=80"
+        "https://images.unsplash.com/photo-1553406830-ef2513450d76?w=800&q=80"
       ],
       "specifications": {
         "capacity": "256GB",
@@ -2003,8 +1825,9 @@
       "description": "The CalDigit TS4 is the ultimate Thunderbolt 4 dock with 18 ports including 3x Thunderbolt 4, 5x USB-A, 2x USB-C, SD card, microSD, 2.5Gb Ethernet, and 98W laptop charging. It transforms any laptop into a powerful desktop workstation.",
       "shortDescription": "Thunderbolt 4 dock with 18 ports, 98W charging, 2.5Gb Ethernet.",
       "images": [
-        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80",
-        "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80"
+        "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80",
+        "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=800&q=80",
+        "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=800&q=80"
       ],
       "specifications": {
         "ports": "3x Thunderbolt 4, 5x USB-A 3.2, 2x USB-C 3.2, SD 4.0, microSD 4.0, 2.5GbE, Audio in/out",
@@ -2049,9 +1872,9 @@
       "description": "The Anker 555 USB-C Hub is an affordable 8-in-1 docking solution with HDMI 4K@60Hz, 100W power delivery pass-through, Ethernet, SD/microSD slots, and USB-A ports. It's the perfect travel companion for laptops with limited ports.",
       "shortDescription": "8-in-1 USB-C hub with 4K HDMI, 100W PD, Ethernet.",
       "images": [
-        "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80",
+        "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=800&q=80",
         "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=800&q=80",
-        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80"
+        "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80"
       ],
       "specifications": {
         "ports": "HDMI 2.1, USB-C PD, 2x USB-A 3.0, Ethernet (Gigabit), SD, microSD",
@@ -2096,7 +1919,8 @@
       "shortDescription": "Thunderbolt 4 dock with 11 ports, 96W charging, dual 4K.",
       "images": [
         "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=800&q=80",
-        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80"
+        "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80",
+        "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=800&q=80"
       ],
       "specifications": {
         "ports": "3x Thunderbolt 4, 3x USB-A 3.2, 1x USB-C 3.2, Gigabit Ethernet, SD, microSD, Audio",
@@ -2140,9 +1964,9 @@
       "description": "The UGREEN 12-in-1 USB-C Hub offers an impressive array of ports including dual HDMI, VGA, USB-A 3.0, Ethernet, SD/microSD, audio, and 100W PD. It supports triple display output for maximum productivity.",
       "shortDescription": "12-in-1 USB-C hub with dual HDMI, VGA, Ethernet, 100W PD.",
       "images": [
-        "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=800&q=80",
         "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80",
-        "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=800&q=80"
+        "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=800&q=80",
+        "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=800&q=80"
       ],
       "specifications": {
         "ports": "2x HDMI, VGA, 3x USB-A 3.0, USB-C PD, Gigabit Ethernet, SD, microSD, Audio",
@@ -2186,6 +2010,7 @@
       "description": "The Satechi Thunderbolt 4 Pro Dock combines premium aluminum design with powerful connectivity. Offering Thunderbolt 4, USB-A, Ethernet, SD, and up to 96W charging, it's designed for MacBook users who value aesthetics and performance.",
       "shortDescription": "Thunderbolt 4 dock with premium aluminum design, 96W charging.",
       "images": [
+        "https://images.unsplash.com/photo-1547394765-185e1e68f34e?w=800&q=80",
         "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80",
         "https://images.unsplash.com/photo-1601524909162-ae8725290836?w=800&q=80"
       ],
@@ -2213,6 +2038,623 @@
       "trending": false,
       "isActive": true,
       "createdAt": "2026-03-18T10:00:00Z"
+    },
+    {
+      "id": 46,
+      "name": "Dell XPS 13 Plus 9320",
+      "slug": "dell-xps-13-plus-9320",
+      "brand": "Dell",
+      "categoryId": 1,
+      "category": "Laptops",
+      "price": 139999,
+      "discountPrice": 129999,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 87,
+      "stock": 12,
+      "sku": "LAP-006",
+      "description": "The Dell XPS 13 Plus pushes premium ultrabook design forward with a zero-lattice keyboard, seamless glass touchpad, and a stunning OLED InfiniteEdge display. Powered by a 13th Gen Intel Core i7, it's built for developers and creators who value portability without compromising performance.",
+      "shortDescription": "13.4-inch OLED ultrabook, Intel Core i7-1360P, 16GB RAM, 512GB SSD.",
+      "images": [
+        "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80",
+        "https://images.unsplash.com/photo-1611078489935-0cb964de46d6?w=800&q=80",
+        "https://images.unsplash.com/photo-1504707748692-419802cf939d?w=800&q=80"
+      ],
+      "specifications": {
+        "processor": "Intel Core i7-1360P 12-core",
+        "ram": "16GB LPDDR5",
+        "storage": "512GB NVMe SSD",
+        "display": "13.4-inch OLED Touch",
+        "resolution": "3456 x 2160",
+        "refreshRate": "60Hz",
+        "graphics": "Intel Iris Xe",
+        "battery": "Up to 12 hours",
+        "operatingSystem": "Windows 11 Home",
+        "weight": "1.24kg",
+        "ports": "2x Thunderbolt 4, 3.5mm combo"
+      },
+      "features": [
+        "Zero-lattice keyboard",
+        "Seamless glass haptic touchpad",
+        "OLED InfiniteEdge display",
+        "Vapor chamber cooling"
+      ],
+      "tags": [
+        "dell",
+        "xps",
+        "ultrabook",
+        "developer",
+        "portable"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-09-02T10:00:00Z"
+    },
+    {
+      "id": 48,
+      "name": "HP Omen Transcend 32",
+      "slug": "hp-omen-transcend-32",
+      "brand": "HP",
+      "categoryId": 3,
+      "category": "Monitors",
+      "price": 109999,
+      "discountPrice": 99999,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 62,
+      "stock": 8,
+      "sku": "MON-006",
+      "description": "A 31.5-inch QD-OLED gaming display with 4K resolution and a blazing 240Hz refresh rate. The HP Omen Transcend 32 delivers 0.03ms response time, VESA DisplayHDR 1000 brightness, and a built-in KVM switch, making it a top choice for gaming and high-end productivity alike.",
+      "shortDescription": "31.5-inch 4K QD-OLED, 240Hz, 0.03ms, DisplayHDR 1000.",
+      "images": [
+        "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800&q=80",
+        "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=800&q=80",
+        "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&q=80"
+      ],
+      "specifications": {
+        "panel": "31.5-inch QD-OLED",
+        "resolution": "3840 x 2160",
+        "refreshRate": "240Hz",
+        "responseTime": "0.03ms",
+        "brightness": "1000 nits peak",
+        "ports": "2x HDMI 2.1, 1x DP 1.4, USB-C, 4x USB-A",
+        "colorGamut": "99% DCI-P3",
+        "curvature": "Flat"
+      },
+      "features": [
+        "QD-OLED panel",
+        "240Hz refresh rate",
+        "VESA DisplayHDR 1000",
+        "Integrated KVM switch"
+      ],
+      "tags": [
+        "hp",
+        "omen",
+        "monitor",
+        "oled",
+        "gaming"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-09-02T10:00:00Z"
+    },
+    {
+      "id": 49,
+      "name": "NuPhy Air75 V2 Wireless Mechanical Keyboard",
+      "slug": "nuphy-air75-v2",
+      "brand": "NuPhy",
+      "categoryId": 4,
+      "category": "Keyboards",
+      "price": 11999,
+      "discountPrice": 9999,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 203,
+      "stock": 35,
+      "sku": "KEY-006",
+      "description": "Ultra-slim 75% wireless mechanical keyboard with low-profile Gateron switches, PBT keycaps, and tri-mode connectivity. QMK/VIA support lets developers remap every key, while the 2000mAh battery keeps you typing for weeks on a single charge.",
+      "shortDescription": "Slim 75% wireless, hot-swappable, QMK/VIA, 2000mAh battery.",
+      "images": [
+        "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800&q=80",
+        "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800&q=80",
+        "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80"
+      ],
+      "specifications": {
+        "layout": "75%",
+        "switch": "NuPhy Gateron low-profile",
+        "connectivity": "Tri-mode (Bluetooth / 2.4GHz / USB-C)",
+        "battery": "2000mAh",
+        "keycaps": "Double-shot PBT",
+        "hotSwappable": true,
+        "weight": "545g"
+      },
+      "features": [
+        "Ultra-low profile design",
+        "Hot-swappable switches",
+        "QMK / VIA support",
+        "Tri-mode connectivity"
+      ],
+      "tags": [
+        "nuphy",
+        "keyboard",
+        "mechanical",
+        "wireless",
+        "slim"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-09-02T10:00:00Z"
+    },
+    {
+      "id": 50,
+      "name": "ASUS ROG Harpe Ace Aim Lab Edition",
+      "slug": "asus-rog-harpe-ace-aimlab",
+      "brand": "ASUS",
+      "categoryId": 5,
+      "category": "Mice",
+      "price": 11999,
+      "discountPrice": 9999,
+      "currency": "INR",
+      "rating": 4.4,
+      "reviewCount": 118,
+      "stock": 25,
+      "sku": "MOU-005",
+      "description": "An esports-grade wireless mouse co-tuned with Aim Lab. The 36K ROG AimPoint optical sensor tracks flawlessly at 36000 DPI, the 54g shell is barely noticeable, and 4K wireless polling keeps click latency ultra-low.",
+      "shortDescription": "Wireless esports mouse, 36K sensor, 54g, 36000 DPI.",
+      "images": [
+        "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800&q=80",
+        "https://images.unsplash.com/photo-1605379399642-870262d3d051?w=800&q=80",
+        "https://images.unsplash.com/photo-1551462147-ff29053bfc14?w=800&q=80"
+      ],
+      "specifications": {
+        "sensor": "36K ROG AimPoint optical",
+        "dpi": "36000",
+        "pollingRate": "4000Hz",
+        "weight": "54g",
+        "buttons": 5,
+        "connectivity": "2.4GHz / Bluetooth / USB",
+        "battery": "Up to 90 hours",
+        "feet": "100% PTFE"
+      },
+      "features": [
+        "36K optical sensor",
+        "Ultra-light 54g design",
+        "4K wireless polling",
+        "Aim Lab tuned profiles"
+      ],
+      "tags": [
+        "asus",
+        "rog",
+        "gaming",
+        "mouse",
+        "esports"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-09-02T10:00:00Z"
+    },
+    {
+      "id": 51,
+      "name": "Sony WH-CH720N Wireless Noise Cancelling Headphones",
+      "slug": "sony-wh-ch720n",
+      "brand": "Sony",
+      "categoryId": 6,
+      "category": "Headphones",
+      "price": 9990,
+      "discountPrice": 8990,
+      "currency": "INR",
+      "rating": 4.3,
+      "reviewCount": 341,
+      "stock": 50,
+      "sku": "HEA-006",
+      "description": "Affordable everyday noise cancelling from Sony. The dual noise sensor system blocks ambient distractions, while the lightweight 192g design and up to 35 hours of battery make these ideal for long commutes, work calls, and travel.",
+      "shortDescription": "Lightweight wireless ANC headphones, 35hr battery, multipoint.",
+      "images": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80",
+        "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&q=80",
+        "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=800&q=80"
+      ],
+      "specifications": {
+        "driver": "30mm",
+        "frequency": "20Hz - 20kHz",
+        "noiseCancelling": "Dual Noise Sensor",
+        "battery": "Up to 35 hours",
+        "bluetooth": "5.2",
+        "weight": "192g",
+        "codecs": "SBC, AAC, LDAC"
+      },
+      "features": [
+        "Dual noise sensor ANC",
+        "Ultra-lightweight 192g",
+        "35-hour battery life",
+        "Multipoint connection"
+      ],
+      "tags": [
+        "sony",
+        "headphones",
+        "wireless",
+        "noise-cancelling",
+        "budget"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-09-02T10:00:00Z"
+    },
+    {
+      "id": 52,
+      "name": "Roost Stand V3 Adjustable Aluminum Laptop Stand",
+      "slug": "roost-stand-v3-adjustable-aluminum",
+      "brand": "Roost",
+      "categoryId": 11,
+      "category": "Laptop Stands",
+      "price": 6499,
+      "discountPrice": 5499,
+      "currency": "INR",
+      "rating": 4.8,
+      "reviewCount": 486,
+      "stock": 45,
+      "sku": "STD-001",
+      "description": "The Roost Stand V3 is the professional-grade laptop stand built for developers who code for hours. Its lightweight glass-reinforced nylon and aluminum construction supports a fully customizable ergonomic height, raising your screen to eye level to reduce neck and back strain. It folds flat to pack into a laptop sleeve, making it the ideal travel companion for remote work.",
+      "shortDescription": "Feather-light height-adjustable aluminum stand, folds flat for travel.",
+      "images": [
+        "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&q=80",
+        "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80",
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&q=80"
+      ],
+      "specifications": {
+        "material": "Aluminum Alloy & Glass-Reinforced Nylon",
+        "adjustability": "Height Adjustable (7 positions)",
+        "heightRange": "17.8–37 cm",
+        "angleRange": "0–45°",
+        "compatibility": "13–17 inch laptops",
+        "foldable": true,
+        "portable": true,
+        "weightCapacity": "11 kg",
+        "dimensions": "38 x 4 x 4 cm (folded)",
+        "weight": "0.19 kg",
+        "color": "Black"
+      },
+      "features": [
+        "Raise screen to eye level for better posture",
+        "Folds flat — packs into a laptop sleeve",
+        "7 adjustable height positions",
+        "Stable grip pads hold laptop firmly",
+        "Holds up to 11 kg"
+      ],
+      "tags": [
+        "laptop stand",
+        "adjustable",
+        "ergonomic",
+        "travel",
+        "developer",
+        "work from home",
+        "aluminum"
+      ],
+      "featured": true,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-02-10T09:00:00Z"
+    },
+    {
+      "id": 53,
+      "name": "UGREEN LP198 Foldable Aluminum Laptop Stand",
+      "slug": "ugreen-lp198-foldable-aluminum",
+      "brand": "UGREEN",
+      "categoryId": 11,
+      "category": "Laptop Stands",
+      "price": 2199,
+      "discountPrice": 1699,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 2105,
+      "stock": 240,
+      "sku": "STD-002",
+      "description": "A compact, foldable aluminum laptop stand that raises your laptop to a comfortable viewing angle while keeping it stable on any desk. Precision CNC-machined aluminum with silicone pads protects your device and grips the surface, while the open vented design promotes passive cooling during heavy workloads.",
+      "shortDescription": "Foldable aircraft-grade aluminum stand with 7 angle positions.",
+      "images": [
+        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80",
+        "https://images.unsplash.com/photo-1504707748692-419802cf939d?w=800&q=80",
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&q=80"
+      ],
+      "specifications": {
+        "material": "Aircraft-grade Aluminum Alloy",
+        "adjustability": "Angle Adjustable (7 levels)",
+        "angleRange": "36–72°",
+        "compatibility": "10–15.6 inch laptops",
+        "foldable": true,
+        "portable": true,
+        "cooling": "Passive Cooling (open design)",
+        "weightCapacity": "10 kg",
+        "dimensions": "251 x 214 x 34 mm",
+        "weight": "0.31 kg",
+        "color": "Space Gray"
+      },
+      "features": [
+        "7 adjustable viewing angles",
+        "Folds into a flat pocket-sized profile",
+        "Silicone pads prevent scratches and slips",
+        "Open design improves airflow for cooling",
+        "Sturdy 10 kg weight capacity"
+      ],
+      "tags": [
+        "laptop stand",
+        "foldable",
+        "portable",
+        "aluminum",
+        "ugreen",
+        "ergonomic"
+      ],
+      "featured": true,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-01-22T09:00:00Z"
+    },
+    {
+      "id": 54,
+      "name": "Nulaxy Ergonomic Adjustable Laptop Stand",
+      "slug": "nulaxy-ergonomic-adjustable",
+      "brand": "Nulaxy",
+      "categoryId": 11,
+      "category": "Laptop Stands",
+      "price": 1399,
+      "discountPrice": 999,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 3420,
+      "stock": 380,
+      "sku": "STD-003",
+      "description": "An ergonomic laptop stand that instantly upgrades your desk posture. Six adjustable height and angle options lift your laptop to a natural eye level while aluminum construction with rubber pads delivers rock-solid stability. The hollow back design allows heat to dissipate, keeping performance high during long sessions.",
+      "shortDescription": "Budget ergonomic stand with 6 height/angle adjustments and passive cooling.",
+      "images": [
+        "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=800&q=80",
+        "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&q=80",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80"
+      ],
+      "specifications": {
+        "material": "Aluminum Alloy",
+        "adjustability": "Height and Angle Adjustable (6 levels)",
+        "heightRange": "11–19 cm",
+        "angleRange": "0–45°",
+        "compatibility": "10–15.6 inch laptops",
+        "weightCapacity": "10 kg",
+        "cooling": "Passive Cooling (hollow vented back)",
+        "dimensions": "253 x 218 x 48 mm",
+        "weight": "0.41 kg",
+        "color": "Silver"
+      },
+      "features": [
+        "6 ergonomic height and angle levels",
+        "Hollow vented design for heat dissipation",
+        "Anti-slip silicone and rubber pads",
+        "Lightweight yet durable aluminum build",
+        "Compatible with 10–15.6 inch laptops"
+      ],
+      "tags": [
+        "laptop stand",
+        "ergonomic",
+        "adjustable",
+        "nulaxy",
+        "desk setup",
+        "work from home"
+      ],
+      "featured": false,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-01-18T09:00:00Z"
+    },
+    {
+      "id": 55,
+      "name": "MOFT Z Dual Laptop & Tablet Stand",
+      "slug": "moft-z-dual-laptop-tablet-stand",
+      "brand": "MOFT",
+      "categoryId": 11,
+      "category": "Laptop Stands",
+      "price": 3999,
+      "discountPrice": 3499,
+      "currency": "INR",
+      "rating": 4.7,
+      "reviewCount": 658,
+      "stock": 90,
+      "sku": "STD-004",
+      "description": "The MOFT Z is a dual-level stand that pairs your laptop with a tablet, mobile device, or external webcam in one tidy workspace. Its ABS + aluminum hinge and clean Z-fold design holds two devices simultaneously, stacking your laptop on the upper level for a clutter-free, multi-screen workflow.",
+      "shortDescription": "Two-level Z-shaped stand for laptop + phone/tablet second-screen setups.",
+      "images": [
+        "https://images.unsplash.com/photo-1618424181497-157f25b6ddd5?w=800&q=80",
+        "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?w=800&q=80",
+        "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&q=80"
+      ],
+      "specifications": {
+        "material": "ABS + Aluminum Alloy",
+        "adjustability": "Two-step Height (Z-folding)",
+        "compatibility": "Laptop up to 16 inch; secondary device up to 0.9 kg",
+        "foldable": true,
+        "portable": true,
+        "weightCapacity": "1.6 kg (top level)",
+        "dimensions": "230 x 172 x 30 mm (folded)",
+        "weight": "0.66 kg",
+        "color": "Black"
+      },
+      "features": [
+        "Dual-level design for laptop + second device",
+        "Z-folding structure stores flat",
+        "Built-in magnetic phone stand tab",
+        "Raised triangle structure adds desk airflow",
+        "Holds devices up to 16 inches"
+      ],
+      "tags": [
+        "laptop stand",
+        "dual stand",
+        "second screen",
+        "workstation",
+        "moft",
+        "tablet stand"
+      ],
+      "featured": false,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-02-02T09:00:00Z"
+    },
+    {
+      "id": 56,
+      "name": "Soundance Vertical Laptop Stand",
+      "slug": "soundance-vertical-laptop-stand",
+      "brand": "Soundance",
+      "categoryId": 11,
+      "category": "Laptop Stands",
+      "price": 1299,
+      "discountPrice": 899,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 1820,
+      "stock": 260,
+      "sku": "STD-005",
+      "description": "Keep your workspace clutter-free with the Soundance vertical laptop stand. Its sleek aluminum footprint positions your closed laptop upright, saving precious desk space next to your monitor and peripherals. Soft silicone pads hold the laptop firmly while ventilated side slots keep it cool and accessible.",
+      "shortDescription": "Space-saving stand to store a closed laptop vertically on your desk.",
+      "images": [
+        "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80",
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&q=80"
+      ],
+      "specifications": {
+        "material": "Aluminum Alloy",
+        "adjustability": "Fixed Slot Width 12–17 mm",
+        "compatibility": "11–16 inch laptops (thickness 12–17 mm)",
+        "foldable": false,
+        "portable": false,
+        "cooling": "Passive Cooling (ventilated side slots)",
+        "weightCapacity": "5 kg",
+        "dimensions": "157 x 65 x 30 mm",
+        "weight": "0.28 kg",
+        "color": "Silver"
+      },
+      "features": [
+        "Frees up desk space for better cable management",
+        "Universal slots fit 11–16 inch laptops",
+        "Anti-scratch silicone cushions",
+        "Ventilated slots for air circulation",
+        "Heavy base keeps your laptop stable"
+      ],
+      "tags": [
+        "laptop stand",
+        "vertical stand",
+        "space saving",
+        "dock",
+        "desk organizer"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-01-30T09:00:00Z"
+    },
+    {
+      "id": 57,
+      "name": "Havit HV-F2056 3-Fan Cooling Laptop Stand",
+      "slug": "havit-hv-f2056-cooling-stand",
+      "brand": "Havit",
+      "categoryId": 11,
+      "category": "Laptop Stands",
+      "price": 2299,
+      "discountPrice": 1899,
+      "currency": "INR",
+      "rating": 4.4,
+      "reviewCount": 1215,
+      "stock": 170,
+      "sku": "STD-006",
+      "description": "Beat thermal throttling with the Havit cooling stand. Three whisper-quiet fans (with a rear pad combination) actively pull heat away from your laptop while six adjustable height levels raise the screen to eye level. A USB-powered design with two USB pass-through ports keeps your fans running without hogging a port.",
+      "shortDescription": "Active 3-fan cooling stand with 6 height positions and USB pass-through.",
+      "images": [
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800&q=80",
+        "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&q=80",
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80"
+      ],
+      "specifications": {
+        "material": "ABS Plastic",
+        "adjustability": "Height Adjustable (6 levels)",
+        "compatibility": "Up to 17 inch laptops",
+        "cooling": "Active Cooling (3 fans, 700 RPM)",
+        "weightCapacity": "8 kg",
+        "dimensions": "386 x 320 x 60 mm",
+        "weight": "0.72 kg",
+        "color": "Black",
+        "ports": "2x USB 2.0 pass-through"
+      },
+      "features": [
+        "3 low-noise fans cool high-RPM workloads",
+        "6 adjustable height levels for eye-level viewing",
+        "USB powered with 2 extra USB ports",
+        "Anti-slip tabs keep laptop in place",
+        "Perfect for gaming and heavy dev builds"
+      ],
+      "tags": [
+        "laptop stand",
+        "cooling stand",
+        "cooling pad",
+        "havit",
+        "gaming",
+        "height adjustable"
+      ],
+      "featured": true,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-02-20T09:00:00Z"
+    },
+    {
+      "id": 58,
+      "name": "ErGear Heavy-Duty Adjustable Laptop Stand",
+      "slug": "ergear-heavy-duty-adjustable",
+      "brand": "ErGear",
+      "categoryId": 11,
+      "category": "Laptop Stands",
+      "price": 2999,
+      "discountPrice": 2499,
+      "currency": "INR",
+      "rating": 4.7,
+      "reviewCount": 934,
+      "stock": 120,
+      "sku": "STD-007",
+      "description": "Built for the biggest workstations, the ErGear heavy-duty stand supports laptops up to 17.3 inches and a total weight of 12 kg. Its all-aluminum body and wide base provide rock-solid stability at any of the five height settings, while the powerful hinge locks firmly and the open platform gives a second screen a stable mount.",
+      "shortDescription": "Sturdy wide-platform stand for large and heavy laptops (up to 12 kg).",
+      "images": [
+        "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&q=80",
+        "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&q=80",
+        "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&q=80"
+      ],
+      "specifications": {
+        "material": "Aluminum Alloy",
+        "adjustability": "Height & Angle Adjustable (5 levels)",
+        "heightRange": "12–20 cm",
+        "angleRange": "0–60°",
+        "compatibility": "11–17.3 inch laptops",
+        "weightCapacity": "12 kg",
+        "cooling": "Passive Cooling (open platform)",
+        "dimensions": "290 x 260 x 55 mm",
+        "weight": "0.89 kg",
+        "color": "Gray"
+      },
+      "features": [
+        "Supports laptops up to 17.3 inches",
+        "12 kg weight capacity with sturdy hinges",
+        "5 height positions with stepless angle tilt",
+        "Wide base adds desk stability",
+        "Open platform boosts passive airflow"
+      ],
+      "tags": [
+        "laptop stand",
+        "heavy duty",
+        "adjustable",
+        "large laptop",
+        "workstation",
+        "aluminum"
+      ],
+      "featured": false,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-03-01T09:00:00Z"
     }
   ],
   "users": [
@@ -2323,6 +2765,14 @@
       "role": "customer",
       "createdAt": "2026-08-31T17:32:54.777Z",
       "id": 102
+    },
+    {
+      "username": "aslam",
+      "email": "aslam@gmail.com",
+      "password": "1234567",
+      "fullName": "muhammed aslam",
+      "createdAt": "2026-09-02T04:30:33.786Z",
+      "id": 103
     }
   ],
   "orders": [
@@ -2679,7 +3129,7 @@
       "userId": 3,
       "rating": 4,
       "title": "Great but pricey",
-      "comment": "Incredible build quality and performance. The only reason for 4 stars is the price \u2014 it's a significant investment. But for professional development work, it's worth every penny.",
+      "comment": "Incredible build quality and performance. The only reason for 4 stars is the price — it's a significant investment. But for professional development work, it's worth every penny.",
       "createdAt": "2026-07-10T10:00:00Z"
     },
     {
@@ -2715,7 +3165,7 @@
       "userId": 6,
       "rating": 5,
       "title": "Incredible for coding and gaming",
-      "comment": "4K at 160Hz with Nano IPS \u2014 what more could you want? Colors are accurate for design work, and the refresh rate is buttery smooth for gaming after work hours.",
+      "comment": "4K at 160Hz with Nano IPS — what more could you want? Colors are accurate for design work, and the refresh rate is buttery smooth for gaming after work hours.",
       "createdAt": "2026-07-18T10:00:00Z"
     },
     {
@@ -2751,7 +3201,7 @@
       "userId": 4,
       "rating": 5,
       "title": "Podcast quality at home",
-      "comment": "The auto-level mode is a lifesaver \u2014 no more worrying about mic technique. Sound quality rivals XLR setups at twice the price. The hybrid USB/XLR output gives upgrade flexibility.",
+      "comment": "The auto-level mode is a lifesaver — no more worrying about mic technique. Sound quality rivals XLR setups at twice the price. The hybrid USB/XLR output gives upgrade flexibility.",
       "createdAt": "2026-07-22T10:00:00Z"
     },
     {
@@ -2769,7 +3219,7 @@
       "userId": 6,
       "rating": 5,
       "title": "Single cable desktop setup",
-      "comment": "One cable to my MacBook Pro and everything just works \u2014 dual monitors, ethernet, all peripherals. The 98W charging keeps my laptop topped up. Worth every rupee for the convenience.",
+      "comment": "One cable to my MacBook Pro and everything just works — dual monitors, ethernet, all peripherals. The 98W charging keeps my laptop topped up. Worth every rupee for the convenience.",
       "createdAt": "2026-07-30T10:00:00Z"
     },
     {
@@ -2787,7 +3237,7 @@
       "userId": 8,
       "rating": 4,
       "title": "Solid business laptop",
-      "comment": "Keyboard is the best I've ever typed on. TrackPoint is a nice touch for power users. Build quality is exceptional \u2014 feels like it could survive anything. Webcam could be better.",
+      "comment": "Keyboard is the best I've ever typed on. TrackPoint is a nice touch for power users. Build quality is exceptional — feels like it could survive anything. Webcam could be better.",
       "createdAt": "2026-08-02T10:00:00Z"
     },
     {
@@ -2850,7 +3300,7 @@
       "userId": 7,
       "rating": 4,
       "title": "Great value flagship",
-      "comment": "100W charging is incredibly fast \u2014 0 to 100% in under 30 minutes. OxygenOS is clean and snappy. Camera is good but not S24 Ultra level. At this price, it's hard to beat.",
+      "comment": "100W charging is incredibly fast — 0 to 100% in under 30 minutes. OxygenOS is clean and snappy. Camera is good but not S24 Ultra level. At this price, it's hard to beat.",
       "createdAt": "2026-08-09T10:00:00Z"
     },
     {
@@ -2949,7 +3399,7 @@
       "userId": 2,
       "rating": 4,
       "title": "Productivity powerhouse",
-      "comment": "The 21:9 ratio is amazing for split-screen coding. USB-C with 60W PD means one cable setup. Only downside is 60Hz \u2014 would love a higher refresh rate option.",
+      "comment": "The 21:9 ratio is amazing for split-screen coding. USB-C with 60W PD means one cable setup. Only downside is 60Hz — would love a higher refresh rate option.",
       "createdAt": "2026-08-20T10:00:00Z"
     }
   ],

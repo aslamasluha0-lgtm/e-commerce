@@ -7,12 +7,12 @@ const ProductRating = ({ rating, count }) => {
         <Star
           key={star}
           className={`h-4 w-4 ${
-            star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
+            star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300 dark:text-gray-600'
           }`}
         />
       ))}
       {count !== undefined && (
-        <span className="text-sm text-gray-500 ml-1">({count})</span>
+        <span className="text-sm text-gray-500 ml-1 dark:text-gray-400">({count})</span>
       )}
     </div>
   )

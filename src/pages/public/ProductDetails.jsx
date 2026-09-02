@@ -31,10 +31,10 @@ const ProductDetails = () => {
         <ProductImageGallery images={product.images || []} />
 
         <div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4 dark:text-gray-100">{product.name}</h1>
           <ProductRating rating={product.rating || 0} count={product.reviewCount || 0} />
-          <p className="text-3xl font-bold text-gray-900 mt-4">{formatCurrency(product.price)}</p>
-          <p className="text-gray-600 mt-6 leading-relaxed">{product.description}</p>
+          <p className="text-3xl font-bold text-gray-900 mt-4 dark:text-gray-100">{formatCurrency(product.price)}</p>
+          <p className="text-gray-600 mt-6 leading-relaxed dark:text-gray-300">{product.description}</p>
 
           <div className="flex gap-4 mt-8">
             <Button
@@ -55,22 +55,22 @@ const ProductDetails = () => {
           </div>
 
           <div className="mt-8 space-y-3">
-            <div className="flex justify-between py-2 border-b">
-              <span className="text-gray-600">Availability</span>
-              <span className={product.stock > 0 ? 'text-green-600' : 'text-red-600'}>
+            <div className="flex justify-between py-2 border-b dark:border-gray-700">
+              <span className="text-gray-600 dark:text-gray-300">Availability</span>
+              <span className={product.stock > 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600'}>
                 {product.stock > 0 ? 'In Stock' : 'Out of Stock'}
               </span>
             </div>
-            <div className="flex justify-between py-2 border-b">
-              <span className="text-gray-600">Category</span>
-              <span>{product.category || 'N/A'}</span>
+            <div className="flex justify-between py-2 border-b dark:border-gray-700">
+              <span className="text-gray-600 dark:text-gray-300">Category</span>
+              <span className="dark:text-gray-200">{product.category || 'N/A'}</span>
             </div>
           </div>
         </div>
       </div>
 
       <section className="mt-16">
-        <h2 className="text-2xl font-bold mb-6">Customer Reviews</h2>
+        <h2 className="text-2xl font-bold mb-6 dark:text-gray-100">Customer Reviews</h2>
         <ReviewList reviews={product.reviews || []} />
       </section>
     </div>

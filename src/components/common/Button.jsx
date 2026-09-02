@@ -9,20 +9,25 @@ const Button = ({
   className = '',
   ...props
 }) => {
-  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed'
+  const baseStyles =
+    'inline-flex items-center justify-center gap-2 font-medium rounded-lg transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-500 disabled:opacity-50 disabled:cursor-not-allowed active:scale-[0.98]'
 
   const variants = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500',
-    outline: 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-blue-500',
-    danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
-    ghost: 'text-gray-600 hover:bg-gray-100 focus:ring-gray-500',
+    primary:
+      'bg-brand-600 text-white hover:bg-brand-700 focus-visible:ring-brand-600 shadow-sm hover:shadow-soft',
+    secondary:
+      'bg-surface-100 text-surface-800 hover:bg-surface-200 focus-visible:ring-surface-400 dark:bg-surface-800 dark:text-surface-100 dark:hover:bg-surface-700',
+    outline:
+      'border border-surface-200 bg-white text-surface-700 hover:bg-surface-50 hover:border-surface-300 focus-visible:ring-brand-500 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800',
+    danger: 'bg-red-600 text-white hover:bg-red-700 focus-visible:ring-red-500 shadow-sm',
+    ghost:
+      'text-surface-600 hover:bg-surface-100 hover:text-surface-900 focus-visible:ring-surface-400 dark:text-surface-300 dark:hover:bg-surface-800 dark:hover:text-white',
   }
 
   const sizes = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-sm',
-    lg: 'px-6 py-3 text-base',
+    sm: 'h-9 px-3.5 text-sm',
+    md: 'h-11 px-5 text-sm',
+    lg: 'h-12 px-6 text-base',
   }
 
   return (
@@ -31,7 +36,7 @@ const Button = ({
       disabled={disabled || loading}
       {...props}
     >
-      {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+      {loading && <Loader2 className="h-4 w-4 animate-spin" />}
       {children}
     </button>
   )

@@ -44,7 +44,7 @@ const AIChatbot = () => {
       )}
 
       {isOpen && (
-        <div className="fixed bottom-6 right-6 w-96 h-[500px] bg-white rounded-lg shadow-2xl border flex flex-col z-50">
+        <div className="fixed bottom-0 right-0 left-0 sm:left-auto sm:bottom-6 sm:right-6 w-full sm:w-96 h-[75vh] sm:h-[500px] bg-white rounded-t-xl sm:rounded-lg shadow-2xl border flex flex-col z-50 dark:bg-gray-900 dark:border-gray-700">
           <ChatHeader onClose={() => setIsOpen(false)} />
           <ChatMessages messages={messages} />
           <ChatInput onSend={handleSendMessage} />

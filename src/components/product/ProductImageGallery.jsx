@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import ProductImage from '@/components/common/ProductImage'
 
 const ProductImageGallery = ({ images = [] }) => {
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -14,16 +15,16 @@ const ProductImageGallery = ({ images = [] }) => {
 
   if (!images.length) {
     return (
-      <div className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center">
-        <span className="text-gray-400">No image available</span>
+      <div className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center dark:bg-gray-800">
+        <span className="text-gray-400 dark:text-gray-500">No image available</span>
       </div>
     )
   }
 
   return (
     <div className="space-y-4">
-      <div className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden">
-        <img
+      <div className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden dark:bg-gray-800">
+        <ProductImage
           src={images[selectedIndex]}
           alt="Product"
           className="w-full h-full object-cover"
@@ -52,10 +53,10 @@ const ProductImageGallery = ({ images = [] }) => {
               key={index}
               onClick={() => setSelectedIndex(index)}
               className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 ${
-                selectedIndex === index ? 'border-blue-600' : 'border-gray-200'
+                selectedIndex === index ? 'border-blue-600' : 'border-gray-200 dark:border-gray-700'
               }`}
             >
-              <img src={image} alt="" className="w-full h-full object-cover" />
+              <ProductImage src={image} alt="" className="w-full h-full object-cover" />
             </button>
           ))}
         </div>

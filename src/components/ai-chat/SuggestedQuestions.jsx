@@ -8,13 +8,13 @@ const SuggestedQuestions = ({ onSelect }) => {
 
   return (
     <div className="px-4 pb-2">
-      <p className="text-xs text-gray-500 mb-2">Suggested questions:</p>
+      <p className="text-xs text-gray-500 mb-2 dark:text-gray-400">Suggested questions:</p>
       <div className="flex flex-wrap gap-2">
         {questions.map((question, index) => (
           <button
             key={index}
             onClick={() => onSelect(question)}
-            className="text-xs px-3 py-1.5 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
+            className="text-xs px-3 py-1.5 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
           >
             {question}
           </button>

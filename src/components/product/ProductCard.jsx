@@ -4,17 +4,18 @@ import { useDispatch } from 'react-redux'
 import { addToCart } from '@/redux/slices/cartSlice'
 import { addToWishlist } from '@/redux/slices/wishlistSlice'
 import ProductRating from './ProductRating'
+import ProductImage from '@/components/common/ProductImage'
 import { formatCurrency } from '@/utils/formatCurrency'
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch()
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow dark:bg-gray-800 dark:border-gray-700">
       <Link to={`/products/${product.id}`}>
         <div className="aspect-square bg-gray-100">
-          <img
-            src={product.images?.[0] || '/placeholder-product.png'}
+          <ProductImage
+            src={product.images?.[0]}
             alt={product.name}
             className="w-full h-full object-cover"
           />
@@ -22,23 +23,23 @@ const ProductCard = ({ product }) => {
       </Link>
       <div className="p-4">
         <Link to={`/products/${product.id}`}>
-          <h3 className="font-medium text-gray-900 mb-1 line-clamp-2 hover:text-blue-600">
+          <h3 className="font-medium text-gray-900 mb-1 line-clamp-2 hover:text-blue-600 dark:text-gray-100">
             {product.name}
           </h3>
         </Link>
         <ProductRating rating={product.rating || 0} count={product.reviewCount || 0} />
         <div className="flex items-center justify-between mt-3">
-          <span className="text-lg font-bold text-gray-900">{formatCurrency(product.price)}</span>
+          <span className="text-lg font-bold text-gray-900 dark:text-gray-100">{formatCurrency(product.price)}</span>
           <div className="flex gap-2">
             <button
               onClick={() => dispatch(addToWishlist(product))}
-              className="p-2 text-gray-400 hover:text-red-500 transition-colors"
+              className="p-2 text-gray-400 hover:text-red-500 transition-colors dark:text-gray-500"
             >
               <Heart className="h-5 w-5" />
             </button>
             <button
               onClick={() => dispatch(addToCart(product))}
-              className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
+              className="p-2 text-gray-400 hover:text-blue-600 transition-colors dark:text-gray-500"
             >
               <ShoppingCart className="h-5 w-5" />
             </button>

@@ -13,17 +13,17 @@ const Categories = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold mb-8">Categories</h1>
+      <h1 className="text-3xl font-bold mb-8 dark:text-gray-100">Categories</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {categories?.map((category) => (
           <Link
             key={category.id}
             to={`/products?category=${category.id}`}
-            className="block p-6 bg-white border rounded-lg hover:shadow-md transition-shadow"
+            className="block p-6 bg-white border rounded-lg hover:shadow-md transition-shadow dark:bg-gray-800 dark:border-gray-700"
           >
-            <h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">{category.name}</h2>
             {category.description && (
-              <p className="text-gray-600 mt-2">{category.description}</p>
+              <p className="text-gray-600 mt-2 dark:text-gray-400">{category.description}</p>
             )}
           </Link>
         ))}

@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux'
 import { removeFromCompare } from '@/redux/slices/compareSlice'
 import { formatCurrency } from '@/utils/formatCurrency'
+import ProductImage from '@/components/common/ProductImage'
 import { X } from 'lucide-react'
 
 const ComparisonTable = ({ products }) => {
@@ -10,7 +11,7 @@ const ComparisonTable = ({ products }) => {
     <table className="w-full border-collapse">
       <thead>
         <tr>
-          <th className="p-4 text-left text-sm font-medium text-gray-500">Product</th>
+          <th className="p-4 text-left text-sm font-medium text-gray-500 dark:text-gray-400">Product</th>
           {products.map((product) => (
             <th key={product.id} className="p-4 text-center">
               <div className="relative">
@@ -20,8 +21,8 @@ const ComparisonTable = ({ products }) => {
                 >
                   <X className="h-3 w-3" />
                 </button>
-                <img
-                  src={product.images?.[0] || '/placeholder-product.png'}
+                <ProductImage
+                  src={product.images?.[0]}
                   alt={product.name}
                   className="w-24 h-24 object-cover rounded-lg mx-auto"
                 />
@@ -40,8 +41,8 @@ const ComparisonTable = ({ products }) => {
             </td>
           ))}
         </tr>
-        <tr className="border-t bg-gray-50">
-          <td className="p-4 text-sm font-medium text-gray-500">Rating</td>
+        <tr className="border-t bg-gray-50 dark:bg-gray-800/50">
+          <td className="p-4 text-sm font-medium text-gray-500 dark:text-gray-400">Rating</td>
           {products.map((product) => (
             <td key={product.id} className="p-4 text-center">
               {product.rating || 'N/A'}
@@ -56,8 +57,8 @@ const ComparisonTable = ({ products }) => {
             </td>
           ))}
         </tr>
-        <tr className="border-t bg-gray-50">
-          <td className="p-4 text-sm font-medium text-gray-500">Availability</td>
+        <tr className="border-t bg-gray-50 dark:bg-gray-800/50">
+          <td className="p-4 text-sm font-medium text-gray-500 dark:text-gray-400">Availability</td>
           {products.map((product) => (
             <td key={product.id} className="p-4 text-center">
               {product.stock > 0 ? 'In Stock' : 'Out of Stock'}

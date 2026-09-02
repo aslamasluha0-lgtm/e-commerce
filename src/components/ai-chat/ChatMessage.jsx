@@ -13,15 +13,15 @@ const ChatMessage = ({ message }) => {
       <div
         className={`max-w-[70%] p-3 rounded-lg ${
           isAI
-            ? 'bg-gray-100 text-gray-800'
+            ? 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100'
             : 'bg-blue-600 text-white'
         }`}
       >
         <p className="text-sm">{message.content}</p>
       </div>
       {!isAI && (
-        <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0">
-          <User className="h-4 w-4 text-gray-600" />
+        <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center flex-shrink-0 dark:bg-gray-700">
+          <User className="h-4 w-4 text-gray-600 dark:text-gray-300" />
         </div>
       )}
     </div>

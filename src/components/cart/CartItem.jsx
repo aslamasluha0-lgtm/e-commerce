@@ -1,21 +1,22 @@
 import { Minus, Plus, Trash2 } from 'lucide-react'
 import { useDispatch } from 'react-redux'
 import { removeFromCart, updateQuantity } from '@/redux/slices/cartSlice'
+import ProductImage from '@/components/common/ProductImage'
 import { formatCurrency } from '@/utils/formatCurrency'
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch()
 
   return (
-    <div className="flex gap-4 py-4 border-b">
-      <img
-        src={item.images?.[0] || '/placeholder-product.png'}
+    <div className="flex gap-4 py-4 border-b dark:border-gray-700">
+      <ProductImage
+        src={item.images?.[0]}
         alt={item.name}
         className="w-20 h-20 object-cover rounded-lg"
       />
       <div className="flex-1">
-        <h3 className="font-medium text-gray-900">{item.name}</h3>
-        <p className="text-sm text-gray-500">{formatCurrency(item.price)}</p>
+        <h3 className="font-medium text-gray-900 dark:text-gray-100">{item.name}</h3>
+        <p className="text-sm text-gray-500 dark:text-gray-400">{formatCurrency(item.price)}</p>
         <div className="flex items-center gap-3 mt-2">
           <button
             onClick={() => dispatch(updateQuantity({ id: item.id, quantity: Math.max(1, item.quantity - 1) }))}

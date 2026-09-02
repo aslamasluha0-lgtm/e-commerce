@@ -10,7 +10,7 @@ const OrderStatus = ({ status }) => {
             className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
               index <= currentIndex
                 ? 'bg-blue-600 text-white'
-                : 'bg-gray-200 text-gray-500'
+                : 'bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400'
             }`}
           >
             {index + 1}
@@ -18,7 +18,7 @@ const OrderStatus = ({ status }) => {
           {index < steps.length - 1 && (
             <div
               className={`h-1 w-12 sm:w-20 ${
-                index < currentIndex ? 'bg-blue-600' : 'bg-gray-200'
+                index < currentIndex ? 'bg-blue-600' : 'bg-gray-200 dark:bg-gray-700'
               }`}
             />
           )}

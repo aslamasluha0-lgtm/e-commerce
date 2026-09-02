@@ -2,20 +2,21 @@ import { Trash2 } from 'lucide-react'
 import { useDispatch } from 'react-redux'
 import { removeFromWishlist } from '@/redux/slices/wishlistSlice'
 import { addToCart } from '@/redux/slices/cartSlice'
+import ProductImage from '@/components/common/ProductImage'
 import { formatCurrency } from '@/utils/formatCurrency'
 
 const WishlistItem = ({ item }) => {
   const dispatch = useDispatch()
 
   return (
-    <div className="flex gap-4 py-4 border-b">
-      <img
-        src={item.images?.[0] || '/placeholder-product.png'}
+    <div className="flex gap-4 py-4 border-b dark:border-gray-700">
+      <ProductImage
+        src={item.images?.[0]}
         alt={item.name}
         className="w-24 h-24 object-cover rounded-lg"
       />
       <div className="flex-1">
-        <h3 className="font-medium text-gray-900">{item.name}</h3>
+        <h3 className="font-medium text-gray-900 dark:text-gray-100">{item.name}</h3>
         <p className="text-lg font-semibold mt-1">{formatCurrency(item.price)}</p>
         <div className="flex gap-2 mt-3">
           <button

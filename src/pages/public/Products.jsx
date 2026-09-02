@@ -14,6 +14,7 @@ const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const [page, setPage] = useState(1)
   const [sortBy, setSortBy] = useState('newest')
+  const [priceMax, setPriceMax] = useState(200000)
   const searchQuery = searchParams.get('q') || ''
   const debouncedSearch = useDebounce(searchQuery)
   const categoryId = searchParams.get('category') || ''
@@ -23,6 +24,7 @@ const Products = () => {
     _limit: 12,
     ...(debouncedSearch && { q: debouncedSearch }),
     ...(categoryId && { categoryId }),
+    ...(priceMax < 200000 && { price_lte: priceMax }),
   }
 
   const sortField = sortBy.replace('_asc', '').replace('_desc', '')
@@ -58,9 +60,14 @@ const Products = () => {
     setSearchParams(params)
   }
 
+  const handlePriceChange = (value) => {
+    setPriceMax(value)
+    setPage(1)
+  }
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold mb-8">Products</h1>
+      <h1 className="text-3xl font-bold mb-8 dark:text-gray-100">Products</h1>
 
       <div className="mb-6">
         <ProductSearch value={searchQuery} onChange={handleSearch} />
@@ -72,12 +79,14 @@ const Products = () => {
             categories={categories}
             selectedCategory={categoryId}
             onCategoryChange={handleCategoryChange}
+            maxPrice={priceMax}
+            onMaxPriceChange={handlePriceChange}
           />
         </aside>
 
         <div className="flex-1">
           <div className="flex items-center justify-between mb-6">
-            <p className="text-gray-600">
+            <p className="text-gray-600 dark:text-gray-400">
               {products?.length || 0} products found
             </p>
             <ProductSort sortBy={sortBy} onSortChange={setSortBy} />

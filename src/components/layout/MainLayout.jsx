@@ -6,7 +6,7 @@ import AIChatbot from '@/components/ai-chat/AIChatbot'
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-950">
       <Navbar />
       <Sidebar />
       <main className="flex-1">

@@ -16,7 +16,7 @@ export const debounce = (func, wait) => {
 }
 
 export const getImageUrl = (imagePath) => {
-  if (!imagePath) return '/placeholder-product.png'
+  if (!imagePath) return '/placeholder-product.svg'
   if (imagePath.startsWith('http')) return imagePath
   return `${import.meta.env.VITE_API_URL}${imagePath}`
 }

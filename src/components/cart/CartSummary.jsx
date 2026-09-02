@@ -11,7 +11,7 @@ const CartSummary = () => {
   const total = subtotal + shipping + tax
 
   return (
-    <div className="bg-gray-50 rounded-lg p-6">
+    <div className="bg-gray-50 rounded-lg p-6 dark:bg-gray-800">
       <h3 className="text-lg font-semibold mb-4">Order Summary</h3>
       <div className="space-y-3">
         <div className="flex justify-between text-sm">

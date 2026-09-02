@@ -22,10 +22,10 @@ const ReviewForm = ({ onSubmit, loading }) => {
   return (
     <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-4">
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Rating</label>
+        <label className="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">Rating</label>
         <select
           {...register('rating', { valueAsNumber: true })}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100"
         >
           <option value={1}>1 Star</option>
           <option value={2}>2 Stars</option>
@@ -41,11 +41,11 @@ const ReviewForm = ({ onSubmit, loading }) => {
         error={errors.title?.message}
       />
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Comment</label>
+        <label className="block text-sm font-medium text-gray-700 mb-1 dark:text-gray-300">Comment</label>
         <textarea
           {...register('comment')}
           rows={4}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 dark:placeholder-gray-500"
         />
         {errors.comment && <p className="text-red-500 text-sm">{errors.comment.message}</p>}
       </div>

@@ -23,23 +23,23 @@ const Checkout = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-3xl font-bold mb-8">Checkout</h1>
+      <h1 className="text-3xl font-bold mb-8 dark:text-gray-100">Checkout</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2 space-y-8">
-          <div className={`bg-white p-6 rounded-lg shadow-sm ${step === 1 ? 'ring-2 ring-blue-600' : ''}`}>
-            <h2 className="text-xl font-semibold mb-4">1. Shipping Address</h2>
+          <div className={`bg-white p-6 rounded-lg shadow-sm dark:bg-gray-800 ${step === 1 ? 'ring-2 ring-blue-600' : ''}`}>
+            <h2 className="text-xl font-semibold mb-4 dark:text-gray-100">1. Shipping Address</h2>
             <AddressForm onSubmit={handleAddressSubmit} />
           </div>
 
-          <div className={`bg-white p-6 rounded-lg shadow-sm ${step === 2 ? 'ring-2 ring-blue-600' : ''}`}>
-            <h2 className="text-xl font-semibold mb-4">2. Payment Method</h2>
+          <div className={`bg-white p-6 rounded-lg shadow-sm dark:bg-gray-800 ${step === 2 ? 'ring-2 ring-blue-600' : ''}`}>
+            <h2 className="text-xl font-semibold mb-4 dark:text-gray-100">2. Payment Method</h2>
             <PaymentMethod selectedMethod={paymentMethod} onSelect={setPaymentMethod} />
           </div>
 
           {step === 2 && (
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h2 className="text-xl font-semibold mb-4">3. Complete Order</h2>
+            <div className="bg-white p-6 rounded-lg shadow-sm dark:bg-gray-800">
+              <h2 className="text-xl font-semibold mb-4 dark:text-gray-100">3. Complete Order</h2>
               {paymentMethod === 'razorpay' ? (
                 <RazorpayButton amount={0} onSuccess={handlePaymentSuccess} />
               ) : (
