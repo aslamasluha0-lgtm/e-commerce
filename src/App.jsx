@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import store from '@/redux/store'
 import AppRoutes from '@/routes/AppRoutes'
 import ScrollToTop from './components/common/ScrollToTop'
+import Footer from './components/common/Footer'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -24,6 +25,7 @@ function App() {
           <AppRoutes />
         </BrowserRouter>
       </QueryClientProvider>
+      <Footer/>
     </Provider>
   )
 }
