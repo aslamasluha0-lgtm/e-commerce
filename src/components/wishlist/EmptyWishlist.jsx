@@ -1,16 +1,23 @@
 import { Heart } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import EmptyState from '@/components/common/EmptyState'
 import Button from '@/components/common/Button'
 
 const EmptyWishlist = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-16">
-      <Heart className="h-24 w-24 text-gray-300 mb-4 dark:text-gray-700" />
-      <h2 className="text-2xl font-semibold text-gray-900 mb-2 dark:text-gray-100">Your wishlist is empty</h2>
-      <p className="text-gray-500 mb-6 dark:text-gray-400">Save products you love for later!</p>
-      <Link to="/products">
-        <Button>Browse Products</Button>
-      </Link>
+    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="rounded-3xl border border-surface-200 bg-white p-8 dark:border-surface-800 dark:bg-surface-900">
+        <EmptyState
+          icon={Heart}
+          title="Your wishlist is empty"
+          description="Save the products you love, and find them here whenever you're ready to buy."
+          action={
+            <Link to="/products">
+              <Button>Browse Products</Button>
+            </Link>
+          }
+        />
+      </div>
     </div>
   )
 }

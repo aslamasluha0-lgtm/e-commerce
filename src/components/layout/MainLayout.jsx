@@ -3,10 +3,11 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import Sidebar from './Sidebar'
 import AIChatbot from '@/components/ai-chat/AIChatbot'
+import ToastProvider from '@/components/common/Toast'
 
 const MainLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-950">
+    <div className="flex min-h-screen flex-col bg-surface-50 dark:bg-surface-950">
       <Navbar />
       <Sidebar />
       <main className="flex-1">
@@ -14,6 +15,7 @@ const MainLayout = () => {
       </main>
       <Footer />
       <AIChatbot />
+      <ToastProvider />
     </div>
   )
 }

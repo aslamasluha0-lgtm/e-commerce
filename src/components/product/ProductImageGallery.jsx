@@ -15,31 +15,33 @@ const ProductImageGallery = ({ images = [] }) => {
 
   if (!images.length) {
     return (
-      <div className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center dark:bg-gray-800">
-        <span className="text-gray-400 dark:text-gray-500">No image available</span>
+      <div className="flex aspect-square items-center justify-center rounded-2xl bg-surface-100 dark:bg-surface-800">
+        <span className="text-surface-400 dark:text-surface-500">No image available</span>
       </div>
     )
   }
 
   return (
-    <div className="space-y-4">
-      <div className="relative aspect-square bg-gray-100 rounded-lg overflow-hidden dark:bg-gray-800">
+    <div>
+      <div className="relative aspect-square overflow-hidden rounded-2xl border border-surface-200 bg-white dark:border-surface-800 dark:bg-surface-900">
         <ProductImage
           src={images[selectedIndex]}
           alt="Product"
-          className="w-full h-full object-cover"
+          className="h-full w-full object-contain p-6"
         />
         {images.length > 1 && (
           <>
             <button
               onClick={handlePrevious}
-              className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-white/80 rounded-full hover:bg-white"
+              aria-label="Previous image"
+              className="absolute left-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-surface-700 shadow-soft backdrop-blur transition-all hover:bg-white dark:bg-surface-800/90 dark:text-surface-200 dark:hover:bg-surface-700"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
             <button
               onClick={handleNext}
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-white/80 rounded-full hover:bg-white"
+              aria-label="Next image"
+              className="absolute right-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-surface-700 shadow-soft backdrop-blur transition-all hover:bg-white dark:bg-surface-800/90 dark:text-surface-200 dark:hover:bg-surface-700"
             >
               <ChevronRight className="h-5 w-5" />
             </button>
@@ -47,16 +49,23 @@ const ProductImageGallery = ({ images = [] }) => {
         )}
       </div>
       {images.length > 1 && (
-        <div className="flex gap-2 overflow-x-auto">
+        <div className="mt-4 flex gap-3 overflow-x-auto scrollbar-none">
           {images.map((image, index) => (
             <button
               key={index}
               onClick={() => setSelectedIndex(index)}
-              className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 ${
-                selectedIndex === index ? 'border-blue-600' : 'border-gray-200 dark:border-gray-700'
+              aria-label={`View image ${index + 1}`}
+              className={`relative flex aspect-square w-20 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl border-2 bg-white transition-all ${
+                selectedIndex === index
+                  ? 'border-brand-600 ring-2 ring-brand-600/20'
+                  : 'border-surface-200 hover:border-surface-300 dark:border-surface-700 dark:hover:border-surface-600'
               }`}
             >
-              <ProductImage src={image} alt="" className="w-full h-full object-cover" />
+              <ProductImage
+                src={image}
+                alt=""
+                className="h-full w-full object-contain p-1.5"
+              />
             </button>
           ))}
         </div>

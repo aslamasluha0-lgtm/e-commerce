@@ -11,11 +11,12 @@ const ProductSort = ({ sortBy, onSortChange }) => {
 
   return (
     <div className="flex items-center gap-2">
-      <ArrowUpDown className="h-4 w-4 text-gray-500 dark:text-gray-400" />
+      <ArrowUpDown className="h-4 w-4 text-surface-400 dark:text-surface-500" />
       <select
         value={sortBy}
         onChange={(e) => onSortChange(e.target.value)}
-        className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-100 dark:border-gray-600"
+        aria-label="Sort products"
+        className="h-10 cursor-pointer rounded-xl border border-surface-200 bg-white px-3 py-2 text-sm text-surface-700 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500/20 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200"
       >
         {sortOptions.map((option) => (
           <option key={option.value} value={option.value}>

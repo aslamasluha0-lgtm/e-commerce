@@ -1,15 +1,17 @@
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 import LoginForm from '@/components/auth/LoginForm'
 import { useAuth } from '@/hooks/useAuth'
 
 const Login = () => {
   const navigate = useNavigate()
+  const location = useLocation()
   const { login, loading, error } = useAuth()
 
   const handleSubmit = async (data) => {
     try {
       await login(data)
-      navigate('/')
+      const from = location.state?.from || '/'
+      navigate(from, { replace: true })
     } catch (err) {
       // Error handled by useAuth hook
     }

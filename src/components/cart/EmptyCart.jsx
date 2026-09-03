@@ -1,16 +1,23 @@
 import { ShoppingCart } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import EmptyState from '@/components/common/EmptyState'
 import Button from '@/components/common/Button'
 
 const EmptyCart = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-16">
-      <ShoppingCart className="h-24 w-24 text-gray-300 mb-4 dark:text-gray-700" />
-      <h2 className="text-2xl font-semibold text-gray-900 mb-2 dark:text-gray-100">Your cart is empty</h2>
-      <p className="text-gray-500 mb-6 dark:text-gray-400">Add some products to get started!</p>
-      <Link to="/products">
-        <Button>Continue Shopping</Button>
-      </Link>
+    <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="rounded-3xl border border-surface-200 bg-white p-8 dark:border-surface-800 dark:bg-surface-900">
+        <EmptyState
+          icon={ShoppingCart}
+          title="Your cart is empty"
+          description="Looks like you haven't added anything yet. Explore our collection to find the right gear for your setup."
+          action={
+            <Link to="/products">
+              <Button>Start Shopping</Button>
+            </Link>
+          }
+        />
+      </div>
     </div>
   )
 }
