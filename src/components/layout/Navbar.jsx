@@ -37,12 +37,12 @@ const Navbar = () => {
   const wishlistCount = useSelector((state) => state.wishlist.items.length)
 
   const [searchQuery, setSearchQuery] = useState('')
-  const debouncedSearch = searchQuery.trim()
+  const trimmedQuery = searchQuery.trim()
 
   const handleSearchSubmit = (e) => {
     e.preventDefault()
-    if (debouncedSearch) {
-      navigate(`/products?q=${encodeURIComponent(debouncedSearch)}`)
+    if (trimmedQuery) {
+      navigate(`/products?q=${encodeURIComponent(trimmedQuery)}`)
     } else {
       navigate('/products')
     }

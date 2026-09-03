@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { SlidersHorizontal, X } from 'lucide-react'
+import { SlidersHorizontal, X, Loader2 } from 'lucide-react'
 import ProductGrid from '@/components/product/ProductGrid'
 import ProductFilter from '@/components/product/ProductFilter'
 import ProductSort from '@/components/product/ProductSort'
@@ -36,7 +36,7 @@ const Products = () => {
     params._order = sortBy.includes('_desc') ? 'desc' : 'asc'
   }
 
-  const { data: products, isLoading, isError, refetch } = useProducts(params)
+  const { data: products, isLoading, isFetching, isError, refetch } = useProducts(params)
 
   const { data: categories } = useQuery({
     queryKey: ['categories'],
@@ -173,6 +173,9 @@ const Products = () => {
                     </span>"
                   </>
                 )}
+                {isFetching && !isLoading && (
+                  <Loader2 className="ml-2 inline h-3.5 w-3.5 animate-spin text-surface-400 dark:text-surface-500" />
+                )}
               </p>
               <ProductSort sortBy={sortBy} onSortChange={setSortBy} />
             </div>
@@ -182,8 +185,16 @@ const Products = () => {
             products={products}
             loading={isLoading}
             skeletonCount={12}
-            emptyMessage="No products found"
-            emptyDescription="Try adjusting your search or filters to find what you're looking for."
+            emptyMessage={
+              debouncedSearch
+                ? `No products found for "${debouncedSearch}"`
+                : 'No products found'
+            }
+            emptyDescription={
+              debouncedSearch
+                ? 'Try adjusting your search or filters to find what you\'re looking for.'
+                : 'Try adjusting your filters to find what you\'re looking for.'
+            }
           />
 
           {isError && (

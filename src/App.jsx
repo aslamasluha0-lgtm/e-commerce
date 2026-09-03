@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import store from '@/redux/store'
 import AppRoutes from '@/routes/AppRoutes'
+import ScrollToTop from './components/common/ScrollToTop'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -19,6 +20,7 @@ function App() {
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
+         <ScrollToTop/>
           <AppRoutes />
         </BrowserRouter>
       </QueryClientProvider>
