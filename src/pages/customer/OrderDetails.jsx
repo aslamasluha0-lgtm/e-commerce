@@ -51,7 +51,8 @@ const OrderDetails = () => {
   const navigate = useNavigate()
   const { user } = useAuth()
   const { data: order, isLoading } = useOrder(id)
-  const { data: products } = useProducts()
+  const { data: productData } = useProducts()
+  const products = productData?.items
 
   const productMap = new Map(
     (products || []).map((p) => [String(p.id), p])

@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { ShoppingBag, PackageCheck, ArrowLeft } from 'lucide-react'
+import { ShoppingBag, PackageCheck, ArrowLeft, MapPin } from 'lucide-react'
 import AddressForm from '@/components/checkout/AddressForm'
 import OrderSummary from '@/components/checkout/OrderSummary'
 import PaymentMethod from '@/components/checkout/PaymentMethod'
@@ -16,6 +16,10 @@ import { clearCart } from '@/redux/slices/cartSlice'
 import { calculateTotals, generateOrderNumber } from '@/utils/checkoutCalculations'
 import { formatCurrency } from '@/utils/formatCurrency'
 import { addressSchema } from '@/utils/validators'
+import { getEffectivePrice } from '@/utils/helpers'
+import { storage } from '@/utils/storage'
+
+const ADDRESS_STORAGE_KEY = 'devstore_addresses'
 
 const emptyAddress = {
   fullName: '',
@@ -38,7 +42,7 @@ const Checkout = () => {
   const { items: cartItems } = useSelector((state) => state.cart)
 
   const checkoutItems = buyNowItem
-    ? [{ ...buyNowItem.product, quantity: buyNowItem.quantity }]
+    ? [{ ...buyNowItem.product, price: getEffectivePrice(buyNowItem.product), quantity: buyNowItem.quantity }]
     : cartItems
 
   const orderNumber = useRef(generateOrderNumber()).current
@@ -50,6 +54,25 @@ const Checkout = () => {
   const [shippingErrors, setShippingErrors] = useState({})
   const [paymentStatus, setPaymentStatus] = useState('idle')
   const [orderError, setOrderError] = useState('')
+
+  const savedAddresses = user
+    ? storage.get(ADDRESS_STORAGE_KEY)?.[String(user.id)] || []
+    : []
+
+  const handleSelectSavedAddress = (address) => {
+    setShippingAddress({
+      fullName: address.fullName,
+      phone: address.phone,
+      address: address.address,
+      city: address.city,
+      state: address.state,
+      pincode: address.pincode,
+    })
+    setShippingErrors({})
+    setOrderError('')
+  }
+
+  const hasEnteredAddress = Object.values(shippingAddress).some((v) => String(v).trim() !== '')
 
   if (!checkoutItems.length) {
     return (
@@ -237,6 +260,36 @@ const Checkout = () => {
             <h2 className="text-lg font-semibold text-surface-900 dark:text-surface-100">
               1. Shipping Address
             </h2>
+            {savedAddresses.length > 0 && !hasEnteredAddress && (
+              <div className="mt-4">
+                <p className="mb-2 text-sm font-medium text-surface-600 dark:text-surface-300">
+                  Choose a saved address
+                </p>
+                <div className="space-y-2">
+                  {savedAddresses.map((addr) => (
+                    <button
+                      key={addr.id}
+                      type="button"
+                      onClick={() => handleSelectSavedAddress(addr)}
+                      className="flex w-full items-start gap-3 rounded-xl border border-surface-200 bg-surface-50 p-3 text-left transition-colors hover:border-brand-400 dark:border-surface-700 dark:bg-surface-900 dark:hover:border-brand-600"
+                    >
+                      <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-brand-600 dark:text-brand-400" />
+                      <div className="min-w-0">
+                        <p className="text-sm font-semibold text-surface-900 dark:text-surface-100">
+                          {addr.fullName}
+                        </p>
+                        <p className="text-xs text-surface-500 dark:text-surface-400">
+                          {addr.address}, {addr.city}, {addr.state} {addr.pincode}
+                        </p>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+                <p className="my-3 text-center text-xs text-surface-400 dark:text-surface-500">
+                  or enter a new address below
+                </p>
+              </div>
+            )}
             <div className="mt-4">
               <AddressForm
                 value={shippingAddress}

@@ -65,6 +65,11 @@ const CartItem = ({ item }) => {
         <div className="mt-2">
           <p className="text-sm text-surface-500 dark:text-surface-400">
             {formatCurrency(item.price)} each
+            {item.originalPrice && (
+              <span className="ml-1.5 text-xs text-surface-400 line-through dark:text-surface-500">
+                {formatCurrency(item.originalPrice)}
+              </span>
+            )}
           </p>
         </div>
 

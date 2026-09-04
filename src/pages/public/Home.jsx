@@ -1,30 +1,23 @@
 import { Link } from 'react-router-dom'
 import {
   ArrowRight,
-  Laptop,
-  Monitor,
-  Keyboard,
-  Mouse,
-  Headphones,
-  MonitorUp,
   ShieldCheck,
   Truck,
   CreditCard,
   RotateCcw,
   Headset,
+  Laptop,
+  Monitor,
+  Keyboard,
+  Mouse,
+  Headphones,
 } from 'lucide-react'
+import { useQuery } from '@tanstack/react-query'
 import ProductGrid from '@/components/product/ProductGrid'
 import SectionHeader from '@/components/common/SectionHeader'
 import { useProducts } from '@/hooks/useProducts'
-
-const CATEGORIES = [
-  { id: 1, name: 'Laptops', description: 'Powerful machines for any workload', icon: Laptop },
-  { id: 3, name: 'Monitors', description: 'Crisp displays for deep focus', icon: Monitor },
-  { id: 4, name: 'Keyboards', description: 'Mechanical & low-profile options', icon: Keyboard },
-  { id: 5, name: 'Mice', description: 'Precision for every click', icon: Mouse },
-  { id: 6, name: 'Headphones', description: 'Immersive, distraction-free audio', icon: Headphones },
-  { id: 11, name: 'Laptop Stands', description: 'Ergonomic workspace setups', icon: MonitorUp },
-]
+import { categoryService } from '@/services/categoryService'
+import { CATEGORY_ICONS, FALLBACK_CATEGORY_ICON } from '@/constants/categoryIcons'
 
 const BENEFITS = [
   { Icon: Truck, title: 'Free Shipping', desc: 'On all orders over ₹500' },
@@ -35,7 +28,13 @@ const BENEFITS = [
 ]
 
 const Home = () => {
-  const { data: products, isLoading } = useProducts({ _limit: 8 })
+  const { data, isLoading: productsLoading } = useProducts({ _limit: 8 })
+  const products = data?.items
+
+  const { data: categories } = useQuery({
+    queryKey: ['categories'],
+    queryFn: categoryService.getAll,
+  })
 
   return (
     <div>
@@ -163,24 +162,27 @@ const Home = () => {
           actionTo="/categories"
         />
         <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6 sm:gap-6">
-          {CATEGORIES.map(({ id, name, icon: Icon }) => (
-            <Link
-              key={id}
-              to={`/products?category=${id}`}
-              className="group relative flex flex-col items-start overflow-hidden rounded-2xl border border-surface-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-card-hover dark:border-surface-800 dark:bg-surface-900 dark:hover:border-brand-800"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-100 text-surface-600 transition-colors group-hover:bg-brand-50 group-hover:text-brand-600 dark:bg-surface-800 dark:text-surface-300 dark:group-hover:bg-brand-950/40 dark:group-hover:text-brand-400">
-                <Icon className="h-6 w-6" strokeWidth={1.75} />
-              </div>
-              <p className="mt-4 text-sm font-semibold text-surface-900 dark:text-surface-100">
-                {name}
-              </p>
-              <span className="flex items-center gap-1 text-xs text-surface-500 transition-colors group-hover:text-brand-600 dark:text-surface-400 dark:group-hover:text-brand-400">
-                Explore
-                <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
-              </span>
-            </Link>
-          ))}
+          {(categories || []).map((category) => {
+            const Icon = CATEGORY_ICONS[category.slug] || FALLBACK_CATEGORY_ICON
+            return (
+              <Link
+                key={category.id}
+                to={`/products?category=${category.id}`}
+                className="group relative flex flex-col items-start overflow-hidden rounded-2xl border border-surface-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-300 hover:shadow-card-hover dark:border-surface-800 dark:bg-surface-900 dark:hover:border-brand-800"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-100 text-surface-600 transition-colors group-hover:bg-brand-50 group-hover:text-brand-600 dark:bg-surface-800 dark:text-surface-300 dark:group-hover:bg-brand-950/40 dark:group-hover:text-brand-400">
+                  <Icon className="h-6 w-6" strokeWidth={1.75} />
+                </div>
+                <p className="mt-4 text-sm font-semibold text-surface-900 dark:text-surface-100">
+                  {category.name}
+                </p>
+                <span className="flex items-center gap-1 text-xs text-surface-500 transition-colors group-hover:text-brand-600 dark:text-surface-400 dark:group-hover:text-brand-400">
+                  Explore
+                  <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </Link>
+            )
+          })}
         </div>
       </section>
 
@@ -194,7 +196,7 @@ const Home = () => {
             actionTo="/products"
           />
           <div className="mt-8">
-            <ProductGrid products={products} loading={isLoading} skeletonCount={8} />
+            <ProductGrid products={products} loading={productsLoading} skeletonCount={8} />
           </div>
         </div>
       </section>

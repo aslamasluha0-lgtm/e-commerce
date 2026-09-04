@@ -1,23 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Laptop, Monitor, Keyboard, Mouse, Headphones, Webcam, Mic, HardDrive, Usb, MonitorUp } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { categoryService } from '@/services/categoryService'
 import { CategoryCardSkeleton } from '@/components/common/Skeletons'
-
-const CATEGORY_ICONS = {
-  'laptops': Laptop,
-  'monitors': Monitor,
-  'keyboards': Keyboard,
-  'mice': Mouse,
-  'headphones': Headphones,
-  'webcams': Webcam,
-  'microphones': Mic,
-  'storage': HardDrive,
-  'usb-hubs-docks': Usb,
-  'laptop-stands': MonitorUp,
-}
-
-const fallbackIcon = Laptop
+import { CATEGORY_ICONS, FALLBACK_CATEGORY_ICON } from '@/constants/categoryIcons'
 
 const Categories = () => {
   const { data: categories, isLoading } = useQuery({
@@ -54,7 +40,7 @@ const Categories = () => {
 
       <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {categories?.map((category) => {
-          const Icon = CATEGORY_ICONS[category.slug] || fallbackIcon
+          const Icon = CATEGORY_ICONS[category.slug] || FALLBACK_CATEGORY_ICON
           return (
             <Link
               key={category.id}

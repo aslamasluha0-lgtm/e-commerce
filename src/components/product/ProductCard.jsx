@@ -9,6 +9,7 @@ import ProductImage from '@/components/common/ProductImage'
 import Price from '@/components/common/Price'
 import Badge from '@/components/common/Badge'
 import { useToast } from '@/hooks/useToast'
+import { getEffectivePrice, getOriginalPrice } from '@/utils/helpers'
 
 const getBadge = (product) => {
   if (product.tags?.includes('new')) return { label: 'NEW', variant: 'brand' }
@@ -28,7 +29,8 @@ const ProductCard = ({ product }) => {
   const wishlistItems = useSelector((state) => state.wishlist.items)
   const isWishlisted = wishlistItems.some((item) => item.id === product.id)
 
-  const originalPrice = product.discountPrice || product.price
+  const effectivePrice = getEffectivePrice(product)
+  const originalPrice = getOriginalPrice(product)
   const outOfStock = product.stock === 0
 
   const handleWishlist = (e) => {
@@ -152,7 +154,7 @@ const ProductCard = ({ product }) => {
         </div>
 
         <div className="mt-auto pt-3">
-          <Price price={product.price} originalPrice={originalPrice} />
+          <Price price={effectivePrice} originalPrice={originalPrice} />
         </div>
       </div>
     </Link>

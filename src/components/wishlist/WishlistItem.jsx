@@ -8,11 +8,13 @@ import Price from '@/components/common/Price'
 import Badge from '@/components/common/Badge'
 import { useToast } from '@/hooks/useToast'
 import { Link } from 'react-router-dom'
+import { getEffectivePrice, getOriginalPrice } from '@/utils/helpers'
 
 const WishlistItem = ({ item }) => {
   const dispatch = useDispatch()
   const { success } = useToast()
-  const originalPrice = item.discountPrice || item.price
+  const effectivePrice = getEffectivePrice(item)
+  const originalPrice = getOriginalPrice(item)
 
   const handleAddToCart = () => {
     dispatch(addToCart(item))
@@ -64,7 +66,7 @@ const WishlistItem = ({ item }) => {
         </div>
 
         <div className="mt-2">
-          <Price price={item.price} originalPrice={originalPrice} />
+          <Price price={effectivePrice} originalPrice={originalPrice} />
         </div>
 
         <div className="mt-1">

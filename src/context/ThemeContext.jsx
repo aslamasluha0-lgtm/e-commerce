@@ -11,7 +11,7 @@ export const ThemeProvider = ({ children }) => {
     try {
       localStorage.setItem(THEME_STORAGE_KEY, theme)
     } catch {
-      
+      // Storage may be unavailable (private mode / quota). Theme still applies for the session.
     }
   }, [theme])
 

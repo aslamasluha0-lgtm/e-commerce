@@ -3,8 +3,15 @@ import { storage, STORAGE_KEYS } from '@/utils/storage'
 
 const initialState = {
   items: storage.get(STORAGE_KEYS.CART) || [],
-  totalAmount: 0,
-  totalQuantity: 0,
+}
+
+const normalizeCartItem = (product) => {
+  const effectivePrice = product.discountPrice || product.price
+  return {
+    ...product,
+    price: effectivePrice,
+    originalPrice: product.discountPrice ? product.price : undefined,
+  }
 }
 
 const cartSlice = createSlice({
@@ -12,11 +19,12 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const existingItem = state.items.find((item) => item.id === action.payload.id)
+      const normalized = normalizeCartItem(action.payload)
+      const existingItem = state.items.find((item) => item.id === normalized.id)
       if (existingItem) {
         existingItem.quantity += 1
       } else {
-        state.items.push({ ...action.payload, quantity: 1 })
+        state.items.push({ ...normalized, quantity: 1 })
       }
       storage.set(STORAGE_KEYS.CART, state.items)
     },

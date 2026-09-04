@@ -36,7 +36,9 @@ const Products = () => {
     params._order = sortBy.includes('_desc') ? 'desc' : 'asc'
   }
 
-  const { data: products, isLoading, isFetching, isError, refetch } = useProducts(params)
+  const { data, isLoading, isFetching, isError, refetch } = useProducts(params)
+  const products = data?.items
+  const totalCount = data?.totalCount
 
   const { data: categories } = useQuery({
     queryKey: ['categories'],
@@ -162,7 +164,7 @@ const Products = () => {
               <p className="text-sm text-surface-500 dark:text-surface-400">
                 Showing{' '}
                 <span className="font-semibold text-surface-900 dark:text-surface-100">
-                  {products?.length || 0}
+                  {totalCount ?? products?.length ?? 0}
                 </span>{' '}
                 products
                 {debouncedSearch && (
@@ -207,7 +209,7 @@ const Products = () => {
           {!isError && (
             <Pagination
               currentPage={page}
-              totalPages={Math.ceil((products?.length || 0) / 12)}
+              totalPages={totalCount ? Math.ceil(totalCount / 12) : 1}
               onPageChange={setPage}
             />
           )}

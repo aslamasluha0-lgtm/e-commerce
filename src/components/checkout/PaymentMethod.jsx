@@ -6,14 +6,14 @@ const PaymentMethod = ({ selectedMethod, onSelect }) => {
 
   return (
     <div className="space-y-3">
-      <h3 className="text-lg font-semibold dark:text-gray-100">Payment Method</h3>
+      <h3 className="text-lg font-semibold text-surface-900 dark:text-surface-100">Payment Method</h3>
       {methods.map((method) => (
         <label
           key={method.id}
-          className={`flex items-center gap-3 p-4 border rounded-lg cursor-pointer ${
+          className={`flex items-center gap-3 p-4 border rounded-xl cursor-pointer transition-colors ${
             selectedMethod === method.id
-              ? 'border-blue-600 bg-blue-50 dark:bg-blue-950'
-              : 'border-gray-200 dark:border-gray-700'
+              ? 'border-brand-600 bg-brand-50 dark:bg-brand-950/40 dark:border-brand-700'
+              : 'border-surface-200 dark:border-surface-700 hover:border-surface-300 dark:hover:border-surface-600'
           }`}
         >
           <input
@@ -22,9 +22,9 @@ const PaymentMethod = ({ selectedMethod, onSelect }) => {
             value={method.id}
             checked={selectedMethod === method.id}
             onChange={() => onSelect(method.id)}
-            className="text-blue-600 accent-blue-600"
+            className="accent-brand-600"
           />
-          <span className="dark:text-gray-200">{method.label}</span>
+          <span className="text-surface-700 dark:text-surface-200">{method.label}</span>
         </label>
       ))}
     </div>

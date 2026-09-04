@@ -13,7 +13,7 @@ const ThemeToggle = ({ className = '' }) => {
       onClick={toggleTheme}
       aria-label={label}
       title={label}
-      className={`inline-flex items-center justify-center h-10 w-10 rounded-lg text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 transition-colors dark:text-gray-300 dark:hover:bg-gray-800 dark:hover:text-white ${className}`}
+      className={`inline-flex items-center justify-center h-10 w-10 rounded-lg text-surface-600 hover:bg-surface-100 hover:text-surface-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 transition-colors dark:text-surface-300 dark:hover:bg-surface-800 dark:hover:text-white ${className}`}
     >
       {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
     </button>

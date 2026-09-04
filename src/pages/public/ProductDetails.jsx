@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { ShoppingCart, Heart, ArrowLeft, PackageCheck, ShieldCheck, Truck, Minus, Plus, Box, Zap } from 'lucide-react'
 import { useProduct } from '@/hooks/useProduct'
 import { useProducts } from '@/hooks/useProducts'
+import { useReviewQueries } from '@/queries/reviewQueries'
 import ProductImageGallery from '@/components/product/ProductImageGallery'
 import ProductRating from '@/components/product/ProductRating'
 import ReviewList from '@/components/review/ReviewList'
@@ -17,6 +18,7 @@ import { addToCart } from '@/redux/slices/cartSlice'
 import { addToWishlist, removeFromWishlist } from '@/redux/slices/wishlistSlice'
 import { setBuyNowItem } from '@/redux/slices/checkoutSlice'
 import { useToast } from '@/hooks/useToast'
+import { getEffectivePrice, getOriginalPrice } from '@/utils/helpers'
 
 const TABS = [
   { id: 'overview', label: 'Overview' },
@@ -36,10 +38,14 @@ const ProductDetails = () => {
   const wishlistItems = useSelector((state) => state.wishlist.items)
   const isWishlisted = wishlistItems.some((item) => String(item.id) === String(id))
 
-  const { data: related, isLoading: relatedLoading } = useProducts({
+  const { data: relatedData, isLoading: relatedLoading } = useProducts({
     categoryId: product?.categoryId,
     _limit: 4,
   })
+  const related = relatedData?.items
+
+  const { useProductReviews } = useReviewQueries()
+  const { data: reviews = [], isLoading: reviewsLoading } = useProductReviews(id)
 
   if (isLoading) return <ProductDetailsSkeleton />
   if (!product) {
@@ -84,8 +90,6 @@ const ProductDetails = () => {
     navigate('/checkout')
   }
 
-  const originalPrice = product.discountPrice || product.price
-
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
       <Link
@@ -119,7 +123,7 @@ const ProductDetails = () => {
           </div>
 
           <div className="mt-5">
-            <Price price={product.price} originalPrice={originalPrice} size="lg" />
+            <Price price={getEffectivePrice(product)} originalPrice={getOriginalPrice(product)} size="lg" />
           </div>
 
           <p className="mt-5 leading-relaxed text-surface-600 dark:text-surface-300">
@@ -286,7 +290,23 @@ const ProductDetails = () => {
           title="Customer Reviews"
         />
         <div className="mt-6">
-          <ReviewList reviews={product.reviews || []} />
+          {reviewsLoading ? (
+            <div className="space-y-4">
+              {[1, 2].map((i) => (
+                <div key={i} className="animate-pulse rounded-xl border border-surface-200 bg-white p-4 dark:border-surface-800 dark:bg-surface-900">
+                  <div className="flex gap-2 mb-3">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <div key={s} className="h-4 w-4 rounded bg-surface-200 dark:bg-surface-700" />
+                    ))}
+                  </div>
+                  <div className="h-4 w-32 rounded bg-surface-200 dark:bg-surface-700 mb-2" />
+                  <div className="h-3 w-full rounded bg-surface-200 dark:bg-surface-700" />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <ReviewList reviews={reviews} />
+          )}
         </div>
       </section>
 

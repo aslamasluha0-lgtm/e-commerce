@@ -2,15 +2,14 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { ShoppingBag } from 'lucide-react'
 import { formatCurrency } from '@/utils/formatCurrency'
+import { calculateTotals } from '@/utils/checkoutCalculations'
 import Button from '@/components/common/Button'
 
 const CartSummary = () => {
   const { items } = useSelector((state) => state.cart)
 
-  const subtotal = items.reduce((total, item) => total + item.price * item.quantity, 0)
-  const shipping = subtotal > 500 || subtotal === 0 ? 0 : 49
-  const tax = Math.round(subtotal * 0.18)
-  const total = subtotal + shipping + tax
+  const { subtotal, shipping, tax, total } = calculateTotals(items)
+  const totalQuantity = items.reduce((n, i) => n + i.quantity, 0)
 
   return (
     <div className="lg:sticky lg:top-24 rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">
@@ -24,7 +23,7 @@ const CartSummary = () => {
       <div className="mt-5 space-y-3 text-sm">
         <div className="flex justify-between">
           <span className="text-surface-500 dark:text-surface-400">
-            Subtotal ({items.reduce((n, i) => n + i.quantity, 0)} items)
+            Subtotal ({totalQuantity} items)
           </span>
           <span className="font-medium text-surface-900 dark:text-surface-100">
             {formatCurrency(subtotal)}

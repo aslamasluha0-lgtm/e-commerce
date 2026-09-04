@@ -3,8 +3,9 @@ import { API_ENDPOINTS } from './api/apiConstants'
 
 export const productService = {
   getAll: async (params) => {
-    const { data } = await axiosInstance.get(API_ENDPOINTS.PRODUCTS, { params })
-    return data
+    const { data, headers } = await axiosInstance.get(API_ENDPOINTS.PRODUCTS, { params })
+    const totalCount = headers['x-total-count'] ? Number(headers['x-total-count']) : undefined
+    return { items: data, totalCount }
   },
 
   getById: async (id) => {
