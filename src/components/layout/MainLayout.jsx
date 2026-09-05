@@ -1,6 +1,5 @@
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
-import AIChatbot from '@/components/ai-chat/AIChatbot'
 import ToastProvider from '@/components/common/Toast'
 
 const MainLayout = () => {
@@ -10,7 +9,6 @@ const MainLayout = () => {
       <main className="flex-1">
         <Outlet />
       </main>
-      <AIChatbot />
       <ToastProvider />
     </div>
   )
