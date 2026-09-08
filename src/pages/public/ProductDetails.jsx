@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
+import toast from 'react-hot-toast'
 import { ShoppingCart, Heart, ArrowLeft, PackageCheck, ShieldCheck, Truck, Minus, Plus, Box, Zap } from 'lucide-react'
 import { useProduct } from '@/hooks/useProduct'
 import { useProducts } from '@/hooks/useProducts'
@@ -17,7 +18,6 @@ import SectionHeader from '@/components/common/SectionHeader'
 import { addToCart } from '@/redux/slices/cartSlice'
 import { addToWishlist, removeFromWishlist } from '@/redux/slices/wishlistSlice'
 import { setBuyNowItem } from '@/redux/slices/checkoutSlice'
-import { useToast } from '@/hooks/useToast'
 import { getEffectivePrice, getOriginalPrice } from '@/utils/helpers'
 
 const TABS = [
@@ -31,7 +31,6 @@ const ProductDetails = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const { data: product, isLoading } = useProduct(id)
-  const { success, error } = useToast()
   const [activeTab, setActiveTab] = useState('overview')
   const [quantity, setQuantity] = useState(1)
 
@@ -63,26 +62,26 @@ const ProductDetails = () => {
     for (let i = 0; i < quantity; i++) {
       dispatch(addToCart(product))
     }
-    success('Added to cart', `${product.name} × ${quantity}`)
+    toast.success(`Added to cart — ${product.name} × ${quantity}`)
   }
 
   const handleWishlist = () => {
     if (isWishlisted) {
       dispatch(removeFromWishlist(product.id))
-      success('Removed from wishlist', product.name)
+      toast.success(`Removed from wishlist — ${product.name}`)
     } else {
       dispatch(addToWishlist(product))
-      success('Added to wishlist', product.name)
+      toast.success(`Added to wishlist — ${product.name}`)
     }
   }
 
   const handleBuyNow = () => {
     if (!product) {
-      error('Unable to proceed to checkout. Please try again.')
+      toast.error('Unable to proceed to checkout. Please try again.')
       return
     }
     if (product.stock === 0) {
-      error('This product is out of stock.', 'Please try another item.')
+      toast.error('This product is out of stock. Please try another item.')
       return
     }
     const qty = Math.min(quantity, product.stock)

@@ -36,20 +36,7 @@ const loadRazorpayScript = () =>
     script.addEventListener('error', onError)
   })
 
-/**
- * Opens the Razorpay Checkout popup in Test Mode.
- *
- * @param {Object} params
- * @param {number} params.amount - Total amount in rupees.
- * @param {string} [params.customerName] - Prefill name.
- * @param {string} [params.email] - Prefill email.
- * @param {string} [params.contact] - Prefill phone.
- * @param {string} [params.description] - Checkout description.
- * @param {(response: any) => void} [params.onSuccess] - Optional success callback.
- * @param {(error: any) => void} [params.onFailure] - Optional failure callback.
- * @param {() => void} [params.onCancel] - Optional cancel callback.
- * @returns {Promise<{status: 'success', paymentId: string} | {status: 'cancelled'} | {status: 'failed'}>}
- */
+
 export const openRazorpayCheckout = async ({
   amount,
   customerName,

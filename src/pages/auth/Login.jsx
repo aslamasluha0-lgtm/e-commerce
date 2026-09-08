@@ -1,4 +1,5 @@
 import { useNavigate, useLocation, Link } from 'react-router-dom'
+import toast from 'react-hot-toast'
 import LoginForm from '@/components/auth/LoginForm'
 import { useAuth } from '@/hooks/useAuth'
 
@@ -8,10 +9,16 @@ const Login = () => {
   const { login, loading, error } = useAuth()
 
   const handleSubmit = async (data) => {
-    await login(data).then(() => {
+    try {
+      await login(data)
+
+      toast.success('Sign in successful')
+
       const from = location.state?.from || '/'
       navigate(from, { replace: true })
-    })
+    } catch (err) {
+      toast.error(err?.message || 'Invalid email or password')
+    }
   }
 
   return (

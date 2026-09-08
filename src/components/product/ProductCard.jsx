@@ -2,13 +2,13 @@ import { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Heart, ShoppingCart, Eye, Check } from 'lucide-react'
 import { useDispatch, useSelector } from 'react-redux'
+import toast from 'react-hot-toast'
 import { addToCart } from '@/redux/slices/cartSlice'
 import { addToWishlist, removeFromWishlist } from '@/redux/slices/wishlistSlice'
 import ProductRating from './ProductRating'
 import ProductImage from '@/components/common/ProductImage'
 import Price from '@/components/common/Price'
 import Badge from '@/components/common/Badge'
-import { useToast } from '@/hooks/useToast'
 import { getEffectivePrice, getOriginalPrice } from '@/utils/helpers'
 
 const getBadge = (product) => {
@@ -23,7 +23,6 @@ const getBadge = (product) => {
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch()
-  const { success } = useToast()
   const [added, setAdded] = useState(false)
   const addTimer = useRef(null)
   const wishlistItems = useSelector((state) => state.wishlist.items)
@@ -38,10 +37,10 @@ const ProductCard = ({ product }) => {
     e.stopPropagation()
     if (isWishlisted) {
       dispatch(removeFromWishlist(product.id))
-      success('Removed from wishlist', product.name)
+      toast.success(`Removed from wishlist — ${product.name}`)
     } else {
       dispatch(addToWishlist(product))
-      success('Added to wishlist', product.name)
+      toast.success(`Added to wishlist — ${product.name}`)
     }
   }
 
@@ -50,7 +49,7 @@ const ProductCard = ({ product }) => {
     e.stopPropagation()
     if (outOfStock) return
     dispatch(addToCart(product))
-    success('Added to cart', product.name)
+    toast.success(`Added to cart — ${product.name}`)
 
     setAdded(true)
     if (addTimer.current) clearTimeout(addTimer.current)

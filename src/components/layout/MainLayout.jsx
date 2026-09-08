@@ -1,6 +1,5 @@
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
-import ToastProvider from '@/components/common/Toast'
 
 const MainLayout = () => {
   return (
@@ -9,7 +8,6 @@ const MainLayout = () => {
       <main className="flex-1">
         <Outlet />
       </main>
-      <ToastProvider />
     </div>
   )
 }

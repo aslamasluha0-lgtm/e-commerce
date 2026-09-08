@@ -3,7 +3,7 @@ import { MapPin, Plus, Pencil, Trash2, X } from 'lucide-react'
 import Button from '@/components/common/Button'
 import Input from '@/components/common/Input'
 import { useAuth } from '@/hooks/useAuth'
-import { useToast } from '@/hooks/useToast'
+import toast from 'react-hot-toast'
 import { storage } from '@/utils/storage'
 import { addressSchema } from '@/utils/validators'
 
@@ -20,7 +20,6 @@ const emptyAddress = {
 
 const Addresses = () => {
   const { user } = useAuth()
-  const { success } = useToast()
   const idCounter = useRef(1)
   const [addresses, setAddresses] = useState(() => {
     const all = storage.get(ADDRESS_STORAGE_KEY) || {}
@@ -67,7 +66,7 @@ const Addresses = () => {
     if (editingId) {
       const updated = addresses.map((a) => (a.id === editingId ? { ...a, ...form } : a))
       persistAddresses(updated)
-      success('Address updated', 'Your address has been updated.')
+      toast.success('Address updated — Your address has been updated.')
     } else {
       idCounter.current += 1
       const newAddress = {
@@ -75,7 +74,7 @@ const Addresses = () => {
         id: `addr-${idCounter.current}`,
       }
       persistAddresses([...addresses, newAddress])
-      success('Address added', 'New address has been saved.')
+      toast.success('Address added — New address has been saved.')
     }
 
     resetForm()
@@ -97,7 +96,7 @@ const Addresses = () => {
 
   const handleDelete = (id) => {
     persistAddresses(addresses.filter((a) => a.id !== id))
-    success('Address removed', 'Address has been deleted.')
+    toast.success('Address removed — Address has been deleted.')
   }
 
   const resetForm = () => {

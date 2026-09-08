@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useToast } from '@/hooks/useToast'
+import toast from 'react-hot-toast'
 import Input from '@/components/common/Input'
 import Button from '@/components/common/Button'
 
 const ForgotPassword = () => {
-  const { success } = useToast()
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
@@ -13,7 +12,7 @@ const ForgotPassword = () => {
     e.preventDefault()
     if (!email.trim()) return
     setSubmitted(true)
-    success('Reset link sent', `If an account exists for ${email}, you will receive a password reset link.`)
+    toast.success(`Reset link sent — If an account exists for ${email}, you will receive a password reset link.`)
   }
 
   return (

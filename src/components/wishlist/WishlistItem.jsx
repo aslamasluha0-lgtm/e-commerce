@@ -1,30 +1,29 @@
 import { Trash2, ShoppingCart } from 'lucide-react'
 import { useDispatch } from 'react-redux'
+import toast from 'react-hot-toast'
 import { removeFromWishlist } from '@/redux/slices/wishlistSlice'
 import { addToCart } from '@/redux/slices/cartSlice'
 import ProductImage from '@/components/common/ProductImage'
 import ProductRating from '@/components/product/ProductRating'
 import Price from '@/components/common/Price'
 import Badge from '@/components/common/Badge'
-import { useToast } from '@/hooks/useToast'
 import { Link } from 'react-router-dom'
 import { getEffectivePrice, getOriginalPrice } from '@/utils/helpers'
 
 const WishlistItem = ({ item }) => {
   const dispatch = useDispatch()
-  const { success } = useToast()
   const effectivePrice = getEffectivePrice(item)
   const originalPrice = getOriginalPrice(item)
 
   const handleAddToCart = () => {
     dispatch(addToCart(item))
     dispatch(removeFromWishlist(item.id))
-    success('Added to cart', item.name)
+    toast.success(`Added to cart — ${item.name}`)
   }
 
   const handleRemove = () => {
     dispatch(removeFromWishlist(item.id))
-    success('Removed from wishlist', item.name)
+    toast.success(`Removed from wishlist — ${item.name}`)
   }
 
   return (

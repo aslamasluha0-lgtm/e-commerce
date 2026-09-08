@@ -9,7 +9,7 @@ import RazorpayButton from '@/components/checkout/RazorpayButton'
 import CheckoutSteps from '@/components/checkout/CheckoutSteps'
 import Button from '@/components/common/Button'
 import { useAuth } from '@/hooks/useAuth'
-import { useToast } from '@/hooks/useToast'
+import toast from 'react-hot-toast'
 import { useOrderQueries } from '@/queries/orderQueries'
 import { clearBuyNowItem } from '@/redux/slices/checkoutSlice'
 import { clearCart } from '@/redux/slices/cartSlice'
@@ -34,7 +34,6 @@ const Checkout = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const { user } = useAuth()
-  const { success } = useToast()
   const { useCreateOrder } = useOrderQueries()
   const createOrder = useCreateOrder()
 
@@ -189,7 +188,7 @@ const Checkout = () => {
       }
 
       setPaymentStatus('success')
-      success('Order placed successfully!', `Order ${order.orderNumber} has been confirmed.`)
+      toast.success(`Order placed successfully! Order ${order.orderNumber} has been confirmed.`)
       navigate('/order-success', { state: { order }, replace: true })
       return { ok: true }
     } catch (err) {

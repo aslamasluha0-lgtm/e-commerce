@@ -1,30 +1,29 @@
 import { Minus, Plus, Trash2, Heart } from 'lucide-react'
 import { useDispatch, useSelector } from 'react-redux'
+import toast from 'react-hot-toast'
 import { removeFromCart, updateQuantity } from '@/redux/slices/cartSlice'
 import { addToWishlist, removeFromWishlist } from '@/redux/slices/wishlistSlice'
 import ProductImage from '@/components/common/ProductImage'
 import { formatCurrency } from '@/utils/formatCurrency'
-import { useToast } from '@/hooks/useToast'
 import { Link } from 'react-router-dom'
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch()
-  const { success } = useToast()
   const wishlistItems = useSelector((state) => state.wishlist.items)
   const isWishlisted = wishlistItems.some((w) => w.id === item.id)
 
   const handleRemove = () => {
     dispatch(removeFromCart(item.id))
-    success('Removed from cart', item.name)
+    toast.success(`Removed from cart — ${item.name}`)
   }
 
   const handleWishlist = () => {
     if (isWishlisted) {
       dispatch(removeFromWishlist(item.id))
-      success('Removed from wishlist', item.name)
+      toast.success(`Removed from wishlist — ${item.name}`)
     } else {
       dispatch(addToWishlist(item))
-      success('Saved to wishlist', item.name)
+      toast.success(`Saved to wishlist — ${item.name}`)
     }
   }
 

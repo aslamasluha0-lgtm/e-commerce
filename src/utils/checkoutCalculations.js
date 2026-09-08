@@ -1,6 +1,6 @@
-export const FREE_SHIPPING_THRESHOLD = 500
+export const FREE_SHIPPING_THRESHOLD = 5000
 export const FLAT_SHIPPING = 49
-export const TAX_RATE = 0.18
+export const TAX_RATE = 0.10
 
 export const calculateTotals = (items, discount = 0) => {
   const subtotal = items.reduce((total, item) => total + item.price * item.quantity, 0)
