@@ -8,6 +8,7 @@
       "image": "https://itechstore.co.in/uploads/products/mac_m5_product.webp",
       "isActive": true
     },
+   
     {
       "id": 3,
       "name": "Monitors",
@@ -2773,6 +2774,14 @@
       "fullName": "muhammed aslam",
       "createdAt": "2026-09-02T04:30:33.786Z",
       "id": 103
+    },
+    {
+      "name": "sam",
+      "email": "sam@gmail.com",
+      "password": "12345678",
+      "role": "customer",
+      "createdAt": "2026-09-08T14:37:03.340Z",
+      "id": 104
     }
   ],
   "orders": [
