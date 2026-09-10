@@ -8,7 +8,6 @@
       "image": "https://itechstore.co.in/uploads/products/mac_m5_product.webp",
       "isActive": true
     },
-   
     {
       "id": 3,
       "name": "Monitors",
@@ -2659,9 +2658,6 @@
     }
   ],
   "users": [
-   
-   
-  
     {
       "name": "aslam",
       "email": "aslam@gmail.com",
@@ -2686,14 +2682,13 @@
       "createdAt": "2026-09-08T14:37:03.340Z",
       "id": 104
     },
-     {
-    "id": 1,
-    "name": "aslamaadmin",
-    "email": "aslam@devtech.com",
-    "password": "admin123",
-    "role": "admin"
-   }
-   
+    {
+      "id": 1,
+      "name": "aslamaadmin",
+      "email": "aslam@devtech.com",
+      "password": "admin123",
+      "role": "admin"
+    }
   ],
   "orders": [
     {
@@ -3295,6 +3290,50 @@
         }
       ],
       "id": 16
+    },
+    {
+      "userId": 102,
+      "orderNumber": "DEV-20260910-662",
+      "items": [
+        {
+          "id": 2,
+          "productId": 2,
+          "name": "ThinkPad X1 Carbon Gen 11",
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQczcTv92ljtISad-Y-uAPDIyX76koE1wW6tvq-zMpvphCSQ4jRBT1QehM&s=10",
+          "price": 132999,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 132999,
+      "discount": 0,
+      "shipping": 0,
+      "tax": 13300,
+      "total": 146299,
+      "paymentMethod": "razorpay",
+      "paymentStatus": "paid",
+      "paymentId": "pay_TaFPyKTaPQldU5",
+      "orderStatus": "processing",
+      "status": "processing",
+      "shippingAddress": {
+        "fullName": "muhammed",
+        "phone": "7907956468",
+        "addressLine1": "tharayil",
+        "addressLine2": "",
+        "city": "edappal",
+        "state": "kerala",
+        "postalCode": "679584",
+        "country": "India"
+      },
+      "date": "2026-09-10T07:14:27.651Z",
+      "createdAt": "2026-09-10T07:14:27.651Z",
+      "timeline": [
+        {
+          "status": "placed",
+          "date": "2026-09-10T07:14:27.651Z",
+          "note": "Order placed"
+        }
+      ],
+      "id": 17
     }
   ],
   "reviews": [
