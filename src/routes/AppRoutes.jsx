@@ -19,6 +19,17 @@ import OrderDetails from '@/pages/customer/OrderDetails'
 import OrderSuccess from '@/pages/customer/OrderSuccess'
 import Addresses from '@/pages/customer/Addresses'
 
+import AdminRoute from './AdminRoute'
+import AdminLogin from '@/pages/admin/AdminLogin'
+import AdminLayout from '@/pages/admin/AdminLayout'
+import AdminDashboard from '@/pages/admin/AdminDashboard'
+import AdminProducts from '@/pages/admin/AdminProducts'
+import AdminProductCreate from '@/pages/admin/AdminProductCreate'
+import AdminProductEdit from '@/pages/admin/AdminProductEdit'
+import AdminUsers from '@/pages/admin/AdminUsers'
+import AdminOrders from '@/pages/admin/AdminOrders'
+import AdminOrderDetails from '@/pages/admin/AdminOrderDetails'
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -53,6 +64,20 @@ const AppRoutes = () => {
         </Route>
 
         <Route path="*" element={<NotFound />} />
+      </Route>
+
+      <Route path="/admin/login" element={<AdminLogin />} />
+
+      <Route element={<AdminRoute />}>
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<AdminDashboard />} />
+          <Route path="products" element={<AdminProducts />} />
+          <Route path="products/new" element={<AdminProductCreate />} />
+          <Route path="products/:id/edit" element={<AdminProductEdit />} />
+          <Route path="users" element={<AdminUsers />} />
+          <Route path="orders" element={<AdminOrders />} />
+          <Route path="orders/:id" element={<AdminOrderDetails />} />
+        </Route>
       </Route>
     </Routes>
   )
