@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Plus } from 'lucide-react'
+import { Link, useNavigate } from 'react-router-dom'
+import { Plus, Pencil } from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
 import { productService } from '@/services/productService'
 import AdminTable from '@/components/admin/AdminTable'
@@ -17,6 +17,7 @@ const PAGE_SIZE = 10
 
 const AdminProducts = () => {
   const [page, setPage] = useState(1)
+  const navigate = useNavigate()
 
   const params = {
     _page: page,
@@ -83,6 +84,20 @@ const AdminProducts = () => {
       key: 'createdAt',
       label: 'Created',
       render: (product) => formatDate(product.createdAt),
+    },
+    {
+      key: 'actions',
+      label: 'Actions',
+      render: (product) => (
+        <button
+          type="button"
+          onClick={() => navigate(`/admin/products/${product.id}/edit`)}
+          className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:bg-surface-50 hover:border-surface-300 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
+        >
+          <Pencil className="h-3.5 w-3.5" />
+          Edit
+        </button>
+      ),
     },
   ]
 

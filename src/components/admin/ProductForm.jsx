@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Plus, X } from 'lucide-react'
@@ -7,11 +7,20 @@ import Input from '@/components/common/Input'
 import Button from '@/components/common/Button'
 import ProductImage from '@/components/common/ProductImage'
 
-const ProductForm = ({ onSubmit, onCancel, categories = [], loading = false, error }) => {
+const ProductForm = ({
+  onSubmit,
+  onCancel,
+  categories = [],
+  loading = false,
+  error,
+  initialData,
+  submitLabel = 'Save Product',
+}) => {
   const {
     register,
     handleSubmit,
     setValue,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(productSchema),
@@ -20,8 +29,21 @@ const ProductForm = ({ onSubmit, onCancel, categories = [], loading = false, err
     },
   })
 
-  const [images, setImages] = useState([])
+  const [images, setImages] = useState(() => initialData?.images || [])
   const [imageUrl, setImageUrl] = useState('')
+
+  useEffect(() => {
+    if (initialData) {
+      reset({
+        name: initialData.name,
+        description: initialData.description,
+        price: initialData.price,
+        categoryId: initialData.categoryId,
+        stock: initialData.stock,
+        images: initialData.images || [],
+      })
+    }
+  }, [initialData, reset])
 
   const updateImages = (next) => {
     setImages(next)
@@ -182,7 +204,7 @@ const ProductForm = ({ onSubmit, onCancel, categories = [], loading = false, err
           Cancel
         </Button>
         <Button type="submit" loading={loading} disabled={loading}>
-          {loading ? 'Saving...' : 'Save Product'}
+          {loading ? 'Saving...' : submitLabel}
         </Button>
       </div>
     </form>

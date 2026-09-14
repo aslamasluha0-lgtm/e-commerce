@@ -2240,7 +2240,7 @@
     {
       "id": 51,
       "name": "Sony WH-CH720N Wireless Noise Cancelling Headphones",
-      "slug": "sony-wh-ch720n",
+      "slug": "sony-wh-ch720n-wireless-noise-cancelling-headphones",
       "brand": "Sony",
       "categoryId": 6,
       "category": "Headphones",
@@ -2656,6 +2656,7 @@
       "isActive": true,
       "createdAt": "2026-03-01T09:00:00Z"
     }
+    
   ],
   "users": [
     {
