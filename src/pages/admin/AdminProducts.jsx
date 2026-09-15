@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Plus, Pencil } from 'lucide-react'
-import { useQuery } from '@tanstack/react-query'
+import { Plus, Pencil, Trash } from 'lucide-react'
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
+import toast from 'react-hot-toast'
 import { productService } from '@/services/productService'
 import AdminTable from '@/components/admin/AdminTable'
 import AdminPagination from '@/components/admin/AdminPagination'
+import ConfirmDialog from '@/components/admin/ConfirmDialog'
 import StatusBadge from '@/components/admin/StatusBadge'
 import EmptyState from '@/components/common/EmptyState'
 import ErrorMessage from '@/components/common/ErrorMessage'
@@ -17,7 +19,9 @@ const PAGE_SIZE = 10
 
 const AdminProducts = () => {
   const [page, setPage] = useState(1)
+  const [productToDelete, setProductToDelete] = useState(null)
   const navigate = useNavigate()
+  const queryClient = useQueryClient()
 
   const params = {
     _page: page,
@@ -30,6 +34,36 @@ const AdminProducts = () => {
     queryKey: ['admin-products', params],
     queryFn: () => productService.getAll(params),
   })
+
+  const deleteMutation = useMutation({
+    mutationFn: (id) => productService.delete(id),
+
+    onSuccess: async () => {
+      if (page > 1 && data?.items?.length === 1) {
+        setPage((prev) => prev - 1)
+      }
+
+      await queryClient.invalidateQueries({
+        queryKey: ['admin-products'],
+      })
+
+      setProductToDelete(null)
+      toast.success('Product deleted successfully')
+    },
+
+    onError: () => {
+      toast.error('Failed to delete product. Please try again.')
+    },
+  })
+
+  const handleDelete = (product) => {
+    setProductToDelete(product)
+  }
+
+  const handleConfirmDelete = () => {
+    if (!productToDelete) return
+    deleteMutation.mutate(productToDelete.id)
+  }
 
   const products = data?.items
   const totalPages = data?.totalCount
@@ -89,14 +123,24 @@ const AdminProducts = () => {
       key: 'actions',
       label: 'Actions',
       render: (product) => (
-        <button
-          type="button"
-          onClick={() => navigate(`/admin/products/${product.id}/edit`)}
-          className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:bg-surface-50 hover:border-surface-300 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
-        >
-          <Pencil className="h-3.5 w-3.5" />
-          Edit
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => navigate(`/admin/products/${product.id}/edit`)}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:bg-surface-50 hover:border-surface-300 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
+          >
+            <Pencil className="h-3.5 w-3.5" />
+            Edit
+          </button>
+          <button
+            type="button"
+            onClick={() => handleDelete(product)}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-red-200 bg-white px-3 py-1.5 text-xs font-medium text-red-600 transition-colors hover:bg-red-50 hover:border-red-300 dark:border-red-800 dark:bg-surface-900 dark:text-red-400 dark:hover:bg-red-950"
+          >
+            <Trash className="h-3.5 w-3.5" />
+            Delete
+          </button>
+        </div>
       ),
     },
   ]
@@ -155,6 +199,20 @@ const AdminProducts = () => {
           />
         </div>
       )}
+
+      <ConfirmDialog
+        isOpen={!!productToDelete}
+        title="Delete Product"
+        message={
+          productToDelete
+            ? `Are you sure you want to delete "${productToDelete.name}"? This action cannot be undone.`
+            : ''
+        }
+        confirmLabel="Delete"
+        onConfirm={handleConfirmDelete}
+        onCancel={() => setProductToDelete(null)}
+        loading={deleteMutation.isPending}
+      />
     </div>
   )
 }

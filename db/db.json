@@ -2051,7 +2051,7 @@
       "currency": "INR",
       "rating": 4.6,
       "reviewCount": 87,
-      "stock": 12,
+      "stock": 10,
       "sku": "LAP-006",
       "description": "The Dell XPS 13 Plus pushes premium ultrabook design forward with a zero-lattice keyboard, seamless glass touchpad, and a stunning OLED InfiniteEdge display. Powered by a 13th Gen Intel Core i7, it's built for developers and creators who value portability without compromising performance.",
       "shortDescription": "13.4-inch OLED ultrabook, Intel Core i7-1360P, 16GB RAM, 512GB SSD.",
@@ -2656,7 +2656,6 @@
       "isActive": true,
       "createdAt": "2026-03-01T09:00:00Z"
     }
-    
   ],
   "users": [
     {
