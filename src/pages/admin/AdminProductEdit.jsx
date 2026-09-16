@@ -4,6 +4,8 @@ import toast from 'react-hot-toast'
 import { productService } from '@/services/productService'
 import { categoryService } from '@/services/categoryService'
 import ProductForm from '@/components/admin/ProductForm'
+import AdminLoading from '@/components/admin/AdminLoading'
+import AdminError from '@/components/admin/AdminError'
 
 const slugify = (name) =>
   name
@@ -24,6 +26,7 @@ const AdminProductEdit = () => {
     data: product,
     isPending: productPending,
     isError: productError,
+    refetch: refetchProduct,
   } = useQuery({
     queryKey: ['admin-product', id],
     queryFn: () => productService.getById(id),
@@ -40,18 +43,25 @@ const AdminProductEdit = () => {
       productService.update(productId, productData),
 
     onSuccess: async () => {
-      await queryClient.invalidateQueries({
-        queryKey: ['admin-products'],
-      })
-      await queryClient.invalidateQueries({
-        queryKey: ['admin-product', id],
-      })
+      await Promise.all([
+        queryClient.invalidateQueries({
+          queryKey: ['admin-products'],
+        }),
+        queryClient.invalidateQueries({
+          queryKey: ['admin-product', id],
+        }),
+        queryClient.invalidateQueries({
+          queryKey: ['admin-dashboard-products'],
+        }),
+      ])
       toast.success('Product updated successfully')
       navigate('/admin/products')
     },
+    onError: () => toast.error('Failed to update product'),
   })
 
   const handleUpdate = (formData) => {
+    if (updateMutation.isPending) return
     const category = categories.find((c) => c.id === formData.categoryId)
     updateMutation.mutate({
       id,
@@ -72,9 +82,7 @@ const AdminProductEdit = () => {
   if (productPending) {
     return (
       <div className="p-6">
-        <p className="text-sm text-surface-500 dark:text-surface-400">
-          Loading product...
-        </p>
+        <AdminLoading message="Loading Product..." />
       </div>
     )
   }
@@ -82,15 +90,15 @@ const AdminProductEdit = () => {
   if (productError || !product) {
     return (
       <div className="p-6">
-        <p className="text-lg text-surface-900 dark:text-white">
-          Unable to load product
-        </p>
-        <Link
-          to="/admin/products"
-          className="mt-4 inline-flex items-center rounded-lg border border-surface-200 bg-white px-4 py-2 text-sm font-medium text-surface-700 transition-colors hover:bg-surface-50 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
-        >
-          Back to Products
-        </Link>
+        <AdminError message="Unable to load product." onRetry={refetchProduct} />
+        <div className="mt-4 flex justify-center">
+          <Link
+            to="/admin/products"
+            className="inline-flex items-center rounded-lg border border-surface-200 bg-white px-4 py-2 text-sm font-medium text-surface-700 transition-colors hover:bg-surface-50 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
+          >
+            Back to Products
+          </Link>
+        </div>
       </div>
     )
   }

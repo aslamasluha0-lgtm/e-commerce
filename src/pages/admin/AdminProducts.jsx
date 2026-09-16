@@ -1,16 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Plus, Pencil, Trash } from 'lucide-react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import toast from 'react-hot-toast'
 import { productService } from '@/services/productService'
+import { categoryService } from '@/services/categoryService'
 import AdminTable from '@/components/admin/AdminTable'
 import AdminPagination from '@/components/admin/AdminPagination'
+import AdminLoading from '@/components/admin/AdminLoading'
+import AdminError from '@/components/admin/AdminError'
+import AdminEmptyState from '@/components/admin/AdminEmptyState'
 import ConfirmDialog from '@/components/admin/ConfirmDialog'
 import StatusBadge from '@/components/admin/StatusBadge'
-import EmptyState from '@/components/common/EmptyState'
-import ErrorMessage from '@/components/common/ErrorMessage'
-import Skeleton from '@/components/common/Skeleton'
+import Input from '@/components/common/Input'
 import ProductImage from '@/components/common/ProductImage'
 import { formatCurrency } from '@/utils/formatCurrency'
 import { formatDate } from '@/utils/formatDate'
@@ -19,21 +21,49 @@ const PAGE_SIZE = 10
 
 const AdminProducts = () => {
   const [page, setPage] = useState(1)
+  const [search, setSearch] = useState('')
+  const [debouncedSearch, setDebouncedSearch] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('')
   const [productToDelete, setProductToDelete] = useState(null)
   const navigate = useNavigate()
   const queryClient = useQueryClient()
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(search.trim())
+    }, 300)
+
+    return () => clearTimeout(timer)
+  }, [search])
+
+  const { data: categories = [] } = useQuery({
+    queryKey: ['categories'],
+    queryFn: categoryService.getAll,
+  })
+
+  const hasActiveFilters = Boolean(debouncedSearch) || Boolean(selectedCategory)
 
   const params = {
     _page: page,
     _limit: PAGE_SIZE,
     _sort: 'createdAt',
     _order: 'desc',
+    ...(debouncedSearch ? { q: debouncedSearch } : {}),
+    ...(selectedCategory ? { categoryId: Number(selectedCategory) } : {}),
   }
 
   const { data, isLoading, isError, refetch } = useQuery({
-    queryKey: ['admin-products', params],
+    queryKey: ['admin-products', page, PAGE_SIZE, debouncedSearch, selectedCategory],
     queryFn: () => productService.getAll(params),
   })
+
+  const [lastFilterKey, setLastFilterKey] = useState('')
+  const filterKey = `${debouncedSearch}::${selectedCategory}`
+
+  if (filterKey !== lastFilterKey) {
+    setLastFilterKey(filterKey)
+    if (page > 1) setPage(1)
+  }
 
   const deleteMutation = useMutation({
     mutationFn: (id) => productService.delete(id),
@@ -43,9 +73,14 @@ const AdminProducts = () => {
         setPage((prev) => prev - 1)
       }
 
-      await queryClient.invalidateQueries({
-        queryKey: ['admin-products'],
-      })
+      await Promise.all([
+        queryClient.invalidateQueries({
+          queryKey: ['admin-products'],
+        }),
+        queryClient.invalidateQueries({
+          queryKey: ['admin-dashboard-products'],
+        }),
+      ])
 
       setProductToDelete(null)
       toast.success('Product deleted successfully')
@@ -63,6 +98,12 @@ const AdminProducts = () => {
   const handleConfirmDelete = () => {
     if (!productToDelete) return
     deleteMutation.mutate(productToDelete.id)
+  }
+
+  const handleClearFilters = () => {
+    setSearch('')
+    setSelectedCategory('')
+    setPage(1)
   }
 
   const products = data?.items
@@ -127,6 +168,7 @@ const AdminProducts = () => {
           <button
             type="button"
             onClick={() => navigate(`/admin/products/${product.id}/edit`)}
+            aria-label={`Edit ${product.name}`}
             className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:bg-surface-50 hover:border-surface-300 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
           >
             <Pencil className="h-3.5 w-3.5" />
@@ -135,6 +177,7 @@ const AdminProducts = () => {
           <button
             type="button"
             onClick={() => handleDelete(product)}
+            aria-label={`Delete ${product.name}`}
             className="inline-flex items-center gap-1.5 rounded-lg border border-red-200 bg-white px-3 py-1.5 text-xs font-medium text-red-600 transition-colors hover:bg-red-50 hover:border-red-300 dark:border-red-800 dark:bg-surface-900 dark:text-red-400 dark:hover:bg-red-950"
           >
             <Trash className="h-3.5 w-3.5" />
@@ -151,42 +194,58 @@ const AdminProducts = () => {
         <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Products</h1>
         <Link
           to="/admin/products/new"
-          className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+          className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
         >
           <Plus className="h-4 w-4" />
           Add Product
         </Link>
       </div>
 
-      {isLoading && (
-        <div className="space-y-3">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <Skeleton key={i} className="h-16 w-full" />
-          ))}
+      <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <div className="sm:w-80">
+          <Input
+            type="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search products..."
+          />
         </div>
-      )}
+        <select
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="h-11 w-full rounded-lg border border-surface-200 bg-white px-3.5 text-sm text-surface-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/60 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-100 sm:w-56"
+        >
+          <option value="">All Categories</option>
+          {categories.map((category) => (
+            <option key={category.id} value={category.id}>
+              {category.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {isLoading && <AdminLoading message="Loading Products..." />}
 
       {isError && (
-        <ErrorMessage
-          message="We couldn't load the products list."
-          onRetry={refetch}
-        />
+        <AdminError message="Unable to load products." onRetry={refetch} />
       )}
 
       {!isLoading && !isError && products?.length === 0 && (
-        <EmptyState
-          title="No products found"
-          description="Get started by adding your first product."
-          action={
-            <Link
-              to="/admin/products/new"
-              className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-            >
-              <Plus className="h-4 w-4" />
-              Add Product
-            </Link>
-          }
-        />
+        hasActiveFilters ? (
+          <AdminEmptyState
+            title="No products found"
+            description="There are no products matching your current filters."
+            actionLabel="Clear Filters"
+            onAction={handleClearFilters}
+          />
+        ) : (
+          <AdminEmptyState
+            title="No products found"
+            description="Get started by adding your first product."
+            actionLabel="Add Product"
+            onAction={() => navigate('/admin/products/new')}
+          />
+        )
       )}
 
       {!isLoading && !isError && products?.length > 0 && (

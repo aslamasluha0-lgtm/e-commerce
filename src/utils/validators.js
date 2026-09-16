@@ -18,9 +18,9 @@ export const registerSchema = z.object({
 export const productSchema = z.object({
   name: z.string().min(1, 'Product name is required'),
   description: z.string().min(10, 'Description must be at least 10 characters'),
-  price: z.number().positive('Price must be positive'),
-  categoryId: z.number().positive('Category is required'),
-  stock: z.number().int().min(0, 'Stock cannot be negative'),
+  price: z.number({ required_error: 'Price is required' }).positive('Price must be greater than 0'),
+  categoryId: z.number({ required_error: 'Category is required' }).positive('Category is required'),
+  stock: z.number({ required_error: 'Stock is required' }).int('Stock must be a whole number').min(0, 'Stock cannot be negative'),
   images: z.array(z.string()).min(1, 'At least one image is required'),
 })
 

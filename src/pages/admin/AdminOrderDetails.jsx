@@ -1,22 +1,29 @@
-import { Link, useParams } from 'react-router-dom'
-import { useQuery } from '@tanstack/react-query'
-import { ArrowLeft, Package } from 'lucide-react'
+import { useState } from 'react'
+import { Link, useParams, useNavigate } from 'react-router-dom'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import toast from 'react-hot-toast'
+import { ArrowLeft, Loader2, Package } from 'lucide-react'
 import { orderService } from '@/services/orderService'
 import { userService } from '@/services/userService'
 import { useProducts } from '@/hooks/useProducts'
-import OrderStatusBadge from '@/components/order/OrderStatusBadge'
+import StatusBadge from '@/components/admin/StatusBadge'
+import ConfirmDialog from '@/components/admin/ConfirmDialog'
+import AdminLoading from '@/components/admin/AdminLoading'
+import AdminError from '@/components/admin/AdminError'
+import AdminEmptyState from '@/components/admin/AdminEmptyState'
 import Badge from '@/components/common/Badge'
-import EmptyState from '@/components/common/EmptyState'
-import ErrorMessage from '@/components/common/ErrorMessage'
-import Skeleton from '@/components/common/Skeleton'
 import ProductImage from '@/components/common/ProductImage'
 import { formatCurrency } from '@/utils/formatCurrency'
 import { formatDate } from '@/utils/formatDate'
 import {
+  getOrderStatus,
   getPaymentMethodLabel,
   getPaymentStatusLabel,
   isRazorpayOrder,
+  ORDER_STATUS_LABELS,
 } from '@/utils/orderDisplay'
+
+const ORDER_STATUSES = Object.keys(ORDER_STATUS_LABELS)
 
 const enrichOrderItems = (items, productMap) =>
   (items || []).map((item) => {
@@ -71,6 +78,33 @@ const BackLink = () => (
 
 const AdminOrderDetails = () => {
   const { id } = useParams()
+  const navigate = useNavigate()
+
+  const queryClient = useQueryClient()
+
+  const updateStatusMutation = useMutation({
+    mutationFn: (status) => orderService.updateStatus(id, status),
+
+    onSuccess: async () => {
+      await Promise.all([
+        queryClient.invalidateQueries({
+          queryKey: ['admin-orders'],
+        }),
+        queryClient.invalidateQueries({
+          queryKey: ['admin-order', id],
+        }),
+        queryClient.invalidateQueries({
+          queryKey: ['admin-dashboard-orders'],
+        }),
+      ])
+
+      toast.success('Order status updated successfully')
+    },
+
+    onError: () => {
+      toast.error('Failed to update order status')
+    },
+  })
 
   const {
     data: order,
@@ -79,11 +113,32 @@ const AdminOrderDetails = () => {
     refetch,
   } = useQuery({
     queryKey: ['admin-order', id],
-    queryFn: () => orderService.getById(id),
+    queryFn: () =>
+      orderService.getById(id).catch((error) => {
+        if (error.response?.status === 404) return null
+        throw error
+      }),
     enabled: Boolean(id),
   })
 
-  const { data: users = [] } = useQuery({
+  const [selectedStatus, setSelectedStatus] = useState('')
+  const [syncedOrderId, setSyncedOrderId] = useState(null)
+  const [confirmCancelOpen, setConfirmCancelOpen] = useState(false)
+
+  if (order && String(order.id) !== syncedOrderId) {
+    setSyncedOrderId(String(order.id))
+    setSelectedStatus(getOrderStatus(order))
+  }
+
+  const handleSaveStatus = () => {
+    if (selectedStatus === 'cancelled') {
+      setConfirmCancelOpen(true)
+      return
+    }
+    updateStatusMutation.mutate(selectedStatus)
+  }
+
+  const { data: userData } = useQuery({
     queryKey: ['admin-users'],
     queryFn: userService.getAll,
   })
@@ -91,24 +146,15 @@ const AdminOrderDetails = () => {
   const { data: productData } = useProducts()
   const products = productData?.items
 
+  const users = userData?.items ?? []
+
   const userMap = new Map((users || []).map((user) => [String(user.id), user]))
   const productMap = new Map((products || []).map((p) => [String(p.id), p]))
 
   if (isLoading) {
     return (
       <div className="p-6">
-        <div className="mb-4 flex items-center gap-2">
-          <ArrowLeft className="h-4 w-4 text-surface-400 dark:text-surface-500" aria-hidden="true" />
-          <p className="text-sm text-surface-500 dark:text-surface-400">
-            Loading order details...
-          </p>
-        </div>
-        <div className="space-y-4">
-          <Skeleton className="h-8 w-56" />
-          <Skeleton className="h-32 w-full" />
-          <Skeleton className="h-48 w-full" />
-          <Skeleton className="h-32 w-full" />
-        </div>
+        <AdminLoading message="Loading Order..." />
       </div>
     )
   }
@@ -116,7 +162,7 @@ const AdminOrderDetails = () => {
   if (isError) {
     return (
       <div className="p-6">
-        <ErrorMessage message="Unable to load this order." onRetry={refetch} />
+        <AdminError message="Unable to load order." onRetry={refetch} />
         <div className="mt-4 flex justify-center">
           <BackLink />
         </div>
@@ -127,11 +173,12 @@ const AdminOrderDetails = () => {
   if (!order) {
     return (
       <div className="p-6">
-        <EmptyState
+        <AdminEmptyState
           title="Order not found"
           description="This order could not be found."
           icon={Package}
-          action={<BackLink />}
+          actionLabel="Back to Orders"
+          onAction={() => navigate('/admin/orders')}
         />
       </div>
     )
@@ -143,12 +190,14 @@ const AdminOrderDetails = () => {
   const address = order.shippingAddress || {}
   const total = order.total ?? order.totalAmount ?? 0
   const isRazorpay = isRazorpayOrder(order)
+  const currentStatus = getOrderStatus(order)
 
   const customer = userMap.get(String(order.userId ?? ''))
   const customerName = customer
     ? customer.name || customer.fullName || customer.username
     : address.fullName || (order.userId != null ? `User #${order.userId}` : 'Guest')
   const customerEmail = customer?.email
+  const customerPhone = customer?.phone || address.phone
 
   return (
     <div className="p-6">
@@ -167,7 +216,7 @@ const AdminOrderDetails = () => {
             </p>
           )}
         </div>
-        <OrderStatusBadge order={order} size="lg" />
+        <StatusBadge status={currentStatus} />
       </div>
 
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -197,10 +246,46 @@ const AdminOrderDetails = () => {
             <div className="flex items-center justify-between gap-3">
               <dt className="text-surface-500 dark:text-surface-400">Order Status</dt>
               <dd>
-                <OrderStatusBadge order={order} />
+                <StatusBadge status={currentStatus} />
               </dd>
             </div>
           </dl>
+
+          <div className="mt-4 border-t border-surface-100 pt-4 dark:border-surface-800">
+            <label
+              htmlFor="order-status"
+              className="mb-2 block text-sm font-medium text-surface-900 dark:text-surface-100"
+            >
+              Update Status
+            </label>
+            <div className="flex flex-wrap items-center gap-3">
+              <select
+                id="order-status"
+                value={selectedStatus}
+                onChange={(e) => setSelectedStatus(e.target.value)}
+                className="h-11 min-w-[180px] flex-1 rounded-xl border border-surface-200 bg-white px-3.5 text-sm text-surface-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/60 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-100"
+              >
+                {ORDER_STATUSES.map((status) => (
+                  <option key={status} value={status}>
+                    {ORDER_STATUS_LABELS[status]}
+                  </option>
+                ))}
+              </select>
+              <button
+                type="button"
+                onClick={handleSaveStatus}
+                disabled={
+                  updateStatusMutation.isPending ||
+                  selectedStatus === currentStatus
+                }
+                aria-busy={updateStatusMutation.isPending || undefined}
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-medium text-white shadow-soft transition-colors hover:bg-brand-700 disabled:cursor-not-allowed disabled:opacity-60"
+              >
+                <Loader2 className={`h-4 w-4 animate-spin ${updateStatusMutation.isPending ? '' : 'hidden'}`} />
+                {updateStatusMutation.isPending ? 'Updating...' : 'Save Status'}
+              </button>
+            </div>
+          </div>
         </div>
 
         <div className="rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">
@@ -218,6 +303,12 @@ const AdminOrderDetails = () => {
               <dt className="text-surface-500 dark:text-surface-400">Customer Email</dt>
               <dd className="max-w-[60%] truncate text-right font-medium text-surface-900 dark:text-surface-100">
                 {customerEmail || '—'}
+              </dd>
+            </div>
+            <div className="flex items-center justify-between gap-3">
+              <dt className="text-surface-500 dark:text-surface-400">Customer Phone</dt>
+              <dd className="font-medium text-surface-900 dark:text-surface-100">
+                {customerPhone || '—'}
               </dd>
             </div>
           </dl>
@@ -351,6 +442,20 @@ const AdminOrderDetails = () => {
           </dl>
         </div>
       </div>
+
+      <ConfirmDialog
+        isOpen={confirmCancelOpen}
+        title="Cancel Order"
+        message="Are you sure you want to cancel this order?"
+        confirmLabel="Yes, Cancel Order"
+        loadingLabel="Cancelling..."
+        onCancel={() => setConfirmCancelOpen(false)}
+        onConfirm={() => {
+          setConfirmCancelOpen(false)
+          updateStatusMutation.mutate(selectedStatus)
+        }}
+        loading={updateStatusMutation.isPending}
+      />
     </div>
   )
 }

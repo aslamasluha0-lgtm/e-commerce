@@ -1,14 +1,16 @@
+import { useEffect, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useNavigate } from 'react-router-dom'
 import { Eye, Package } from 'lucide-react'
 import { orderService } from '@/services/orderService'
 import { userService } from '@/services/userService'
 import AdminTable from '@/components/admin/AdminTable'
+import AdminLoading from '@/components/admin/AdminLoading'
+import AdminError from '@/components/admin/AdminError'
+import AdminEmptyState from '@/components/admin/AdminEmptyState'
 import OrderStatusBadge from '@/components/order/OrderStatusBadge'
 import Badge from '@/components/common/Badge'
-import EmptyState from '@/components/common/EmptyState'
-import ErrorMessage from '@/components/common/ErrorMessage'
-import Skeleton from '@/components/common/Skeleton'
+import Input from '@/components/common/Input'
 import { formatCurrency } from '@/utils/formatCurrency'
 import { formatDate } from '@/utils/formatDate'
 import {
@@ -36,6 +38,18 @@ const getPaymentStatusVariant = (status) => {
 
 const AdminOrders = () => {
   const navigate = useNavigate()
+  const [search, setSearch] = useState('')
+  const [debouncedSearch, setDebouncedSearch] = useState('')
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(search.trim())
+    }, 300)
+
+    return () => clearTimeout(timer)
+  }, [search])
+
+  const hasSearch = Boolean(debouncedSearch)
 
   const {
     data: orders = [],
@@ -43,30 +57,28 @@ const AdminOrders = () => {
     isError,
     refetch,
   } = useQuery({
-    queryKey: ['admin-orders'],
-    queryFn: orderService.getAll,
+    queryKey: ['admin-orders', debouncedSearch],
+    queryFn: () =>
+      orderService.getAll(debouncedSearch ? { q: debouncedSearch } : {}),
   })
 
-  const { data: users = [] } = useQuery({
+  const { data: userData } = useQuery({
     queryKey: ['admin-users'],
     queryFn: userService.getAll,
   })
+
+  const users = userData?.items ?? []
 
   const userMap = new Map((users || []).map((user) => [String(user.id), user]))
 
   const columns = [
     {
       key: 'order',
-      label: 'Order',
+      label: 'Order ID',
       render: (order) => (
-        <div>
-          <p className="font-medium text-surface-900 dark:text-surface-100">
-            {order.orderNumber || `#${order.id}`}
-          </p>
-          <p className="text-xs text-surface-500 dark:text-surface-400">
-            {order.items?.length || 0} item{(order.items?.length || 0) !== 1 ? 's' : ''}
-          </p>
-        </div>
+        <span className="font-medium text-surface-900 dark:text-surface-100">
+          {order.orderNumber || `#${order.id}`}
+        </span>
       ),
     },
     {
@@ -87,13 +99,18 @@ const AdminOrders = () => {
       },
     },
     {
+      key: 'items',
+      label: 'Items',
+      render: (order) => order.items?.length || 0,
+    },
+    {
       key: 'total',
       label: 'Total',
       render: (order) => formatCurrency(order.total ?? order.totalAmount ?? 0),
     },
     {
       key: 'paymentMethod',
-      label: 'Payment Method',
+      label: 'Payment',
       render: (order) => getPaymentMethodLabel(order.paymentMethod),
     },
     {
@@ -107,7 +124,7 @@ const AdminOrders = () => {
     },
     {
       key: 'orderStatus',
-      label: 'Order Status',
+      label: 'Status',
       render: (order) => <OrderStatusBadge order={order} />,
     },
     {
@@ -117,6 +134,7 @@ const AdminOrders = () => {
         <button
           type="button"
           onClick={() => navigate(`/admin/orders/${order.id}`)}
+          aria-label={`View order ${order.orderNumber || order.id}`}
           className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:bg-surface-50 hover:border-surface-300 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
         >
           <Eye className="h-3.5 w-3.5" />
@@ -128,31 +146,39 @@ const AdminOrders = () => {
 
   return (
     <div className="p-6">
-      <div className="mb-6">
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Orders</h1>
+        <div className="sm:w-80">
+          <Input
+            type="search"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search orders..."
+          />
+        </div>
       </div>
 
-      {isLoading && (
-        <div className="space-y-3">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <Skeleton key={i} className="h-16 w-full" />
-          ))}
-        </div>
-      )}
+      {isLoading && <AdminLoading message="Loading Orders..." />}
 
       {isError && (
-        <ErrorMessage
-          message="Unable to load orders."
-          onRetry={refetch}
-        />
+        <AdminError message="Unable to load orders." onRetry={refetch} />
       )}
 
       {!isLoading && !isError && orders.length === 0 && (
-        <EmptyState
-          title="No orders found"
-          description="There are no orders yet."
-          icon={Package}
-        />
+        hasSearch ? (
+          <AdminEmptyState
+            title="No orders match your search."
+            description="Try a different search term."
+            actionLabel="Clear Search"
+            onAction={() => setSearch('')}
+          />
+        ) : (
+          <AdminEmptyState
+            title="No orders found"
+            description="There are no orders yet."
+            icon={Package}
+          />
+        )
       )}
 
       {!isLoading && !isError && orders.length > 0 && (

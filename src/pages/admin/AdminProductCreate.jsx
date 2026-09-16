@@ -28,15 +28,22 @@ const AdminProductCreate = () => {
     mutationFn: (productData) => productService.create(productData),
 
     onSuccess: async () => {
-      await queryClient.invalidateQueries({
-        queryKey: ['admin-products'],
-      })
+      await Promise.all([
+        queryClient.invalidateQueries({
+          queryKey: ['admin-products'],
+        }),
+        queryClient.invalidateQueries({
+          queryKey: ['admin-dashboard-products'],
+        }),
+      ])
       toast.success('Product created successfully')
       navigate('/admin/products')
     },
+    onError: () => toast.error('Failed to save product'),
   })
 
   const handleCreate = (formData) => {
+    if (createProductMutation.isPending) return
     const category = categories.find((c) => c.id === formData.categoryId)
     createProductMutation.mutate({
       name: formData.name,

@@ -18,7 +18,7 @@ export const orderService = {
   },
 
   updateStatus: async (id, status) => {
-    const { data } = await axiosInstance.patch(`${API_ENDPOINTS.ORDERS}/${id}`, { status })
+    const { data } = await axiosInstance.patch(`${API_ENDPOINTS.ORDERS}/${id}`, { orderStatus: status })
     return data
   },
 

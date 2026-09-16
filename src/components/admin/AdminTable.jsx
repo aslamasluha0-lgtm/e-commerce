@@ -7,7 +7,7 @@ const AdminTable = ({ columns, data }) => {
             {columns.map((col) => (
               <th
                 key={col.key}
-                className="px-6 py-3 text-left text-xs font-medium text-surface-500 uppercase tracking-wider"
+                className="px-6 py-3 text-left text-xs font-medium text-surface-500 uppercase tracking-wider dark:text-surface-400"
               >
                 {col.label}
               </th>

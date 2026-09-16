@@ -15,13 +15,13 @@ export const adminAuthService = {
     )
 
     if (!data || data.length === 0) {
-      throw new Error('Invalid admin credentials')
+      throw new Error('Invalid email or password')
     }
 
     const admin = data[0]
 
     if (admin.blocked) {
-      throw new Error('Admin account is blocked')
+      throw new Error('Your account is blocked.')
     }
 
     if (admin.role !== 'admin') {

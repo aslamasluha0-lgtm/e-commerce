@@ -13,7 +13,9 @@ export const userService = {
   },
 
   getAll: async (params) => {
-    const { data } = await axiosInstance.get(API_ENDPOINTS.USERS, { params })
-    return data
+    const response = await axiosInstance.get(API_ENDPOINTS.USERS, { params })
+    const items = response.data
+    const totalCount = Number(response.headers['x-total-count'] || items.length)
+    return { items, totalCount }
   },
 }

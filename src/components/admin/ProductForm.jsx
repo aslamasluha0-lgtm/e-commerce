@@ -25,6 +25,11 @@ const ProductForm = ({
   } = useForm({
     resolver: zodResolver(productSchema),
     defaultValues: {
+      name: '',
+      description: '',
+      price: '',
+      categoryId: '',
+      stock: '',
       images: [],
     },
   })
