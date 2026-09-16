@@ -4,6 +4,7 @@ import toast from 'react-hot-toast'
 import { productService } from '@/services/productService'
 import { categoryService } from '@/services/categoryService'
 import ProductForm from '@/components/admin/ProductForm'
+import AdminBreadcrumb from '@/components/admin/AdminBreadcrumb'
 
 const slugify = (name) =>
   name
@@ -28,14 +29,9 @@ const AdminProductCreate = () => {
     mutationFn: (productData) => productService.create(productData),
 
     onSuccess: async () => {
-      await Promise.all([
-        queryClient.invalidateQueries({
-          queryKey: ['admin-products'],
-        }),
-        queryClient.invalidateQueries({
-          queryKey: ['admin-dashboard-products'],
-        }),
-      ])
+      await queryClient.invalidateQueries({
+        queryKey: ['admin-products'],
+      })
       toast.success('Product created successfully')
       navigate('/admin/products')
     },
@@ -67,9 +63,16 @@ const AdminProductCreate = () => {
   return (
     <div className="p-6">
       <div className="mb-6">
+        <AdminBreadcrumb
+          items={[
+            { label: 'Dashboard', to: '/admin/dashboard' },
+            { label: 'Products', to: '/admin/products' },
+            { label: 'Add Product' },
+          ]}
+        />
         <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Add Product</h1>
         <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
-          Admin Products / Add Product
+          Add a new product to your catalog.
         </p>
       </div>
 

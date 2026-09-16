@@ -31,9 +31,22 @@ const AdminHeader = ({ onMenuClick }) => {
       </div>
       <div className="flex items-center gap-4">
         {adminUser && (
-          <span className="hidden text-sm text-surface-600 dark:text-surface-300 sm:inline">
-            {adminUser.name || adminUser.email}
-          </span>
+          <div className="flex items-center gap-2.5">
+            <span
+              className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-100 text-sm font-semibold text-brand-700 dark:bg-brand-900/50 dark:text-brand-200"
+              aria-hidden="true"
+            >
+              {((adminUser.name || adminUser.email || 'A').charAt(0)).toUpperCase()}
+            </span>
+            <div className="hidden text-right leading-tight sm:block">
+              <p className="text-sm font-medium text-surface-900 dark:text-white">
+                {adminUser.name || 'Admin'}
+              </p>
+              <p className="text-xs text-surface-500 dark:text-surface-400">
+                {adminUser.email}
+              </p>
+            </div>
+          </div>
         )}
         <button
           type="button"

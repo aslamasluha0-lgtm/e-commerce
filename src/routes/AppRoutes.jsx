@@ -70,7 +70,8 @@ const AppRoutes = () => {
 
       <Route element={<AdminRoute />}>
         <Route path="/admin" element={<AdminLayout />}>
-          <Route index element={<AdminDashboard />} />
+          <Route index element={<Navigate to="/admin/dashboard" replace />} />
+          <Route path="dashboard" element={<AdminDashboard />} />
           <Route path="products" element={<AdminProducts />} />
           <Route path="products/new" element={<AdminProductCreate />} />
           <Route path="products/:id/edit" element={<AdminProductEdit />} />

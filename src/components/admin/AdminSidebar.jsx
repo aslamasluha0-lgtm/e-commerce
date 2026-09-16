@@ -1,11 +1,20 @@
 import { NavLink } from 'react-router-dom'
-import { X } from 'lucide-react'
+import { LayoutDashboard, Package, Users, ShoppingBag, X } from 'lucide-react'
 
 const AdminSidebar = ({ open, onClose }) => {
   const navLinkClass = ({ isActive }) =>
-    `px-3 py-2 rounded flex items-center gap-2 ${
-      isActive ? 'bg-surface-700' : 'hover:bg-surface-800'
+    `px-3 py-2.5 rounded-lg flex items-center gap-3 text-sm font-medium transition-colors ${
+      isActive
+        ? 'bg-white/15 text-white'
+        : 'text-surface-200 hover:bg-white/10 hover:text-white'
     }`
+
+  const navItems = [
+    { to: '/admin/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+    { to: '/admin/products', label: 'Products', icon: Package },
+    { to: '/admin/users', label: 'Users', icon: Users },
+    { to: '/admin/orders', label: 'Orders', icon: ShoppingBag },
+  ]
 
   return (
     <aside
@@ -20,24 +29,18 @@ const AdminSidebar = ({ open, onClose }) => {
           type="button"
           onClick={onClose}
           aria-label="Close sidebar"
-          className="p-1.5 rounded text-surface-300 hover:bg-white-800 lg:hidden"
+          className="p-1.5 rounded text-surface-300 hover:bg-white/10 lg:hidden"
         >
           <X className="h-5 w-5" />
         </button>
       </div>
-      <nav className="flex flex-col gap-2">
-        <NavLink to="/admin" end className={navLinkClass}>
-          Dashboard
-        </NavLink>
-        <NavLink to="/admin/products" className={navLinkClass}>
-          Products
-        </NavLink>
-        <NavLink to="/admin/users" className={navLinkClass}>
-          Users
-        </NavLink>
-        <NavLink to="/admin/orders" className={navLinkClass}>
-          Orders
-        </NavLink>
+      <nav className="flex flex-col gap-1">
+        {navItems.map(({ to, label, icon: Icon }) => (
+          <NavLink key={to} to={to} onClick={onClose} className={navLinkClass}>
+            <Icon className="h-4.5 w-4.5 shrink-0" />
+            {label}
+          </NavLink>
+        ))}
       </nav>
     </aside>
   )

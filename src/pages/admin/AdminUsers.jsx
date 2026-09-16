@@ -67,7 +67,7 @@ const AdminUsers = () => {
   })
 
   const { data: roleData } = useQuery({
-    queryKey: ['admin-user-roles'],
+    queryKey: ['admin-users'],
     queryFn: userService.getAll,
   })
 
@@ -82,14 +82,9 @@ const AdminUsers = () => {
       userService.update(user.id, { ...user, blocked }),
 
     onSuccess: async (_updatedUser, variables) => {
-      await Promise.all([
-        queryClient.invalidateQueries({
-          queryKey: ['admin-users'],
-        }),
-        queryClient.invalidateQueries({
-          queryKey: ['admin-dashboard-users'],
-        }),
-      ])
+      await queryClient.invalidateQueries({
+        queryKey: ['admin-users'],
+      })
 
       toast.success(
         variables.blocked
@@ -200,6 +195,9 @@ const AdminUsers = () => {
     <div className="p-6">
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Users</h1>
+        <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
+          Manage users, roles, and access.
+        </p>
         <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:flex-wrap">
           <div className="sm:flex-1 sm:max-w-sm">
             <Input

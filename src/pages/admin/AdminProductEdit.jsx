@@ -4,6 +4,7 @@ import toast from 'react-hot-toast'
 import { productService } from '@/services/productService'
 import { categoryService } from '@/services/categoryService'
 import ProductForm from '@/components/admin/ProductForm'
+import AdminBreadcrumb from '@/components/admin/AdminBreadcrumb'
 import AdminLoading from '@/components/admin/AdminLoading'
 import AdminError from '@/components/admin/AdminError'
 
@@ -49,9 +50,6 @@ const AdminProductEdit = () => {
         }),
         queryClient.invalidateQueries({
           queryKey: ['admin-product', id],
-        }),
-        queryClient.invalidateQueries({
-          queryKey: ['admin-dashboard-products'],
         }),
       ])
       toast.success('Product updated successfully')
@@ -106,11 +104,18 @@ const AdminProductEdit = () => {
   return (
     <div className="p-6">
       <div className="mb-6">
+        <AdminBreadcrumb
+          items={[
+            { label: 'Dashboard', to: '/admin/dashboard' },
+            { label: 'Products', to: '/admin/products' },
+            { label: 'Edit Product' },
+          ]}
+        />
         <h1 className="text-2xl font-bold text-surface-900 dark:text-white">
           Edit Product
         </h1>
         <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
-          Admin Products / Edit Product
+          Update the details of this product.
         </p>
       </div>
 

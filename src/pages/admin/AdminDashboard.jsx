@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 
 import { productService } from '@/services/productService'
 import { userService } from '@/services/userService'
@@ -23,14 +23,22 @@ const getCustomerName = (order, userMap) => {
 }
 
 const AdminDashboard = () => {
+  const queryClient = useQueryClient()
+
+  const prefetchProduct = (id) => {
+    queryClient.prefetchQuery({
+      queryKey: ['admin-product', id],
+      queryFn: () => productService.getById(id),
+    })
+  }
+
   const {
     data: productData,
     isPending: productsLoading,
     isError: productsError,
     refetch: refetchProducts,
   } = useQuery({
-  
-    queryKey: ['admin-dashboard-products'],
+    queryKey: ['admin-products', 'all'],
     queryFn: () => productService.getAll(),
   })
 
@@ -40,7 +48,7 @@ const AdminDashboard = () => {
     isError: usersError,
     refetch: refetchUsers,
   } = useQuery({
-    queryKey: ['admin-dashboard-users'],
+    queryKey: ['admin-users'],
     queryFn: userService.getAll,
   })
 
@@ -50,7 +58,7 @@ const AdminDashboard = () => {
     isError: ordersError,
     refetch: refetchOrders,
   } = useQuery({
-    queryKey: ['admin-dashboard-orders'],
+    queryKey: ['admin-orders'],
     queryFn: orderService.getAll,
   })
 
@@ -86,9 +94,9 @@ const AdminDashboard = () => {
     )
   }
 
-  const totalProducts = products.length
+  const totalProducts = productData?.totalCount ?? products.length
 
-  const totalUsers = users.length
+  const totalUsers = userData?.totalCount ?? users.length
 
   const totalOrders = orders.length
 
@@ -221,6 +229,8 @@ const AdminDashboard = () => {
       render: (product) => (
         <Link
           to={`/admin/products/${product.id}/edit`}
+          onMouseEnter={() => prefetchProduct(product.id)}
+          onFocus={() => prefetchProduct(product.id)}
           className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:border-surface-300 hover:bg-surface-50 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
         >
           Edit

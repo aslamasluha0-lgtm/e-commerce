@@ -7,7 +7,7 @@ const AdminLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <div className="min-h-screen flex bg-surface-50 dark:bg-surface-950">
+    <div className="min-h-screen flex overflow-x-clip bg-surface-50 dark:bg-surface-950">
       <AdminSidebar
         open={sidebarOpen}
         onClose={() => setSidebarOpen(false)}

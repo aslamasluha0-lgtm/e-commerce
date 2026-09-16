@@ -6,6 +6,7 @@ import { ArrowLeft, Loader2, Package } from 'lucide-react'
 import { orderService } from '@/services/orderService'
 import { userService } from '@/services/userService'
 import { useProducts } from '@/hooks/useProducts'
+import AdminBreadcrumb from '@/components/admin/AdminBreadcrumb'
 import StatusBadge from '@/components/admin/StatusBadge'
 import ConfirmDialog from '@/components/admin/ConfirmDialog'
 import AdminLoading from '@/components/admin/AdminLoading'
@@ -92,9 +93,6 @@ const AdminOrderDetails = () => {
         }),
         queryClient.invalidateQueries({
           queryKey: ['admin-order', id],
-        }),
-        queryClient.invalidateQueries({
-          queryKey: ['admin-dashboard-orders'],
         }),
       ])
 
@@ -201,7 +199,14 @@ const AdminOrderDetails = () => {
 
   return (
     <div className="p-6">
-      <div className="mb-6">
+      <div className="mb-6 space-y-4">
+        <AdminBreadcrumb
+          items={[
+            { label: 'Dashboard', to: '/admin/dashboard' },
+            { label: 'Orders', to: '/admin/orders' },
+            { label: `Order #${orderNumber}` },
+          ]}
+        />
         <BackLink />
       </div>
 

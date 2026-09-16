@@ -65,10 +65,17 @@ const AdminProducts = () => {
     if (page > 1) setPage(1)
   }
 
+  const prefetchProduct = (id) => {
+    queryClient.prefetchQuery({
+      queryKey: ['admin-product', id],
+      queryFn: () => productService.getById(id),
+    })
+  }
+
   const deleteMutation = useMutation({
     mutationFn: (id) => productService.delete(id),
 
-    onSuccess: async () => {
+    onSuccess: async (_deleted, id) => {
       if (page > 1 && data?.items?.length === 1) {
         setPage((prev) => prev - 1)
       }
@@ -78,7 +85,7 @@ const AdminProducts = () => {
           queryKey: ['admin-products'],
         }),
         queryClient.invalidateQueries({
-          queryKey: ['admin-dashboard-products'],
+          queryKey: ['admin-product', id],
         }),
       ])
 
@@ -168,6 +175,8 @@ const AdminProducts = () => {
           <button
             type="button"
             onClick={() => navigate(`/admin/products/${product.id}/edit`)}
+            onMouseEnter={() => prefetchProduct(product.id)}
+            onFocus={() => prefetchProduct(product.id)}
             aria-label={`Edit ${product.name}`}
             className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:bg-surface-50 hover:border-surface-300 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
           >
@@ -191,10 +200,15 @@ const AdminProducts = () => {
   return (
     <div className="p-6">
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Products</h1>
+        <div>
+          <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Products</h1>
+          <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
+            Manage your product catalog.
+          </p>
+        </div>
         <Link
           to="/admin/products/new"
-          className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700"
+          className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white hover:bg-brand-700 sm:self-center"
         >
           <Plus className="h-4 w-4" />
           Add Product

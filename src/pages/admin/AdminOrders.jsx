@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useNavigate } from 'react-router-dom'
 import { Eye, Package } from 'lucide-react'
 import { orderService } from '@/services/orderService'
@@ -38,6 +38,7 @@ const getPaymentStatusVariant = (status) => {
 
 const AdminOrders = () => {
   const navigate = useNavigate()
+  const queryClient = useQueryClient()
   const [search, setSearch] = useState('')
   const [debouncedSearch, setDebouncedSearch] = useState('')
 
@@ -51,15 +52,25 @@ const AdminOrders = () => {
 
   const hasSearch = Boolean(debouncedSearch)
 
+  const prefetchOrder = (id) => {
+    queryClient.prefetchQuery({
+      queryKey: ['admin-order', id],
+      queryFn: () => orderService.getById(id),
+    })
+  }
+
   const {
     data: orders = [],
     isLoading,
     isError,
     refetch,
   } = useQuery({
-    queryKey: ['admin-orders', debouncedSearch],
-    queryFn: () =>
-      orderService.getAll(debouncedSearch ? { q: debouncedSearch } : {}),
+    queryKey: debouncedSearch
+      ? ['admin-orders', debouncedSearch]
+      : ['admin-orders'],
+    queryFn: debouncedSearch
+      ? () => orderService.getAll({ q: debouncedSearch })
+      : orderService.getAll,
   })
 
   const { data: userData } = useQuery({
@@ -134,6 +145,8 @@ const AdminOrders = () => {
         <button
           type="button"
           onClick={() => navigate(`/admin/orders/${order.id}`)}
+          onMouseEnter={() => prefetchOrder(order.id)}
+          onFocus={() => prefetchOrder(order.id)}
           aria-label={`View order ${order.orderNumber || order.id}`}
           className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:bg-surface-50 hover:border-surface-300 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
         >
@@ -147,7 +160,12 @@ const AdminOrders = () => {
   return (
     <div className="p-6">
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Orders</h1>
+        <div>
+          <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Orders</h1>
+          <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
+            Track and manage customer orders.
+          </p>
+        </div>
         <div className="sm:w-80">
           <Input
             type="search"
