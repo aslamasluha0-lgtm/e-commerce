@@ -8,7 +8,7 @@ export const userService = {
   },
 
   update: async (id, userData) => {
-    const { data } = await axiosInstance.put(`${API_ENDPOINTS.USERS}/${id}`, userData)
+    const { data } = await axiosInstance.patch(`${API_ENDPOINTS.USERS}/${id}`, userData)
     return data
   },
 

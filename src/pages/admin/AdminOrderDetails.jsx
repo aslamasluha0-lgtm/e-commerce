@@ -320,59 +320,73 @@ const AdminOrderDetails = () => {
         </div>
       </div>
 
-      <div className="mt-6 rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">
-        <h2 className="mb-4 text-lg font-semibold text-surface-900 dark:text-surface-100">
-          Products
-        </h2>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-surface-200 text-left text-xs font-medium uppercase tracking-wider text-surface-500 dark:border-surface-700 dark:text-surface-400">
-                <th className="py-2 pr-4">Product</th>
-                <th className="py-2 pr-4">Price</th>
-                <th className="py-2 pr-4">Qty</th>
-                <th className="py-2 text-right">Subtotal</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-surface-100 dark:divide-surface-800">
-              {items.map((item, index) => (
-                <tr key={index}>
-                  <td className="py-4 pr-4">
-                    <div className="flex items-center gap-3">
-                      <ProductImage
-                        src={item.image}
-                        alt={item.name}
-                        className="h-12 w-12 flex-shrink-0 rounded-lg border border-surface-100 object-cover dark:border-surface-800"
-                      />
-                      <span className="font-medium text-surface-900 dark:text-surface-100">
-                        {item.name}
-                      </span>
-                    </div>
-                  </td>
-                  <td className="whitespace-nowrap py-4 pr-4 text-surface-700 dark:text-surface-300">
-                    {formatCurrency(item.price)}
-                  </td>
-                  <td className="whitespace-nowrap py-4 pr-4 text-surface-700 dark:text-surface-300">
-                    {item.quantity}
-                  </td>
-                  <td className="whitespace-nowrap py-4 text-right font-semibold text-surface-900 dark:text-surface-100">
-                    {formatCurrency((item.price || 0) * item.quantity)}
-                  </td>
+      <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900 md:col-span-2">
+          <h2 className="mb-4 text-lg font-semibold text-surface-900 dark:text-surface-100">
+            Order Items
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-surface-200 text-left text-xs font-semibold uppercase tracking-wider text-surface-500 dark:border-surface-700 dark:text-surface-400">
+                  <th className="py-2 pr-4">Product</th>
+                  <th className="py-2 pr-4">Price</th>
+                  <th className="py-2 pr-4">Qty</th>
+                  <th className="py-2 text-right">Subtotal</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-surface-100 dark:divide-surface-800">
+                {items.map((item, index) => (
+                  <tr key={index}>
+                    <td className="py-4 pr-4">
+                      <div className="flex items-center gap-3">
+                        <ProductImage
+                          src={item.image}
+                          alt={item.name}
+                          className="h-12 w-12 flex-shrink-0 rounded-lg border border-surface-100 object-cover dark:border-surface-800"
+                        />
+                        <span className="font-medium text-surface-900 dark:text-surface-100">
+                          {item.name}
+                        </span>
+                      </div>
+                    </td>
+                    <td className="whitespace-nowrap py-4 pr-4 text-surface-700 dark:text-surface-300">
+                      {formatCurrency(item.price)}
+                    </td>
+                    <td className="whitespace-nowrap py-4 pr-4 text-surface-700 dark:text-surface-300">
+                      {item.quantity}
+                    </td>
+                    <td className="whitespace-nowrap py-4 text-right font-semibold text-surface-900 dark:text-surface-100">
+                      {formatCurrency((item.price || 0) * item.quantity)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
 
-        <div className="mt-2 space-y-2 border-t border-surface-100 pt-4 dark:border-surface-800">
-          <PriceRow label="Subtotal" value={order.subtotal ?? 0} />
-          {order.discount > 0 && (
-            <PriceRow label="Discount" value={order.discount ?? 0} negative />
-          )}
-          <PriceRow label="Shipping" value={order.shipping ?? 0} free={!order.shipping} />
-          {typeof order.tax === 'number' && <PriceRow label="Tax" value={order.tax} />}
-          <div className="border-t border-surface-100 pt-3 dark:border-surface-800" />
-          <PriceRow label="Total" value={total} strong />
+        <div className="rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">
+          <h2 className="mb-4 text-lg font-semibold text-surface-900 dark:text-surface-100">
+            Order Summary
+          </h2>
+          <div className="space-y-2 text-sm">
+            <PriceRow label="Subtotal" value={order.subtotal ?? 0} />
+            {order.discount > 0 && (
+              <PriceRow label="Discount" value={order.discount ?? 0} negative />
+            )}
+            <PriceRow label="Shipping" value={order.shipping ?? 0} free={!order.shipping} />
+            {typeof order.tax === 'number' && <PriceRow label="Tax" value={order.tax} />}
+            <div className="border-t border-surface-100 pt-3 dark:border-surface-800" />
+            <div className="mt-1 flex items-center justify-between rounded-xl bg-brand-50 px-4 py-3 dark:bg-brand-950/40">
+              <span className="text-sm font-semibold text-brand-700 dark:text-brand-300">
+                Total
+              </span>
+              <span className="text-xl font-bold tracking-tight text-brand-700 dark:text-brand-200">
+                {formatCurrency(total)}
+              </span>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -201,9 +201,9 @@ const AdminProducts = () => {
     <div className="p-6">
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Products</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-surface-900 dark:text-white">Products</h1>
           <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
-            Manage your product catalog.
+            Manage your DevTech product catalog.
           </p>
         </div>
         <Link
@@ -222,11 +222,13 @@ const AdminProducts = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search products..."
+            aria-label="Search products"
           />
         </div>
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
+          aria-label="Filter by category"
           className="h-11 w-full rounded-lg border border-surface-200 bg-white px-3.5 text-sm text-surface-900 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/60 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-100 sm:w-56"
         >
           <option value="">All Categories</option>

@@ -53,6 +53,7 @@ export const authService = {
       email,
       password,
       role: 'customer',
+      blocked: false,
       createdAt: new Date().toISOString(),
     }
 

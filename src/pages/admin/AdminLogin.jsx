@@ -34,12 +34,12 @@ const AdminLogin = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-surface-50 dark:bg-surface-950">
-      <div className="w-full max-w-md bg-white dark:bg-surface-800 rounded-2xl shadow-soft p-8">
+      <div className="w-full max-w-md rounded-2xl border border-surface-200 bg-white p-8 shadow-card dark:border-surface-800 dark:bg-surface-800">
         <div className="mb-6 text-center">
-          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-600 text-white">
+          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 text-white shadow-soft">
             <ShieldCheck className="h-6 w-6" />
           </div>
-          <h1 className="text-2xl font-bold text-surface-900 dark:text-white">
+          <h1 className="text-2xl font-bold tracking-tight text-surface-900 dark:text-white">
             DevTech Admin
           </h1>
           <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">

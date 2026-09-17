@@ -70,13 +70,13 @@ const AdminProductCreate = () => {
             { label: 'Add Product' },
           ]}
         />
-        <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Add Product</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-surface-900 dark:text-white">Add Product</h1>
         <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
           Add a new product to your catalog.
         </p>
       </div>
 
-      <div className="max-w-4xl rounded-2xl border border-surface-200 bg-white p-6 shadow-soft dark:border-surface-800 dark:bg-surface-900">
+      <div className="max-w-4xl rounded-2xl border border-surface-200 bg-white p-6 shadow-card dark:border-surface-800 dark:bg-surface-900">
         {categoriesLoading ? (
           <p className="text-sm text-surface-500 dark:text-surface-400">Loading categories...</p>
         ) : (

@@ -7,6 +7,13 @@ export const orderService = {
     return data
   },
 
+  getPage: async (params) => {
+    const response = await axiosInstance.get(API_ENDPOINTS.ORDERS, { params })
+    const items = response.data
+    const totalCount = Number(response.headers['x-total-count'] || items.length)
+    return { items, totalCount }
+  },
+
   getById: async (id) => {
     const { data } = await axiosInstance.get(`${API_ENDPOINTS.ORDERS}/${id}`)
     return data

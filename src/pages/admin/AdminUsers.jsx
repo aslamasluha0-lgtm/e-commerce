@@ -79,7 +79,7 @@ const AdminUsers = () => {
 
   const updateUserMutation = useMutation({
     mutationFn: ({ user, blocked }) =>
-      userService.update(user.id, { ...user, blocked }),
+      userService.update(user.id, { blocked }),
 
     onSuccess: async (_updatedUser, variables) => {
       await queryClient.invalidateQueries({
@@ -194,9 +194,9 @@ const AdminUsers = () => {
   return (
     <div className="p-6">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Users</h1>
+        <h1 className="text-2xl font-bold tracking-tight text-surface-900 dark:text-white">Users</h1>
         <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
-          Manage users, roles, and access.
+          Manage registered DevTech users.
         </p>
         <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:flex-wrap">
           <div className="sm:flex-1 sm:max-w-sm">
@@ -205,6 +205,7 @@ const AdminUsers = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search users..."
+              aria-label="Search users"
             />
           </div>
           <select

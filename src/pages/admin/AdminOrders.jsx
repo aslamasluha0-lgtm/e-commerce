@@ -5,6 +5,7 @@ import { Eye, Package } from 'lucide-react'
 import { orderService } from '@/services/orderService'
 import { userService } from '@/services/userService'
 import AdminTable from '@/components/admin/AdminTable'
+import AdminPagination from '@/components/admin/AdminPagination'
 import AdminLoading from '@/components/admin/AdminLoading'
 import AdminError from '@/components/admin/AdminError'
 import AdminEmptyState from '@/components/admin/AdminEmptyState'
@@ -36,11 +37,14 @@ const getPaymentStatusVariant = (status) => {
   return 'default'
 }
 
+const PAGE_SIZE = 10
+
 const AdminOrders = () => {
   const navigate = useNavigate()
   const queryClient = useQueryClient()
   const [search, setSearch] = useState('')
   const [debouncedSearch, setDebouncedSearch] = useState('')
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -52,6 +56,14 @@ const AdminOrders = () => {
 
   const hasSearch = Boolean(debouncedSearch)
 
+  const filterKey = debouncedSearch
+  const [lastFilterKey, setLastFilterKey] = useState('')
+
+  if (filterKey !== lastFilterKey) {
+    setLastFilterKey(filterKey)
+    if (page !== 1) setPage(1)
+  }
+
   const prefetchOrder = (id) => {
     queryClient.prefetchQuery({
       queryKey: ['admin-order', id],
@@ -60,18 +72,25 @@ const AdminOrders = () => {
   }
 
   const {
-    data: orders = [],
+    data,
     isLoading,
     isError,
     refetch,
   } = useQuery({
-    queryKey: debouncedSearch
-      ? ['admin-orders', debouncedSearch]
-      : ['admin-orders'],
-    queryFn: debouncedSearch
-      ? () => orderService.getAll({ q: debouncedSearch })
-      : orderService.getAll,
+    queryKey: ['admin-orders', page, PAGE_SIZE, debouncedSearch],
+    queryFn: () =>
+      orderService.getPage({
+        _page: page,
+        _limit: PAGE_SIZE,
+        _sort: 'createdAt',
+        _order: 'desc',
+        ...(debouncedSearch ? { q: debouncedSearch } : {}),
+      }),
   })
+
+  const orders = data?.items ?? []
+  const totalCount = data?.totalCount ?? 0
+  const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE))
 
   const { data: userData } = useQuery({
     queryKey: ['admin-users'],
@@ -161,9 +180,9 @@ const AdminOrders = () => {
     <div className="p-6">
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-surface-900 dark:text-white">Orders</h1>
+          <h1 className="text-2xl font-bold tracking-tight text-surface-900 dark:text-white">Orders</h1>
           <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
-            Track and manage customer orders.
+            Manage customer orders.
           </p>
         </div>
         <div className="sm:w-80">
@@ -172,6 +191,7 @@ const AdminOrders = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search orders..."
+            aria-label="Search orders"
           />
         </div>
       </div>
@@ -200,9 +220,18 @@ const AdminOrders = () => {
       )}
 
       {!isLoading && !isError && orders.length > 0 && (
-        <div className="overflow-hidden rounded-2xl border border-surface-200 dark:border-surface-800">
-          <AdminTable columns={columns} data={orders} />
-        </div>
+        <>
+          <div className="overflow-hidden rounded-2xl border border-surface-200 dark:border-surface-800">
+            <AdminTable columns={columns} data={orders} />
+          </div>
+          {totalPages > 1 && (
+            <AdminPagination
+              currentPage={page}
+              totalPages={totalPages}
+              onPageChange={setPage}
+            />
+          )}
+        </>
       )}
     </div>
   )

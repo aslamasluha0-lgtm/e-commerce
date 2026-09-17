@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
+import { Package, Users, ShoppingBag, IndianRupee, Clock, TriangleAlert } from 'lucide-react'
 
+import { useAdminAuth } from '@/hooks/useAdminAuth'
 import { productService } from '@/services/productService'
 import { userService } from '@/services/userService'
 import { orderService } from '@/services/orderService'
@@ -10,7 +12,51 @@ import AdminLoading from '@/components/admin/AdminLoading'
 import AdminError from '@/components/admin/AdminError'
 import StatusBadge from '@/components/admin/StatusBadge'
 import OrderStatusSummary from '@/components/admin/OrderStatusSummary'
+import OrdersChart from '@/components/admin/OrdersChart'
+import OrderStatusChart from '@/components/admin/OrderStatusChart'
 import { getOrderStatus } from '@/utils/orderDisplay'
+
+const MONTH_NAMES = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+]
+
+const UNSUCCESSFUL_STATUSES = new Set(['cancelled', 'failed', 'refunded'])
+
+const createOrderChartData = (orders) => {
+  const byMonth = new Map()
+
+  for (const order of orders) {
+    const date = order.createdAt || order.date
+    if (!date) continue
+
+    const parsed = new Date(date)
+    if (Number.isNaN(parsed.getTime())) continue
+
+    const key = `${parsed.getFullYear()}-${parsed.getMonth()}`
+
+    let entry = byMonth.get(key)
+    if (!entry) {
+      entry = {
+        key,
+        label: `${MONTH_NAMES[parsed.getMonth()]} ${String(parsed.getFullYear()).slice(2)}`,
+        orders: 0,
+        revenue: 0,
+      }
+      byMonth.set(key, entry)
+    }
+
+    entry.orders += 1
+
+    if (!UNSUCCESSFUL_STATUSES.has(getOrderStatus(order))) {
+      entry.revenue += Number(order.total || 0)
+    }
+  }
+
+  return [...byMonth.values()]
+    .sort((a, b) => a.key.localeCompare(b.key))
+    .map(({ label, orders, revenue }) => ({ month: label, orders, revenue }))
+}
 
 const getUserName = (user) => user?.name || user?.fullName || user?.username || null
 
@@ -24,6 +70,7 @@ const getCustomerName = (order, userMap) => {
 
 const AdminDashboard = () => {
   const queryClient = useQueryClient()
+  const { adminUser } = useAdminAuth()
 
   const prefetchProduct = (id) => {
     queryClient.prefetchQuery({
@@ -148,6 +195,16 @@ const AdminDashboard = () => {
       0
     )
 
+  const orderChartData = createOrderChartData(orders)
+
+  const orderStatusChartData = [
+    { name: 'Pending', value: pendingCount },
+    { name: 'Processing', value: processingCount },
+    { name: 'Shipped', value: shippedCount },
+    { name: 'Delivered', value: deliveredCount },
+    { name: 'Cancelled', value: cancelledCount },
+  ]
+
   const userMap = new Map((users || []).map((user) => [String(user.id), user]))
 
   const recentOrders = [...orders]
@@ -242,11 +299,15 @@ const AdminDashboard = () => {
   return (
     <div className="p-6">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold text-surface-900 dark:text-white">
+        <h1 className="text-2xl font-bold tracking-tight text-surface-900 dark:text-white">
           Dashboard
         </h1>
         <p className="mt-1 text-sm text-surface-500 dark:text-surface-400">
-          Overview of your DevTech store.
+          Welcome back,{' '}
+          <span className="font-medium text-surface-700 dark:text-surface-200">
+            {adminUser?.name || 'Admin'}
+          </span>
+          . Here&apos;s how your DevTech store is performing.
         </p>
       </div>
 
@@ -255,40 +316,52 @@ const AdminDashboard = () => {
           title="Total Products"
           value={totalProducts}
           description="Products in catalog"
+          icon={Package}
         />
 
         <StatCard
           title="Total Users"
           value={totalUsers}
           description="Registered users"
+          icon={Users}
         />
 
         <StatCard
           title="Total Orders"
           value={totalOrders}
           description="Orders placed"
+          icon={ShoppingBag}
         />
 
         <StatCard
           title="Total Revenue"
           value={`₹${totalRevenue.toLocaleString('en-IN')}`}
           description="Based on order totals"
+          icon={IndianRupee}
         />
 
         <StatCard
           title="Pending Orders"
           value={pendingOrders}
           description="Orders requiring attention"
+          icon={Clock}
         />
 
         <StatCard
           title="Low Stock"
           value={lowStockProducts}
           description="Products with 5 or fewer items"
+          icon={TriangleAlert}
         />
       </div>
 
+      <div className="mt-6">
+        <OrdersChart data={orderChartData} />
+      </div>
+
       <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <OrderStatusChart data={orderStatusChartData} total={totalOrders} />
+
         <div className="rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">
           <div className="mb-4 flex items-center justify-between gap-3">
             <h2 className="text-lg font-semibold text-surface-900 dark:text-surface-100">
@@ -312,30 +385,30 @@ const AdminDashboard = () => {
             </div>
           )}
         </div>
+      </div>
 
-        <div className="rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">
-          <div className="mb-4 flex items-center justify-between gap-3">
-            <h2 className="text-lg font-semibold text-surface-900 dark:text-surface-100">
-              Low Stock Products
-            </h2>
-            <Link
-              to="/admin/products"
-              className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:border-surface-300 hover:bg-surface-50 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
-            >
-              View All Products
-            </Link>
-          </div>
-
-          {lowStockList.length === 0 ? (
-            <div className="py-8 text-center text-sm text-surface-500 dark:text-surface-400">
-              No low-stock products.
-            </div>
-          ) : (
-            <div className="overflow-x-auto">
-              <AdminTable columns={productColumns} data={lowStockList} />
-            </div>
-          )}
+      <div className="mt-6 rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">
+        <div className="mb-4 flex items-center justify-between gap-3">
+          <h2 className="text-lg font-semibold text-surface-900 dark:text-surface-100">
+            Low Stock Products
+          </h2>
+          <Link
+            to="/admin/products"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:border-surface-300 hover:bg-surface-50 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
+          >
+            View All Products
+          </Link>
         </div>
+
+        {lowStockList.length === 0 ? (
+          <div className="py-8 text-center text-sm text-surface-500 dark:text-surface-400">
+            No low-stock products.
+          </div>
+        ) : (
+          <div className="overflow-x-auto">
+            <AdminTable columns={productColumns} data={lowStockList} />
+          </div>
+        )}
       </div>
 
       <div className="mt-6 rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">

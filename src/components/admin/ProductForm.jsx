@@ -74,39 +74,12 @@ const ProductForm = ({
         </div>
       )}
 
-      <Input
-        label="Product Name"
-        placeholder="e.g. Mechanical Keyboard X1"
-        {...register('name')}
-        error={errors.name?.message}
-      />
-
-      <div>
-        <label className="mb-1.5 block text-sm font-medium text-surface-700 dark:text-surface-300">
-          Description
-        </label>
-        <textarea
-          {...register('description')}
-          rows={4}
-          placeholder="Describe the product in detail"
-          className="w-full rounded-lg border border-surface-200 bg-white px-3.5 py-2.5 text-surface-900 placeholder:text-surface-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/60 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-100 dark:placeholder:text-surface-500"
-        />
-        {errors.description && (
-          <p className="mt-1 text-sm text-red-500">{errors.description.message}</p>
-        )}
-      </div>
-
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <Input
-          label="Price (INR)"
-          type="number"
-          step="0.01"
-          min="0"
-          placeholder="0.00"
-          {...register('price', {
-            setValueAs: (v) => (v === '' ? undefined : Number(v)),
-          })}
-          error={errors.price?.message}
+          label="Product Name"
+          placeholder="e.g. Mechanical Keyboard X1"
+          {...register('name')}
+          error={errors.name?.message}
         />
         <div>
           <label className="mb-1.5 block text-sm font-medium text-surface-700 dark:text-surface-300">
@@ -129,6 +102,20 @@ const ProductForm = ({
             <p className="mt-1 text-sm text-red-500">{errors.categoryId.message}</p>
           )}
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <Input
+          label="Price (INR)"
+          type="number"
+          step="0.01"
+          min="0"
+          placeholder="0.00"
+          {...register('price', {
+            setValueAs: (v) => (v === '' ? undefined : Number(v)),
+          })}
+          error={errors.price?.message}
+        />
         <Input
           label="Stock"
           type="number"
@@ -140,6 +127,21 @@ const ProductForm = ({
           })}
           error={errors.stock?.message}
         />
+      </div>
+
+      <div>
+        <label className="mb-1.5 block text-sm font-medium text-surface-700 dark:text-surface-300">
+          Description
+        </label>
+        <textarea
+          {...register('description')}
+          rows={4}
+          placeholder="Describe the product in detail"
+          className="w-full rounded-lg border border-surface-200 bg-white px-3.5 py-2.5 text-surface-900 placeholder:text-surface-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/60 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-100 dark:placeholder:text-surface-500"
+        />
+        {errors.description && (
+          <p className="mt-1 text-sm text-red-500">{errors.description.message}</p>
+        )}
       </div>
 
       <div>
