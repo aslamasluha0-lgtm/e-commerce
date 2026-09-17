@@ -83,66 +83,173 @@
   ],
   "products": [
     {
-      "id": 1,
-      "name": "MacBook Pro 14-inch M3 Pro",
-      "slug": "macbook-pro-14-m3-pro",
+      "id": 4,
+      "name": "MacBook Pro 14-inch M5 Pro",
+      "slug": "macbook-pro-14-inch-m5-pro",
       "brand": "Apple",
       "categoryId": 1,
       "category": "Laptops",
-      "price": 199900,
-      "discountPrice": 189900,
+      "price": 199901,
+      "discountPrice": 189999,
       "currency": "INR",
       "rating": 4.8,
       "reviewCount": 256,
-      "stock": 15,
-      "sku": "LAP-001",
-      "description": "The MacBook Pro 14-inch with M3 Pro chip delivers exceptional performance for professional workflows. With up to 18 hours of battery life, a stunning Liquid Retina XDR display, and advanced thermal design, it handles demanding tasks like video editing, 3D rendering, and software development with ease.",
-      "shortDescription": "14-inch MacBook Pro with M3 Pro chip, 18GB RAM, 512GB SSD.",
+      "stock": 10,
+      "sku": "LAP-004",
+      "description": "The MacBook Pro 14-inch with M5 Pro delivers exceptional performance for developers, creators, and professionals. It combines Apple's powerful M5 Pro chip with a stunning Liquid Retina XDR display, long battery life, and a premium lightweight design.",
+      "shortDescription": "14-inch professional laptop with Apple M5 Pro, 24GB unified memory, and 512GB SSD.",
       "images": [
-        "https://www.imagineonline.store/cdn/shop/files/MacBook_Pro_14-inch_M4_chip_Space_Black_PDP_Image_Position_1__en-IN_fbfef1b9-211c-4aed-8e05-ab0d8cf998bb.jpg?v=1760101814",
-        "https://inspireonline.in/cdn/shop/files/MacBook_Pro_16-inch_M4_Pro_or_Max_chip_Space_Black_PDP_Image_Position_2__en-IN_7ed08712-3f80-4824-9332-492cb9da44f3.jpg?v=1730312666&width=1445",
-        "https://www.designinfo.in/wp-content/uploads/2025/05/Apple-14-MacBook-Pro-M4-Space-Black-3-1.webp"
+        "https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/original/apple/494743503/0/tnUZfxOZbs-i8t4OecJTG-1.jpg",
+        "https://www.myg.in/images/thumbnails/600/600/detailed/138/macbook_pro_15-in_m5_pro_5.webp.png"
       ],
       "specifications": {
-        "processor": "Apple M3 Pro 11-core",
-        "ram": "18GB Unified Memory",
+        "processor": "Apple M5 Pro",
+        "ram": "24GB Unified Memory",
         "storage": "512GB SSD",
         "display": "14.2-inch Liquid Retina XDR",
         "resolution": "3024 x 1964",
         "refreshRate": "120Hz ProMotion",
-        "graphics": "Apple M3 Pro 14-core GPU",
-        "battery": "Up to 18 hours",
-        "operatingSystem": "macOS Sonoma",
-        "weight": "1.55kg",
-        "ports": "3x Thunderbolt 4, HDMI, SD card slot, MagSafe 3"
+        "graphics": "Integrated Apple GPU",
+        "battery": "Up to 24 hours",
+        "operatingSystem": "macOS",
+        "weight": "Approximately 1.6kg",
+        "ports": "3x Thunderbolt, HDMI, SDXC card slot, MagSafe 3, 3.5mm headphone jack"
       },
       "features": [
         "Liquid Retina XDR display",
-        "M3 Pro chip",
-        "18-hour battery life",
-        "MagSafe charging",
-        "Force Touch trackpad"
+        "ProMotion 120Hz",
+        "Apple M5 Pro chip",
+        "MagSafe 3 charging",
+        "Touch ID",
+        "Six-speaker sound system",
+        "Studio-quality three-mic array"
       ],
       "tags": [
         "apple",
         "macbook",
-        "professional",
+        "macbook-pro",
+        "m5-pro",
         "developer",
+        "premium",
         "creator"
       ],
       "featured": true,
       "trending": true,
       "isActive": true,
-      "createdAt": "2026-01-15T10:00:00Z"
+      "createdAt": "2026-09-17T10:00:00Z"
     },
     {
       "id": 2,
       "name": "ThinkPad X1 Carbon Gen 11",
-      "slug": "thinkpad-x1-carbon-gen11",
+      "slug": "thinkpad-x1-carbon-gen-11",
       "brand": "Lenovo",
       "categoryId": 1,
       "category": "Laptops",
-      "price": 142999,
+      "price": 150000,
+      "discountPrice": 132999,
+      "currency": "INR",
+      "rating": 4.6,
+      "reviewCount": 189,
+      "stock": 20,
+      "sku": "LAP-002",
+      "description": "The ThinkPad X1 Carbon Gen 11 is an ultra-lightweight business laptop with enterprise-grade security features. Powered by 13th Gen Intel Core processors, it offers exceptional keyboard comfort, a brilliant 2.8K OLED display option, and all-day battery life for mobile professionals.",
+      "shortDescription": "14-inch ultralight business laptop with Intel Core i7, 16GB RAM.",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQczcTv92ljtISad-Y-uAPDIyX76koE1wW6tvq-zMpvphCSQ4jRBT1QehM&s=10",
+        "https://m.media-amazon.com/images/I/616lsDxAaCL.jpg",
+        "https://5.imimg.com/data5/SELLER/Default/2024/3/403284749/GO/CO/ZB/8268091/thinkpad-x1-carbon-gen-11-21hms00000-500x500.png"
+      ],
+      "specifications": {
+        "processor": "Intel Core i7-1365U",
+        "ram": "16GB LPDDR5x",
+        "storage": "512GB PCIe Gen 4 SSD",
+        "display": "14-inch 2.8K OLED",
+        "resolution": "2880 x 1800",
+        "refreshRate": "60Hz",
+        "graphics": "Intel Iris Xe Graphics",
+        "battery": "57Wh, up to 15 hours",
+        "operatingSystem": "Windows 11 Pro",
+        "weight": "1.12kg",
+        "ports": "2x Thunderbolt 4, 2x USB-A, HDMI 2.0b"
+      },
+      "features": [
+        "MIL-STD-810H tested",
+        "IR camera with Windows Hello",
+        "TrackPoint pointing device",
+        "Rapid Charge"
+      ],
+      "tags": [
+        "lenovo",
+        "thinkpad",
+        "business",
+        "ultralight",
+        "enterprise"
+      ],
+      "featured": true,
+      "trending": false,
+      "isActive": true,
+      "createdAt": "2026-02-10T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Dell XPS 15 9530",
+      "slug": "dell-xps-15-9530",
+      "brand": "Dell",
+      "categoryId": 1,
+      "category": "Laptops",
+      "price": 164999,
+      "discountPrice": 154999,
+      "currency": "INR",
+      "rating": 4.5,
+      "reviewCount": 142,
+      "stock": 12,
+      "sku": "LAP-003",
+      "description": "The Dell XPS 15 9530 combines stunning design with powerful performance. Featuring a 15.6-inch InfinityEdge display, 13th Gen Intel Core processors, and NVIDIA GeForce RTX graphics, it's perfect for developers and creators who need a balance of portability and power.",
+      "shortDescription": "15.6-inch premium laptop with Intel i7, RTX 4050, OLED display.",
+      "images": [
+        "https://pctech.co.in/image/cache/catalog/Laptops/DELL/dell-xps-15-9530-laptop-05-800x800w.jpg",
+        "https://www.expertsystems.co.in/wp-content/uploads/2023/12/ICON-31-500x500.jpg",
+        "https://m.media-amazon.com/images/I/61vlgM-GutL._AC_UF350,350_QL80_.jpg"
+      ],
+      "specifications": {
+        "processor": "Intel Core i7-13700H",
+        "ram": "16GB DDR5",
+        "storage": "512GB NVMe SSD",
+        "display": "15.6-inch 3.5K OLED",
+        "resolution": "3456 x 2160",
+        "refreshRate": "60Hz",
+        "graphics": "NVIDIA GeForce RTX 4050 6GB",
+        "battery": "86Wh, up to 13 hours",
+        "operatingSystem": "Windows 11 Home",
+        "weight": "1.86kg",
+        "ports": "2x Thunderbolt 4, USB-C 3.2, SD card slot"
+      },
+      "features": [
+        "InfinityEdge display",
+        "CNC machined aluminum",
+        "Fingerprint reader",
+        "Waves MaxxAudio Pro"
+      ],
+      "tags": [
+        "dell",
+        "xps",
+        "creator",
+        "premium",
+        "oled"
+      ],
+      "featured": true,
+      "trending": true,
+      "isActive": true,
+      "createdAt": "2026-01-20T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "ThinkPad X1 Carbon Gen 11",
+      "slug": "thinkpad-x1-carbon-gen-11",
+      "brand": "Lenovo",
+      "categoryId": 1,
+      "category": "Laptops",
+      "price": 150000,
       "discountPrice": 132999,
       "currency": "INR",
       "rating": 4.6,
@@ -1388,52 +1495,6 @@
       "createdAt": "2026-03-14T10:00:00Z"
     },
     {
-      "id": 32,
-      "name": "Anker PowerConf C200",
-      "slug": "anker-powerconf-c200",
-      "brand": "Anker",
-      "categoryId": 7,
-      "category": "Webcams",
-      "price": 4999,
-      "discountPrice": 4499,
-      "currency": "INR",
-      "rating": 4.3,
-      "reviewCount": 187,
-      "stock": 45,
-      "sku": "WEB-004",
-      "description": "The Anker PowerConf C200 is an affordable 2K webcam with AI-powered noise cancellation, auto-framing, and a privacy shutter. It offers excellent value for remote workers and students who need reliable video quality for daily calls.",
-      "shortDescription": "Budget 2K webcam with AI noise cancellation, privacy shutter.",
-      "images": [
-        "https://m.media-amazon.com/images/I/61x85jnqUUL.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuHcjSayi8s_XF679Gs2rK_rSDSvvNITDq5JpUaD6SVSUO6Gub2S_fZTRV&s=10",
-        "https://m.media-amazon.com/images/I/61KAgaWzFkL._AC_UF1000,1000_QL80_.jpg"
-      ],
-      "specifications": {
-        "resolution": "2K QHD (2560 x 1440)",
-        "fps": "30fps (2K), 30fps (1080p)",
-        "fieldOfView": "95°",
-        "microphone": "Dual microphones with AI noise cancellation",
-        "connection": "USB-C"
-      },
-      "features": [
-        "AI noise cancellation",
-        "Auto-framing",
-        "Privacy shutter",
-        "Software included"
-      ],
-      "tags": [
-        "anker",
-        "budget",
-        "2k",
-        "webcam",
-        "remote-work"
-      ],
-      "featured": false,
-      "trending": false,
-      "isActive": true,
-      "createdAt": "2026-03-18T10:00:00Z"
-    },
-    {
       "id": 33,
       "name": "Shure MV7+",
       "slug": "shure-mv7-plus",
@@ -2040,107 +2101,6 @@
       "createdAt": "2026-03-18T10:00:00Z"
     },
     {
-      "id": 46,
-      "name": "Dell XPS 13 Plus 9320",
-      "slug": "dell-xps-13-plus-9320",
-      "brand": "Dell",
-      "categoryId": 1,
-      "category": "Laptops",
-      "price": 139999,
-      "discountPrice": 129999,
-      "currency": "INR",
-      "rating": 4.6,
-      "reviewCount": 87,
-      "stock": 10,
-      "sku": "LAP-006",
-      "description": "The Dell XPS 13 Plus pushes premium ultrabook design forward with a zero-lattice keyboard, seamless glass touchpad, and a stunning OLED InfiniteEdge display. Powered by a 13th Gen Intel Core i7, it's built for developers and creators who value portability without compromising performance.",
-      "shortDescription": "13.4-inch OLED ultrabook, Intel Core i7-1360P, 16GB RAM, 512GB SSD.",
-      "images": [
-        "https://apiv2.exceldisc.com/media/39817/dell-xps-13-plus-9320.webp",
-        "https://m.media-amazon.com/images/I/71Bc0CG6RkL.jpg",
-        "https://m.media-amazon.com/images/I/71PJsA73NUL.jpg"
-      ],
-      "specifications": {
-        "processor": "Intel Core i7-1360P 12-core",
-        "ram": "16GB LPDDR5",
-        "storage": "512GB NVMe SSD",
-        "display": "13.4-inch OLED Touch",
-        "resolution": "3456 x 2160",
-        "refreshRate": "60Hz",
-        "graphics": "Intel Iris Xe",
-        "battery": "Up to 12 hours",
-        "operatingSystem": "Windows 11 Home",
-        "weight": "1.24kg",
-        "ports": "2x Thunderbolt 4, 3.5mm combo"
-      },
-      "features": [
-        "Zero-lattice keyboard",
-        "Seamless glass haptic touchpad",
-        "OLED InfiniteEdge display",
-        "Vapor chamber cooling"
-      ],
-      "tags": [
-        "dell",
-        "xps",
-        "ultrabook",
-        "developer",
-        "portable"
-      ],
-      "featured": false,
-      "trending": false,
-      "isActive": true,
-      "createdAt": "2026-09-02T10:00:00Z"
-    },
-    {
-      "id": 48,
-      "name": "HP Omen Transcend 32",
-      "slug": "hp-omen-transcend-32",
-      "brand": "HP",
-      "categoryId": 3,
-      "category": "Monitors",
-      "price": 109999,
-      "discountPrice": 99999,
-      "currency": "INR",
-      "rating": 4.5,
-      "reviewCount": 62,
-      "stock": 8,
-      "sku": "MON-006",
-      "description": "A 31.5-inch QD-OLED gaming display with 4K resolution and a blazing 240Hz refresh rate. The HP Omen Transcend 32 delivers 0.03ms response time, VESA DisplayHDR 1000 brightness, and a built-in KVM switch, making it a top choice for gaming and high-end productivity alike.",
-      "shortDescription": "31.5-inch 4K QD-OLED, 240Hz, 0.03ms, DisplayHDR 1000.",
-      "images": [
-        "https://d2ir8gpcv17b65.cloudfront.net/xstorage/1/_cache/20260809/PR0249224_00e6c54d9eac1940d49eb4c2be278361_593739_1_75741d1331c69f176b48d44f83179433.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQOAWtnBthHpd_JKUT_LQqvlFfoIoYqXoZiCvPYDuyDFvQMg7DwJFpta0&s=10",
-        "https://m.media-amazon.com/images/I/71rr-pfr7FL._AC_UF350,350_QL80_.jpg"
-      ],
-      "specifications": {
-        "panel": "31.5-inch QD-OLED",
-        "resolution": "3840 x 2160",
-        "refreshRate": "240Hz",
-        "responseTime": "0.03ms",
-        "brightness": "1000 nits peak",
-        "ports": "2x HDMI 2.1, 1x DP 1.4, USB-C, 4x USB-A",
-        "colorGamut": "99% DCI-P3",
-        "curvature": "Flat"
-      },
-      "features": [
-        "QD-OLED panel",
-        "240Hz refresh rate",
-        "VESA DisplayHDR 1000",
-        "Integrated KVM switch"
-      ],
-      "tags": [
-        "hp",
-        "omen",
-        "monitor",
-        "oled",
-        "gaming"
-      ],
-      "featured": false,
-      "trending": false,
-      "isActive": true,
-      "createdAt": "2026-09-02T10:00:00Z"
-    },
-    {
       "id": 49,
       "name": "NuPhy Air75 V2 Wireless Mechanical Keyboard",
       "slug": "nuphy-air75-v2",
@@ -2731,244 +2691,6 @@
       "createdAt": "2026-06-15T10:00:00Z"
     },
     {
-      "id": 2,
-      "orderNumber": "ORD-2026-0002",
-      "userId": 2,
-      "items": [
-        {
-          "productId": 6,
-          "quantity": 1,
-          "price": 124999
-        }
-      ],
-      "subtotal": 124999,
-      "discount": 0,
-      "shipping": 0,
-      "tax": 22500,
-      "total": 147499,
-      "paymentMethod": "razorpay",
-      "paymentStatus": "paid",
-      "orderStatus": "delivered",
-      "shippingAddress": {
-        "fullName": "Priya Sharma",
-        "addressLine1": "15 Park Street",
-        "city": "Kolkata",
-        "state": "West Bengal",
-        "postalCode": "700016",
-        "country": "India"
-      },
-      "createdAt": "2026-07-02T10:00:00Z"
-    },
-    {
-      "id": 3,
-      "orderNumber": "ORD-2026-0003",
-      "userId": 3,
-      "items": [
-        {
-          "productId": 11,
-          "quantity": 1,
-          "price": 44999
-        },
-        {
-          "productId": 20,
-          "quantity": 1,
-          "price": 8995
-        },
-        {
-          "productId": 16,
-          "quantity": 1,
-          "price": 9995
-        }
-      ],
-      "subtotal": 63989,
-      "discount": 3000,
-      "shipping": 0,
-      "tax": 11518,
-      "total": 72507,
-      "paymentMethod": "cod",
-      "paymentStatus": "paid",
-      "orderStatus": "shipped",
-      "shippingAddress": {
-        "fullName": "Rohit Kumar",
-        "addressLine1": "78 Koramangala 5th Block",
-        "city": "Bengaluru",
-        "state": "Karnataka",
-        "postalCode": "560095",
-        "country": "India"
-      },
-      "createdAt": "2026-07-18T10:00:00Z"
-    },
-    {
-      "id": 4,
-      "orderNumber": "ORD-2026-0004",
-      "userId": 4,
-      "items": [
-        {
-          "productId": 24,
-          "quantity": 1,
-          "price": 26990
-        },
-        {
-          "productId": 33,
-          "quantity": 1,
-          "price": 27999
-        }
-      ],
-      "subtotal": 54989,
-      "discount": 2000,
-      "shipping": 0,
-      "tax": 9898,
-      "total": 62887,
-      "paymentMethod": "razorpay",
-      "paymentStatus": "paid",
-      "orderStatus": "out_for_delivery",
-      "shippingAddress": {
-        "fullName": "Sneha Patel",
-        "addressLine1": "23 Banjara Hills Road No. 12",
-        "city": "Hyderabad",
-        "state": "Telangana",
-        "postalCode": "500034",
-        "country": "India"
-      },
-      "createdAt": "2026-08-01T10:00:00Z"
-    },
-    {
-      "id": 5,
-      "orderNumber": "ORD-2026-0005",
-      "userId": 5,
-      "items": [
-        {
-          "productId": 3,
-          "quantity": 1,
-          "price": 154999
-        },
-        {
-          "productId": 36,
-          "quantity": 2,
-          "price": 13999
-        }
-      ],
-      "subtotal": 182997,
-      "discount": 10000,
-      "shipping": 0,
-      "tax": 32939,
-      "total": 205936,
-      "paymentMethod": "razorpay",
-      "paymentStatus": "paid",
-      "orderStatus": "shipped",
-      "shippingAddress": {
-        "fullName": "Vikram Singh",
-        "addressLine1": "9 Civil Lines",
-        "city": "Jaipur",
-        "state": "Rajasthan",
-        "postalCode": "302006",
-        "country": "India"
-      },
-      "createdAt": "2026-08-05T10:00:00Z"
-    },
-    {
-      "id": 6,
-      "orderNumber": "ORD-2026-0006",
-      "userId": 6,
-      "items": [
-        {
-          "productId": 15,
-          "quantity": 1,
-          "price": 16499
-        },
-        {
-          "productId": 29,
-          "quantity": 1,
-          "price": 15995
-        },
-        {
-          "productId": 41,
-          "quantity": 1,
-          "price": 29999
-        }
-      ],
-      "subtotal": 62493,
-      "discount": 0,
-      "shipping": 0,
-      "tax": 11249,
-      "total": 73742,
-      "paymentMethod": "razorpay",
-      "paymentStatus": "paid",
-      "orderStatus": "delivered",
-      "shippingAddress": {
-        "fullName": "Ananya Reddy",
-        "addressLine1": "56 Gachibowli",
-        "city": "Hyderabad",
-        "state": "Telangana",
-        "postalCode": "500032",
-        "country": "India"
-      },
-      "createdAt": "2026-07-25T10:00:00Z"
-    },
-    {
-      "id": 7,
-      "orderNumber": "ORD-2026-0007",
-      "userId": 7,
-      "items": [
-        {
-          "productId": 2,
-          "quantity": 1,
-          "price": 132999
-        }
-      ],
-      "subtotal": 132999,
-      "discount": 5000,
-      "shipping": 0,
-      "tax": 22939,
-      "total": 150938,
-      "paymentMethod": "cod",
-      "paymentStatus": "paid",
-      "orderStatus": "packed",
-      "shippingAddress": {
-        "fullName": "Karan Joshi",
-        "addressLine1": "12 Aundh-Baner Road",
-        "city": "Pune",
-        "state": "Maharashtra",
-        "postalCode": "411045",
-        "country": "India"
-      },
-      "createdAt": "2026-08-10T10:00:00Z"
-    },
-    {
-      "id": 8,
-      "orderNumber": "ORD-2026-0008",
-      "userId": 8,
-      "items": [
-        {
-          "productId": 37,
-          "quantity": 1,
-          "price": 8499
-        },
-        {
-          "productId": 42,
-          "quantity": 1,
-          "price": 4499
-        }
-      ],
-      "subtotal": 12998,
-      "discount": 0,
-      "shipping": 49,
-      "tax": 2340,
-      "total": 15387,
-      "paymentMethod": "razorpay",
-      "paymentStatus": "paid",
-      "orderStatus": "confirmed",
-      "shippingAddress": {
-        "fullName": "Neha Gupta",
-        "addressLine1": "34 Salt Lake Sector V",
-        "city": "Kolkata",
-        "state": "West Bengal",
-        "postalCode": "700091",
-        "country": "India"
-      },
-      "createdAt": "2026-08-15T10:00:00Z"
-    },
-    {
       "id": 9,
       "orderNumber": "ORD-2026-0009",
       "userId": 1,
@@ -2996,40 +2718,6 @@
         "country": "India"
       },
       "createdAt": "2026-08-08T10:00:00Z"
-    },
-    {
-      "id": 10,
-      "orderNumber": "ORD-2026-0010",
-      "userId": 3,
-      "items": [
-        {
-          "productId": 4,
-          "quantity": 1,
-          "price": 129999
-        },
-        {
-          "productId": 43,
-          "quantity": 1,
-          "price": 22999
-        }
-      ],
-      "subtotal": 152998,
-      "discount": 8000,
-      "shipping": 0,
-      "tax": 27539,
-      "total": 172537,
-      "paymentMethod": "razorpay",
-      "paymentStatus": "paid",
-      "orderStatus": "pending",
-      "shippingAddress": {
-        "fullName": "Rohit Kumar",
-        "addressLine1": "78 Koramangala 5th Block",
-        "city": "Bengaluru",
-        "state": "Karnataka",
-        "postalCode": "560095",
-        "country": "India"
-      },
-      "createdAt": "2026-08-20T10:00:00Z"
     },
     {
       "userId": 102,
@@ -3096,7 +2784,7 @@
       "paymentMethod": "razorpay",
       "paymentStatus": "paid",
       "paymentId": "pay_TXU5UJJbUXC3fs",
-      "orderStatus": "processing",
+      "orderStatus": "pending",
       "status": "processing",
       "shippingAddress": {
         "fullName": "aslam",
@@ -3338,63 +3026,53 @@
         }
       ],
       "id": 17
+    },
+    {
+      "userId": 102,
+      "orderNumber": "DEV-20260917-235",
+      "items": [
+        {
+          "id": 1,
+          "productId": 1,
+          "name": "MacBook Pro 14-inch M3 Pro",
+          "image": "https://www.imagineonline.store/cdn/shop/files/MacBook_Pro_14-inch_M4_chip_Space_Black_PDP_Image_Position_1__en-IN_fbfef1b9-211c-4aed-8e05-ab0d8cf998bb.jpg?v=1760101814",
+          "price": 189900,
+          "quantity": 1
+        }
+      ],
+      "subtotal": 189900,
+      "discount": 0,
+      "shipping": 0,
+      "tax": 18990,
+      "total": 208890,
+      "paymentMethod": "razorpay",
+      "paymentStatus": "paid",
+      "paymentId": "pay_TczHSXJoj786Wo",
+      "orderStatus": "shipped",
+      "status": "processing",
+      "shippingAddress": {
+        "fullName": "aslam",
+        "phone": "7907956468",
+        "addressLine1": "tharayil",
+        "addressLine2": "",
+        "city": "edappal",
+        "state": "kerala",
+        "postalCode": "679584",
+        "country": "India"
+      },
+      "date": "2026-09-17T05:24:19.101Z",
+      "createdAt": "2026-09-17T05:24:19.101Z",
+      "timeline": [
+        {
+          "status": "placed",
+          "date": "2026-09-17T05:24:19.101Z",
+          "note": "Order placed"
+        }
+      ],
+      "id": 18
     }
   ],
   "reviews": [
-    {
-      "id": 1,
-      "productId": 1,
-      "userId": 1,
-      "rating": 5,
-      "title": "Best laptop for development",
-      "comment": "The M3 Pro handles Xcode, Docker, and multiple VS Code windows without breaking a sweat. Battery life is incredible for full-day coding sessions. The display is gorgeous for long hours of work.",
-      "createdAt": "2026-07-01T10:00:00Z"
-    },
-    {
-      "id": 2,
-      "productId": 1,
-      "userId": 3,
-      "rating": 4,
-      "title": "Great but pricey",
-      "comment": "Incredible build quality and performance. The only reason for 4 stars is the price — it's a significant investment. But for professional development work, it's worth every penny.",
-      "createdAt": "2026-07-10T10:00:00Z"
-    },
-    {
-      "id": 3,
-      "productId": 3,
-      "userId": 5,
-      "rating": 5,
-      "title": "Perfect for creators",
-      "comment": "The OLED display is stunning for photo and video editing. The RTX 4050 handles Premiere Pro and DaVinci Resolve smoothly. Build quality is top-notch.",
-      "createdAt": "2026-07-15T10:00:00Z"
-    },
-    {
-      "id": 4,
-      "productId": 6,
-      "userId": 2,
-      "rating": 5,
-      "title": "Galaxy AI is a game changer",
-      "comment": "The translation and summarization features are incredibly useful. Camera quality is outstanding, especially in low light. The S Pen is still unmatched for note-taking.",
-      "createdAt": "2026-07-20T10:00:00Z"
-    },
-    {
-      "id": 5,
-      "productId": 7,
-      "userId": 4,
-      "rating": 5,
-      "title": "Premium Apple experience",
-      "comment": "The titanium build feels amazing in hand. USB-C is finally here! The 5x zoom is fantastic for product photography. iOS ecosystem integration is seamless.",
-      "createdAt": "2026-07-05T10:00:00Z"
-    },
-    {
-      "id": 6,
-      "productId": 10,
-      "userId": 6,
-      "rating": 5,
-      "title": "Incredible for coding and gaming",
-      "comment": "4K at 160Hz with Nano IPS — what more could you want? Colors are accurate for design work, and the refresh rate is buttery smooth for gaming after work hours.",
-      "createdAt": "2026-07-18T10:00:00Z"
-    },
     {
       "id": 7,
       "productId": 15,
@@ -3403,69 +3081,6 @@
       "title": "Best mechanical keyboard I've owned",
       "comment": "The build quality is insane for the price. QMK support means I can customize every key. The Gateron Jupiter switches feel fantastic out of the box. Highly recommend for developers.",
       "createdAt": "2026-06-28T10:00:00Z"
-    },
-    {
-      "id": 8,
-      "productId": 20,
-      "userId": 2,
-      "rating": 5,
-      "title": "Essential for productivity",
-      "comment": "The MagSpeed scroll wheel alone is worth the price. Logi Flow lets me switch between my Mac and Windows workstations seamlessly. Ergonomic shape is comfortable for 8+ hours of use.",
-      "createdAt": "2026-07-08T10:00:00Z"
-    },
-    {
-      "id": 9,
-      "productId": 24,
-      "userId": 3,
-      "rating": 5,
-      "title": "Perfect noise cancellation",
-      "comment": "I use these daily for focus coding in an open office. The ANC blocks out everything. Sound quality is excellent for music and calls. Multi-point connection with phone and laptop works flawlessly.",
-      "createdAt": "2026-07-12T10:00:00Z"
-    },
-    {
-      "id": 10,
-      "productId": 33,
-      "userId": 4,
-      "rating": 5,
-      "title": "Podcast quality at home",
-      "comment": "The auto-level mode is a lifesaver — no more worrying about mic technique. Sound quality rivals XLR setups at twice the price. The hybrid USB/XLR output gives upgrade flexibility.",
-      "createdAt": "2026-07-22T10:00:00Z"
-    },
-    {
-      "id": 11,
-      "productId": 36,
-      "userId": 5,
-      "rating": 5,
-      "title": "Tank-like build quality",
-      "comment": "Dropped it from desk height onto concrete and not a scratch. Read speeds are consistently over 1000MB/s. Perfect for backing up projects on the go.",
-      "createdAt": "2026-07-25T10:00:00Z"
-    },
-    {
-      "id": 12,
-      "productId": 41,
-      "userId": 6,
-      "rating": 5,
-      "title": "Single cable desktop setup",
-      "comment": "One cable to my MacBook Pro and everything just works — dual monitors, ethernet, all peripherals. The 98W charging keeps my laptop topped up. Worth every rupee for the convenience.",
-      "createdAt": "2026-07-30T10:00:00Z"
-    },
-    {
-      "id": 13,
-      "productId": 4,
-      "userId": 7,
-      "rating": 4,
-      "title": "Powerful gaming laptop",
-      "comment": "Handles every AAA game at high settings. The G14 is impressively light for a gaming laptop. Fan noise is noticeable under load but manageable. Battery life in non-gaming mode is decent.",
-      "createdAt": "2026-08-01T10:00:00Z"
-    },
-    {
-      "id": 14,
-      "productId": 2,
-      "userId": 8,
-      "rating": 4,
-      "title": "Solid business laptop",
-      "comment": "Keyboard is the best I've ever typed on. TrackPoint is a nice touch for power users. Build quality is exceptional — feels like it could survive anything. Webcam could be better.",
-      "createdAt": "2026-08-02T10:00:00Z"
     },
     {
       "id": 15,
@@ -3477,69 +3092,6 @@
       "createdAt": "2026-08-03T10:00:00Z"
     },
     {
-      "id": 16,
-      "productId": 16,
-      "userId": 3,
-      "rating": 5,
-      "title": "Ultimate office keyboard",
-      "comment": "Smart illumination that turns on when my hands approach is pure magic. Easy-Switch between my three devices is seamless. Quiet, precise, and beautifully designed.",
-      "createdAt": "2026-08-04T10:00:00Z"
-    },
-    {
-      "id": 17,
-      "productId": 25,
-      "userId": 2,
-      "rating": 4,
-      "title": "Great but fit varies",
-      "comment": "ANC is excellent for commuting. Sound quality has noticeably improved over AirPods Pro 1. Spatial Audio with head tracking is impressive. Took a star off because the fit isn't perfect for my ears.",
-      "createdAt": "2026-08-05T10:00:00Z"
-    },
-    {
-      "id": 18,
-      "productId": 29,
-      "userId": 5,
-      "rating": 4,
-      "title": "Crystal clear video calls",
-      "comment": "4K quality makes me look professional on every call. The adjustable FOV is handy. Windows Hello integration is seamless. Only wish it had a wider FOV option.",
-      "createdAt": "2026-08-06T10:00:00Z"
-    },
-    {
-      "id": 19,
-      "productId": 37,
-      "userId": 4,
-      "rating": 5,
-      "title": "Fastest SSD for gaming",
-      "comment": "Game load times are virtually eliminated. The 7300MB/s read speed is the real deal. Installed it in my PS5 and it performs flawlessly. WD Dashboard software is useful for monitoring health.",
-      "createdAt": "2026-08-07T10:00:00Z"
-    },
-    {
-      "id": 20,
-      "productId": 42,
-      "userId": 6,
-      "rating": 4,
-      "title": "Great value hub",
-      "comment": "Does everything I need at a fraction of premium dock prices. 4K@60Hz output is smooth. Gets a bit warm under heavy load but doesn't affect performance. Compact and travel-friendly.",
-      "createdAt": "2026-08-08T10:00:00Z"
-    },
-    {
-      "id": 21,
-      "productId": 8,
-      "userId": 7,
-      "rating": 4,
-      "title": "Great value flagship",
-      "comment": "100W charging is incredibly fast — 0 to 100% in under 30 minutes. OxygenOS is clean and snappy. Camera is good but not S24 Ultra level. At this price, it's hard to beat.",
-      "createdAt": "2026-08-09T10:00:00Z"
-    },
-    {
-      "id": 22,
-      "productId": 17,
-      "userId": 8,
-      "rating": 5,
-      "title": "RGB masterpiece",
-      "comment": "The iCUE control wheel is incredibly useful for quick adjustments. Per-key RGB with LightEdge looks stunning. OPX switches are responsive and satisfying. A bit heavy but worth it.",
-      "createdAt": "2026-08-10T10:00:00Z"
-    },
-    {
       "id": 23,
       "productId": 22,
       "userId": 1,
@@ -3549,69 +3101,6 @@
       "createdAt": "2026-08-11T10:00:00Z"
     },
     {
-      "id": 24,
-      "productId": 38,
-      "userId": 2,
-      "rating": 4,
-      "title": "Massive portable storage",
-      "comment": "4TB in something this small is remarkable. Transfer speeds are consistent. The IP55 rating gives peace of mind. Wish it came with a protective case included.",
-      "createdAt": "2026-08-12T10:00:00Z"
-    },
-    {
-      "id": 25,
-      "productId": 12,
-      "userId": 3,
-      "rating": 5,
-      "title": "Developer's dream monitor",
-      "comment": "The USB-C 90W PD means one cable to my laptop. KVM switch handles my work and personal machines seamlessly. IPS Black technology makes dark themes look much better than regular IPS.",
-      "createdAt": "2026-08-13T10:00:00Z"
-    },
-    {
-      "id": 26,
-      "productId": 34,
-      "userId": 4,
-      "rating": 4,
-      "title": "Versatile podcast mic",
-      "comment": "Having 4 pickup patterns is incredibly useful for different recording scenarios. Stereo mode is great for music. Blue VO!CE adds nice polish to voice. Build quality is solid metal.",
-      "createdAt": "2026-08-14T10:00:00Z"
-    },
-    {
-      "id": 27,
-      "productId": 5,
-      "userId": 5,
-      "rating": 4,
-      "title": "Beautiful 2-in-1",
-      "comment": "The OLED touchscreen is stunning and the 360-degree hinge is smooth. Perfect for presentations and note-taking. Performance is great for everyday tasks. Speakers could be louder.",
-      "createdAt": "2026-08-15T10:00:00Z"
-    },
-    {
-      "id": 28,
-      "productId": 9,
-      "userId": 6,
-      "rating": 4,
-      "title": "Camera king",
-      "comment": "Night Sight is unbelievable. The clean Android experience is refreshing. 7 years of updates gives incredible longevity. Performance is snappy for daily use and development.",
-      "createdAt": "2026-08-16T10:00:00Z"
-    },
-    {
-      "id": 29,
-      "productId": 26,
-      "userId": 7,
-      "rating": 5,
-      "title": "Best ANC I've ever heard",
-      "comment": "Immersive Audio is spatial audio done right. Noise cancellation is a noticeable step above the QC45. Comfortable for hours. The carrying case is premium. Absolutely worth the price.",
-      "createdAt": "2026-08-17T10:00:00Z"
-    },
-    {
-      "id": 30,
-      "productId": 19,
-      "userId": 8,
-      "rating": 5,
-      "title": "Typing perfection",
-      "comment": "The PBT keycaps and steel plate create a satisfying thock sound. Cherry MX Browns are perfectly balanced for typing and light gaming. Compact layout saves desk space without losing functionality.",
-      "createdAt": "2026-08-18T10:00:00Z"
-    },
-    {
       "id": 31,
       "productId": 39,
       "userId": 1,
@@ -3619,15 +3108,6 @@
       "title": "Good for the price",
       "comment": "5TB gives plenty of space for backups. Transfer speeds are decent for an HDD. It's not fast like an SSD, but for archival and backups it does the job. A bit bulky to carry around.",
       "createdAt": "2026-08-19T10:00:00Z"
-    },
-    {
-      "id": 32,
-      "productId": 14,
-      "userId": 2,
-      "rating": 4,
-      "title": "Productivity powerhouse",
-      "comment": "The 21:9 ratio is amazing for split-screen coding. USB-C with 60W PD means one cable setup. Only downside is 60Hz — would love a higher refresh rate option.",
-      "createdAt": "2026-08-20T10:00:00Z"
     }
   ],
   "coupons": [
