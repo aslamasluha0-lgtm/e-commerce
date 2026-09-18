@@ -3,7 +3,6 @@ const STORAGE_KEYS = {
   USER: 'devstore_user',
   ADMIN_USER: 'adminUser',
   CART: 'devstore_cart',
-  WISHLIST: 'devstore_wishlist',
 }
 
 export const storage = {

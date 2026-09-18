@@ -1,10 +1,11 @@
 import { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Heart, ShoppingCart, Eye, Check } from 'lucide-react'
 import { useDispatch, useSelector } from 'react-redux'
 import toast from 'react-hot-toast'
 import { addToCart } from '@/redux/slices/cartSlice'
 import { addToWishlist, removeFromWishlist } from '@/redux/slices/wishlistSlice'
+import { useAuth } from '@/hooks/useAuth'
 import ProductRating from './ProductRating'
 import ProductImage from '@/components/common/ProductImage'
 import Price from '@/components/common/Price'
@@ -23,6 +24,8 @@ const getBadge = (product) => {
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const { isAuthenticated } = useAuth()
   const [added, setAdded] = useState(false)
   const addTimer = useRef(null)
   const wishlistItems = useSelector((state) => state.wishlist.items)
@@ -35,6 +38,10 @@ const ProductCard = ({ product }) => {
   const handleWishlist = (e) => {
     e.preventDefault()
     e.stopPropagation()
+    if (!isAuthenticated) {
+      navigate('/login')
+      return
+    }
     if (isWishlisted) {
       dispatch(removeFromWishlist(product.id))
       toast.success(`Removed from wishlist — ${product.name}`)

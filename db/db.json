@@ -3048,7 +3048,7 @@
       "paymentMethod": "razorpay",
       "paymentStatus": "paid",
       "paymentId": "pay_TczHSXJoj786Wo",
-      "orderStatus": "shipped",
+      "orderStatus": "pending",
       "status": "processing",
       "shippingAddress": {
         "fullName": "aslam",

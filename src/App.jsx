@@ -5,6 +5,7 @@ import store from '@/redux/store'
 import { AdminAuthProvider } from '@/context/AdminAuthContext'
 import AppRoutes from '@/routes/AppRoutes'
 import ScrollToTop from './components/common/ScrollToTop'
+import WishlistSync from './components/wishlist/WishlistSync'
 import Footer from './components/common/Footer'
 
 const queryClient = new QueryClient({
@@ -24,6 +25,7 @@ function App() {
         <AdminAuthProvider>
           <BrowserRouter>
            <ScrollToTop/>
+            <WishlistSync />
             <AppRoutes />
           </BrowserRouter>
         </AdminAuthProvider>

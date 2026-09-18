@@ -6,6 +6,7 @@ import { ShoppingCart, Heart, ArrowLeft, PackageCheck, ShieldCheck, Truck, Minus
 import { useProduct } from '@/hooks/useProduct'
 import { useProducts } from '@/hooks/useProducts'
 import { useReviewQueries } from '@/queries/reviewQueries'
+import { useAuth } from '@/hooks/useAuth'
 import ProductImageGallery from '@/components/product/ProductImageGallery'
 import ProductRating from '@/components/product/ProductRating'
 import ReviewList from '@/components/review/ReviewList'
@@ -30,6 +31,7 @@ const ProductDetails = () => {
   const { id } = useParams()
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const { isAuthenticated } = useAuth()
   const { data: product, isLoading } = useProduct(id)
   const [activeTab, setActiveTab] = useState('overview')
   const [quantity, setQuantity] = useState(1)
@@ -66,6 +68,10 @@ const ProductDetails = () => {
   }
 
   const handleWishlist = () => {
+    if (!isAuthenticated) {
+      navigate('/login')
+      return
+    }
     if (isWishlisted) {
       dispatch(removeFromWishlist(product.id))
       toast.success(`Removed from wishlist — ${product.name}`)
