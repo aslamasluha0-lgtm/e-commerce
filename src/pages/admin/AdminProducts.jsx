@@ -133,12 +133,19 @@ const AdminProducts = () => {
             <p className="truncate font-medium text-surface-900 dark:text-surface-100">
               {product.name}
             </p>
-            {product.sku && (
-              <p className="text-xs text-surface-500 dark:text-surface-400">{product.sku}</p>
-            )}
           </div>
         </div>
       ),
+    },
+    {
+      key: 'brand',
+      label: 'Brand',
+      render: (product) => product.brand || '—',
+    },
+    {
+      key: 'sku',
+      label: 'SKU',
+      render: (product) => product.sku || '—',
     },
     {
       key: 'category',

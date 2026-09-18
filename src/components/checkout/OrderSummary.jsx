@@ -2,8 +2,8 @@ import { formatCurrency } from '@/utils/formatCurrency'
 import ProductImage from '@/components/common/ProductImage'
 import { calculateTotals } from '@/utils/checkoutCalculations'
 
-const OrderSummary = ({ items = [], discount = 0, children }) => {
-  const { subtotal, shipping, tax, total } = calculateTotals(items, discount)
+const OrderSummary = ({ items = [], children }) => {
+  const { subtotal, shipping, tax, total } = calculateTotals(items)
 
   return (
     <div className="rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">
@@ -43,14 +43,6 @@ const OrderSummary = ({ items = [], discount = 0, children }) => {
             {formatCurrency(subtotal)}
           </span>
         </div>
-        {discount > 0 && (
-          <div className="flex justify-between">
-            <span className="text-surface-500 dark:text-surface-400">Discount</span>
-            <span className="font-medium text-emerald-600 dark:text-emerald-400">
-              -{formatCurrency(discount)}
-            </span>
-          </div>
-        )}
         <div className="flex justify-between">
           <span className="text-surface-500 dark:text-surface-400">Shipping</span>
           <span

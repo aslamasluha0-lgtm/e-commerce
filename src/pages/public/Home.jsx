@@ -92,7 +92,6 @@ const Home = () => {
                 {[
                   { value: '500+', label: 'Products' },
                   { value: '10k+', label: 'Happy devs' },
-                  { value: '4.8', label: 'Avg. rating' },
                 ].map((stat) => (
                   <div key={stat.label}>
                     <p className="text-2xl font-bold text-surface-900 dark:text-white">

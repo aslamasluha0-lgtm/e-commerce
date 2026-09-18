@@ -20,8 +20,3 @@ export const getImageUrl = (imagePath) => {
   if (imagePath.startsWith('http')) return imagePath
   return `${import.meta.env.VITE_API_URL}${imagePath}`
 }
-
-export const getEffectivePrice = (item) => item.discountPrice || item.price
-
-export const getOriginalPrice = (item) =>
-  item.discountPrice ? item.price : undefined

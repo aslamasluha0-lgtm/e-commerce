@@ -1,17 +1,23 @@
+import { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import toast from 'react-hot-toast'
 import OrderStatusBadge from '@/components/order/OrderStatusBadge'
-import { useOrder } from '@/hooks/useOrders'
+import ConfirmDialog from '@/components/admin/ConfirmDialog'
+import { useOrder, useCancelOrder } from '@/hooks/useOrders'
 import { useProducts } from '@/hooks/useProducts'
 import { useAuth } from '@/hooks/useAuth'
 import ProductImage from '@/components/common/ProductImage'
 import { formatCurrency } from '@/utils/formatCurrency'
 import { formatDate } from '@/utils/formatDate'
 import {
+  getOrderStatus,
   getPaymentMethodLabel,
   getPaymentStatusLabel,
   isRazorpayOrder,
 } from '@/utils/orderDisplay'
-import { ArrowLeft, Package, ShoppingCart } from 'lucide-react'
+import { ArrowLeft, Loader2, Package, ShoppingCart, XCircle } from 'lucide-react'
+
+const CANCELLABLE_STATUSES = ['pending', 'confirmed', 'processing']
 
 const enrichOrderItems = (items, productMap) =>
   (items || []).map((item) => {
@@ -53,6 +59,8 @@ const OrderDetails = () => {
   const { data: order, isLoading } = useOrder(id)
   const { data: productData } = useProducts()
   const products = productData?.items
+  const cancelMutation = useCancelOrder()
+  const [confirmCancelOpen, setConfirmCancelOpen] = useState(false)
 
   const productMap = new Map(
     (products || []).map((p) => [String(p.id), p])
@@ -113,6 +121,34 @@ const OrderDetails = () => {
     )
   }
 
+  const isOwner = !!user && String(order.userId ?? '') === String(user.id ?? '')
+  const currentStatus = String(getOrderStatus(order) || '').toLowerCase()
+  const canCancel = isOwner && CANCELLABLE_STATUSES.includes(currentStatus)
+
+  const handleCancelOrder = () => {
+    if (!user || !order) {
+      toast.error('You are not allowed to cancel this order')
+      return
+    }
+    if (String(order.userId ?? '') !== String(user.id ?? '')) {
+      toast.error('You are not allowed to cancel this order')
+      return
+    }
+    if (!CANCELLABLE_STATUSES.includes(String(getOrderStatus(order)).toLowerCase())) {
+      toast.error('This order cannot be cancelled at this stage')
+      return
+    }
+
+    setConfirmCancelOpen(false)
+    cancelMutation.mutate(
+      { id: order.id },
+      {
+        onSuccess: () => toast.success('Order cancelled successfully'),
+        onError: () => toast.error('Failed to cancel order'),
+      }
+    )
+  }
+
   const items = enrichOrderItems(order.items, productMap)
   const address = order.shippingAddress || {}
   const orderDate = order.createdAt || order.date
@@ -141,7 +177,25 @@ const OrderDetails = () => {
             </p>
           )}
         </div>
-        <OrderStatusBadge order={order} size="lg" />
+        <div className="flex flex-wrap items-center gap-3">
+          <OrderStatusBadge order={order} size="lg" />
+          {canCancel && (
+            <button
+              type="button"
+              onClick={() => setConfirmCancelOpen(true)}
+              disabled={cancelMutation.isPending}
+              aria-busy={cancelMutation.isPending || undefined}
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-red-200 bg-red-50 px-5 py-2.5 text-sm font-medium text-red-700 transition-colors hover:bg-red-100 dark:border-red-900 dark:bg-red-950/40 dark:text-red-300 dark:hover:bg-red-950/70 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {cancelMutation.isPending ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                <XCircle className="h-4 w-4" />
+              )}
+              {cancelMutation.isPending ? 'Cancelling...' : 'Cancel Order'}
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="mt-6 rounded-2xl border border-surface-200 bg-white p-6 shadow-soft dark:border-surface-800 dark:bg-surface-900">
@@ -276,6 +330,17 @@ const OrderDetails = () => {
           View All Orders
         </Link>
       </div>
+
+      <ConfirmDialog
+        isOpen={confirmCancelOpen}
+        title="Cancel Order"
+        message="Are you sure you want to cancel this order?"
+        confirmLabel="Cancel Order"
+        loadingLabel="Cancelling..."
+        onCancel={() => setConfirmCancelOpen(false)}
+        onConfirm={handleCancelOrder}
+        loading={cancelMutation.isPending}
+      />
     </div>
   )
 }

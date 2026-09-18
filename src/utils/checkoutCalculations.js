@@ -2,13 +2,12 @@ export const FREE_SHIPPING_THRESHOLD = 5000
 export const FLAT_SHIPPING = 49
 export const TAX_RATE = 0.10
 
-export const calculateTotals = (items, discount = 0) => {
+export const calculateTotals = (items) => {
   const subtotal = items.reduce((total, item) => total + item.price * item.quantity, 0)
-  const shipping =
-    subtotal === 0 || subtotal - discount >= FREE_SHIPPING_THRESHOLD ? 0 : FLAT_SHIPPING
+  const shipping = subtotal === 0 || subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : FLAT_SHIPPING
   const tax = Math.round(subtotal * TAX_RATE)
-  const total = subtotal - discount + shipping + tax
-  return { subtotal, discount, shipping, tax, total }
+  const total = subtotal + shipping + tax
+  return { subtotal, shipping, tax, total }
 }
 
 export const generateOrderNumber = (date = new Date()) => {

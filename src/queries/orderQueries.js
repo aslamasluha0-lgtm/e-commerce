@@ -45,11 +45,24 @@ export const useOrderQueries = () => {
     })
   }
 
+  const useCancelOrder = () => {
+    return useMutation({
+      mutationFn: ({ id }) => orderService.updateStatus(id, 'cancelled'),
+      onSuccess: async (_data, variables) => {
+        await Promise.all([
+          queryClient.invalidateQueries({ queryKey: ['orders'] }),
+          queryClient.invalidateQueries({ queryKey: ['order', variables.id] }),
+        ])
+      },
+    })
+  }
+
   return {
     useAllOrders,
     useOrder,
     useUserOrders,
     useCreateOrder,
     useUpdateOrderStatus,
+    useCancelOrder,
   }
 }

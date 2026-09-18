@@ -4,16 +4,12 @@ import toast from 'react-hot-toast'
 import { removeFromWishlist } from '@/redux/slices/wishlistSlice'
 import { addToCart } from '@/redux/slices/cartSlice'
 import ProductImage from '@/components/common/ProductImage'
-import ProductRating from '@/components/product/ProductRating'
 import Price from '@/components/common/Price'
 import Badge from '@/components/common/Badge'
 import { Link } from 'react-router-dom'
-import { getEffectivePrice, getOriginalPrice } from '@/utils/helpers'
 
 const WishlistItem = ({ item }) => {
   const dispatch = useDispatch()
-  const effectivePrice = getEffectivePrice(item)
-  const originalPrice = getOriginalPrice(item)
 
   const handleAddToCart = () => {
     dispatch(addToCart(item))
@@ -61,11 +57,7 @@ const WishlistItem = ({ item }) => {
         </div>
 
         <div className="mt-2">
-          <ProductRating rating={item.rating || 0} count={item.reviewCount || 0} />
-        </div>
-
-        <div className="mt-2">
-          <Price price={effectivePrice} originalPrice={originalPrice} />
+          <Price price={item.price} />
         </div>
 
         <div className="mt-1">

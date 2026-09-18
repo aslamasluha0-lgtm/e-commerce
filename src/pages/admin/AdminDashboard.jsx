@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
-import { Package, Users, ShoppingBag, IndianRupee, Clock, TriangleAlert } from 'lucide-react'
+import { Package, Users, ShoppingBag, IndianRupee} from 'lucide-react'
 
 import { useAdminAuth } from '@/hooks/useAdminAuth'
 import { productService } from '@/services/productService'
 import { userService } from '@/services/userService'
 import { orderService } from '@/services/orderService'
 import StatCard from '@/components/admin/StatCard'
-import AdminTable from '@/components/admin/AdminTable'
+
 import AdminLoading from '@/components/admin/AdminLoading'
 import AdminError from '@/components/admin/AdminError'
 import StatusBadge from '@/components/admin/StatusBadge'
-import OrderStatusSummary from '@/components/admin/OrderStatusSummary'
+
 import OrdersChart from '@/components/admin/OrdersChart'
 import OrderStatusChart from '@/components/admin/OrderStatusChart'
 import { getOrderStatus } from '@/utils/orderDisplay'
@@ -340,19 +340,9 @@ const AdminDashboard = () => {
           icon={IndianRupee}
         />
 
-        <StatCard
-          title="Pending Orders"
-          value={pendingOrders}
-          description="Orders requiring attention"
-          icon={Clock}
-        />
+        
 
-        <StatCard
-          title="Low Stock"
-          value={lowStockProducts}
-          description="Products with 5 or fewer items"
-          icon={TriangleAlert}
-        />
+      
       </div>
 
       <div className="mt-6">
@@ -362,84 +352,13 @@ const AdminDashboard = () => {
       <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
         <OrderStatusChart data={orderStatusChartData} total={totalOrders} />
 
-        <div className="rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">
-          <div className="mb-4 flex items-center justify-between gap-3">
-            <h2 className="text-lg font-semibold text-surface-900 dark:text-surface-100">
-              Recent Orders
-            </h2>
-            <Link
-              to="/admin/orders"
-              className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:border-surface-300 hover:bg-surface-50 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
-            >
-              View All Orders
-            </Link>
-          </div>
-
-          {recentOrders.length === 0 ? (
-            <div className="py-8 text-center text-sm text-surface-500 dark:text-surface-400">
-              No recent orders found.
-            </div>
-          ) : (
-            <div className="overflow-x-auto">
-              <AdminTable columns={orderColumns} data={recentOrders} />
-            </div>
-          )}
-        </div>
+        
       </div>
 
-      <div className="mt-6 rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">
-        <div className="mb-4 flex items-center justify-between gap-3">
-          <h2 className="text-lg font-semibold text-surface-900 dark:text-surface-100">
-            Low Stock Products
-          </h2>
-          <Link
-            to="/admin/products"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-surface-200 bg-white px-3 py-1.5 text-xs font-medium text-surface-700 transition-colors hover:border-surface-300 hover:bg-surface-50 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-200 dark:hover:bg-surface-800"
-          >
-            View All Products
-          </Link>
-        </div>
+     
 
-        {lowStockList.length === 0 ? (
-          <div className="py-8 text-center text-sm text-surface-500 dark:text-surface-400">
-            No low-stock products.
-          </div>
-        ) : (
-          <div className="overflow-x-auto">
-            <AdminTable columns={productColumns} data={lowStockList} />
-          </div>
-        )}
-      </div>
-
-      <div className="mt-6 rounded-2xl border border-surface-200 bg-white p-6 dark:border-surface-800 dark:bg-surface-900">
-        <h2 className="mb-4 text-lg font-semibold text-surface-900 dark:text-surface-100">
-          Order Status Summary
-        </h2>
-
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
-          <div className="flex-1">
-            <OrderStatusSummary
-              pending={pendingCount}
-              processing={processingCount}
-              shipped={shippedCount}
-              delivered={deliveredCount}
-              cancelled={cancelledCount}
-            />
-          </div>
-
-          <div className="w-full rounded-2xl border border-emerald-200 bg-emerald-50 p-5 dark:border-emerald-900 dark:bg-emerald-950/40 lg:w-72">
-            <p className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
-              Delivered Revenue
-            </p>
-            <p className="mt-2 text-2xl font-bold text-emerald-900 dark:text-emerald-100">
-              ₹{deliveredRevenue.toLocaleString('en-IN')}
-            </p>
-            <p className="mt-1 text-xs text-emerald-700/70 dark:text-emerald-300/70">
-              Based on delivered order totals
-            </p>
-          </div>
-        </div>
-      </div>
+      
+      
     </div>
   )
 }

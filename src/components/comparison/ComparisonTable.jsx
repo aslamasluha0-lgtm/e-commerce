@@ -41,16 +41,8 @@ const ComparisonTable = ({ products }) => {
             </td>
           ))}
         </tr>
-        <tr className="border-t bg-gray-50 dark:bg-gray-800/50">
-          <td className="p-4 text-sm font-medium text-gray-500 dark:text-gray-400">Rating</td>
-          {products.map((product) => (
-            <td key={product.id} className="p-4 text-center">
-              {product.rating || 'N/A'}
-            </td>
-          ))}
-        </tr>
         <tr className="border-t">
-          <td className="p-4 text-sm font-medium text-gray-500">Category</td>
+          <td className="p-4 text-sm font-medium text-gray-500 dark:text-gray-400">Category</td>
           {products.map((product) => (
             <td key={product.id} className="p-4 text-center">
               {product.category || 'N/A'}

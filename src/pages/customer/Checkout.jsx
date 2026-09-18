@@ -16,7 +16,6 @@ import { clearCart } from '@/redux/slices/cartSlice'
 import { calculateTotals, generateOrderNumber } from '@/utils/checkoutCalculations'
 import { formatCurrency } from '@/utils/formatCurrency'
 import { addressSchema } from '@/utils/validators'
-import { getEffectivePrice } from '@/utils/helpers'
 import { storage } from '@/utils/storage'
 
 const ADDRESS_STORAGE_KEY = 'devstore_addresses'
@@ -41,7 +40,7 @@ const Checkout = () => {
   const { items: cartItems } = useSelector((state) => state.cart)
 
   const checkoutItems = buyNowItem
-    ? [{ ...buyNowItem.product, price: getEffectivePrice(buyNowItem.product), quantity: buyNowItem.quantity }]
+    ? [{ ...buyNowItem.product, price: buyNowItem.product.price, quantity: buyNowItem.quantity }]
     : cartItems
 
   const orderNumber = useRef(generateOrderNumber()).current
@@ -96,7 +95,7 @@ const Checkout = () => {
     )
   }
 
-  const { subtotal, discount, shipping, tax, total } = calculateTotals(checkoutItems)
+  const { subtotal, shipping, tax, total } = calculateTotals(checkoutItems)
 
   const customer = {
     name: shippingAddress.fullName || user?.name || '',
@@ -163,7 +162,6 @@ const Checkout = () => {
         quantity: item.quantity,
       })),
       subtotal,
-      discount,
       shipping,
       tax,
       total,
@@ -316,7 +314,7 @@ const Checkout = () => {
 
         <div>
           <div className="lg:sticky lg:top-24">
-            <OrderSummary items={checkoutItems} discount={discount}>
+            <OrderSummary items={checkoutItems}>
               <div className="mt-6 border-t border-surface-200 pt-6 dark:border-surface-800">
                 {step === 2 && (
                   <p className="mb-3 rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-700 dark:border-emerald-900 dark:bg-emerald-950/40 dark:text-emerald-300">

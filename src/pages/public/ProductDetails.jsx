@@ -8,7 +8,6 @@ import { useProducts } from '@/hooks/useProducts'
 import { useReviewQueries } from '@/queries/reviewQueries'
 import { useAuth } from '@/hooks/useAuth'
 import ProductImageGallery from '@/components/product/ProductImageGallery'
-import ProductRating from '@/components/product/ProductRating'
 import ReviewList from '@/components/review/ReviewList'
 import Button from '@/components/common/Button'
 import Price from '@/components/common/Price'
@@ -19,7 +18,6 @@ import SectionHeader from '@/components/common/SectionHeader'
 import { addToCart } from '@/redux/slices/cartSlice'
 import { addToWishlist, removeFromWishlist } from '@/redux/slices/wishlistSlice'
 import { setBuyNowItem } from '@/redux/slices/checkoutSlice'
-import { getEffectivePrice, getOriginalPrice } from '@/utils/helpers'
 
 const TABS = [
   { id: 'overview', label: 'Overview' },
@@ -119,16 +117,8 @@ const ProductDetails = () => {
             {product.name}
           </h1>
 
-          <div className="mt-3">
-            <ProductRating
-              rating={product.rating || 0}
-              count={product.reviewCount || 0}
-              showNumber
-            />
-          </div>
-
           <div className="mt-5">
-            <Price price={getEffectivePrice(product)} originalPrice={getOriginalPrice(product)} size="lg" />
+            <Price price={product.price} size="lg" />
           </div>
 
           <p className="mt-5 leading-relaxed text-surface-600 dark:text-surface-300">

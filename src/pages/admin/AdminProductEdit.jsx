@@ -67,11 +67,13 @@ const AdminProductEdit = () => {
         ...product,
         name: formData.name,
         slug: slugify(formData.name),
+        brand: formData.brand,
         description: formData.description,
         price: formData.price,
         categoryId: formData.categoryId,
         category: category?.name,
         stock: formData.stock,
+        sku: formData.sku,
         images: formData.images,
       },
     })

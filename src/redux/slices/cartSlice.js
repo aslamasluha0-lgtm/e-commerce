@@ -6,11 +6,9 @@ const initialState = {
 }
 
 const normalizeCartItem = (product) => {
-  const effectivePrice = product.discountPrice || product.price
   return {
     ...product,
-    price: effectivePrice,
-    originalPrice: product.discountPrice ? product.price : undefined,
+    price: product.price,
   }
 }
 

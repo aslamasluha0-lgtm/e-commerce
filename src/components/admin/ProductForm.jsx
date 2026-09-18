@@ -26,10 +26,12 @@ const ProductForm = ({
     resolver: zodResolver(productSchema),
     defaultValues: {
       name: '',
+      brand: '',
       description: '',
       price: '',
       categoryId: '',
       stock: '',
+      sku: '',
       images: [],
     },
   })
@@ -41,10 +43,12 @@ const ProductForm = ({
     if (initialData) {
       reset({
         name: initialData.name,
+        brand: initialData.brand || '',
         description: initialData.description,
         price: initialData.price,
         categoryId: initialData.categoryId,
         stock: initialData.stock,
+        sku: initialData.sku || '',
         images: initialData.images || [],
       })
     }
@@ -81,6 +85,15 @@ const ProductForm = ({
           {...register('name')}
           error={errors.name?.message}
         />
+        <Input
+          label="Brand"
+          placeholder="e.g. Apple"
+          {...register('brand')}
+          error={errors.brand?.message}
+        />
+      </div>
+
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <div>
           <label className="mb-1.5 block text-sm font-medium text-surface-700 dark:text-surface-300">
             Category
@@ -102,6 +115,12 @@ const ProductForm = ({
             <p className="mt-1 text-sm text-red-500">{errors.categoryId.message}</p>
           )}
         </div>
+        <Input
+          label="SKU"
+          placeholder="e.g. LAP-004"
+          {...register('sku')}
+          error={errors.sku?.message}
+        />
       </div>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">

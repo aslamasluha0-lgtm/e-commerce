@@ -9,3 +9,8 @@ export const useOrder = (id) => {
   const { useOrder: useOrderQuery } = useOrderQueries()
   return useOrderQuery(id)
 }
+
+export const useCancelOrder = () => {
+  const { useCancelOrder: useCancelOrderMutation } = useOrderQueries()
+  return useCancelOrderMutation()
+}

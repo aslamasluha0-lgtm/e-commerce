@@ -6,18 +6,15 @@ import toast from 'react-hot-toast'
 import { addToCart } from '@/redux/slices/cartSlice'
 import { addToWishlist, removeFromWishlist } from '@/redux/slices/wishlistSlice'
 import { useAuth } from '@/hooks/useAuth'
-import ProductRating from './ProductRating'
 import ProductImage from '@/components/common/ProductImage'
 import Price from '@/components/common/Price'
 import Badge from '@/components/common/Badge'
-import { getEffectivePrice, getOriginalPrice } from '@/utils/helpers'
 
 const getBadge = (product) => {
   if (product.tags?.includes('new')) return { label: 'NEW', variant: 'brand' }
   if (product.trending || product.tags?.includes('best-seller'))
     return { label: 'BEST SELLER', variant: 'success' }
   if (product.tags?.includes('trending')) return { label: 'TRENDING', variant: 'warning' }
-  if (product.discountPrice) return { label: 'SALE', variant: 'danger' }
   if (product.featured) return { label: 'FEATURED', variant: 'brand' }
   return null
 }
@@ -31,8 +28,6 @@ const ProductCard = ({ product }) => {
   const wishlistItems = useSelector((state) => state.wishlist.items)
   const isWishlisted = wishlistItems.some((item) => item.id === product.id)
 
-  const effectivePrice = getEffectivePrice(product)
-  const originalPrice = getOriginalPrice(product)
   const outOfStock = product.stock === 0
 
   const handleWishlist = (e) => {
@@ -155,12 +150,8 @@ const ProductCard = ({ product }) => {
           {product.name}
         </h3>
 
-        <div className="mt-2">
-          <ProductRating rating={product.rating || 0} count={product.reviewCount || 0} />
-        </div>
-
         <div className="mt-auto pt-3">
-          <Price price={effectivePrice} originalPrice={originalPrice} />
+          <Price price={product.price} />
         </div>
       </div>
     </Link>
